@@ -1,5 +1,5 @@
-const Conexao = require('./conexao.js')
+const Conexao = require("./conexao.js");
 
-const bd =new Conexao()
+const bd = new Conexao();
 
-bd.conectar()
+bd.conectar();

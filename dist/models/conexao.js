@@ -38,22 +38,21 @@ class Conexao {
 
   //Query eh uma funcao para que possamos executar os sql que precisamos dentro do banco de dados
   query(sql) {
-    //Primeiro ele se conecta ao banco
-    this.conectar();
+    return new Promise((resolve, reject) => {
+      this.conectar();
 
-    //Depois ele chama o metodo query do mysql que recebe o sql que queremos executar e o callback
-    this.conexao.query(sql, (err, result) => {
-      //Aqui eh a mesma coisa de cima, a unica diferenca eh q nesse callback a gnt esta passando o resultado tambem, ent se o sql
-      //Tiver um resultado, por exemplo se a gnt tiver buscando dados do banco de dados com o sql, o callback vai tratar esse resultado
-      //E retornar para a gnt
-      if (err) {
-        console.error("Erro ao executar a query: " + err);
-        return;
-      }
+      this.conexao.query(sql, (err, result) => {
+        this.desconectar();
+
+        if (err) {
+          console.error("Erro ao executar a query" + err);
+          reject(err);
+          return;
+        }
+
+        resolve(result);
+      });
     });
-
-    //Depois que ele termina a execucao do sql ele encerra a conexao com o banco de dados
-    this.desconectar();
   }
 
   //Aqui eh uma funcao para encerrar a conexao com o banco de dados
