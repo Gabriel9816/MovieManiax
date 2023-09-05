@@ -33,8 +33,7 @@ class UsuarioModel {
     const senhaenc = md5(senha);
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (nome, email, senha) VALUES (?, ?, ?)`,
-        [nome, email, senhaenc]
+        `INSERT INTO ${this.tabela} (nome, email, senha) VALUES (${nome}, ${email}, ${senhaenc})`
       );
     } catch (error) {
       throw error;
@@ -45,8 +44,7 @@ class UsuarioModel {
     const senhaenc = md5(senha);
     try {
       await this.db.query(
-        `UPDATE ${this.tabela} SET nome = ?, email = ?, senha = ? WHERE id = ?`,
-        [nome, email, senhaenc, id]
+        `UPDATE ${this.tabela} SET nome = ${nome}, email = ${email}, senha = ${senhaenc} WHERE id = ${id}`
       );
     } catch (error) {
       throw error;
@@ -55,7 +53,7 @@ class UsuarioModel {
 
   async delUsuario(id) {
     try {
-      await this.db.query(`DELETE FROM ${this.tabela} WHERE id = ?`, [id]);
+      await this.db.query(`DELETE FROM ${this.tabela} WHERE id = ${id}`);
     } catch (error) {
       throw error;
     }
