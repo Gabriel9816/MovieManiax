@@ -55,3 +55,5 @@ class FilmeModel {
     }
   }
 }
+
+module.exports = FilmeModel;

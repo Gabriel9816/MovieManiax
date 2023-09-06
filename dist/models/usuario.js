@@ -74,3 +74,5 @@ async function test() {
 }
 
 test();
+
+// SELECT * FROM filmesusuario INNER JOIN usuario ON filmesusuario.usuario = usuario.id
