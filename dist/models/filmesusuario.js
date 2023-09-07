@@ -19,10 +19,10 @@ class FilmesUsuarioModel {
     }
   }
 
-  async adicionaFilme(usuario, filme, data) {
+  async adicionaFilme(usuario, filme) {
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (usuario, filme, data) VALUES (${usuario}, ${filme}, ${data})`
+        `INSERT INTO ${this.tabela} (usuario, filme, data) VALUES (${usuario}, ${filme}, NOW())`
       );
     } catch (error) {
       throw error;
@@ -37,3 +37,5 @@ class FilmesUsuarioModel {
     }
   }
 }
+
+module.exports = FilmesUsuarioModel;
