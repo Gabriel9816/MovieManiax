@@ -9,12 +9,21 @@ class UsuarioModel {
     this.db.conectar();
   }
 
-  async getAllUsuario() {
+  async login(email, password) {
+    const senhaenc = md5(password);
     try {
-      const results = await this.db.query(`SELECT * FROM ${this.tabela}`);
-      return results;
-    } catch (err) {
-      throw err;
+      const results = await this.db.query(
+        `SELECT * FROM ${this.tabela} WHERE email = '${email}'`
+      );
+
+      if (results) {
+        const user = results[0];
+        if (user.senha === senhaenc) {
+          console.log("Autenticacao Completa");
+        }
+      }
+    } catch (error) {
+      throw error;
     }
   }
 
@@ -62,15 +71,9 @@ class UsuarioModel {
 
 module.exports = UsuarioModel;
 
-//Apenas testando o getAllUsuario
-async function test() {
+async function teste() {
   const user = new UsuarioModel();
-  try {
-    let usuarios = await user.getAllUsuario();
-    console.log(usuarios);
-  } catch (error) {
-    console.error("Error:", error);
-  }
+  user.login("rai@gmail.com", "123456");
 }
 
-test();
+teste();
