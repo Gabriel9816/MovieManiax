@@ -3,17 +3,12 @@ const md5 = require("md5");
 
 class UsuarioModel {
   tabela = "usuario";
-<<<<<<< Updated upstream
   db = new Conexao();
-=======
-  db = Conexao();
->>>>>>> Stashed changes
 
   constructor() {
     this.db.conectar();
   }
 
-<<<<<<< Updated upstream
   async login(email, password) {
     const senhaenc = md5(password);
     try {
@@ -71,13 +66,6 @@ class UsuarioModel {
     } catch (error) {
       throw error;
     }
-=======
-  cadastrarUsuario(nome, email, senha) {
-    senhaenc = md5(senha);
-    this.db.query(
-      `insert into ${this.tabela} (nome, email, senha) values (${nome}, ${email}, ${senhaenc})`
-    );
->>>>>>> Stashed changes
   }
 }
 

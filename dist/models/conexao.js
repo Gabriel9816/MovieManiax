@@ -21,7 +21,6 @@ class Conexao {
   }
 
   query(sql) {
-<<<<<<< Updated upstream
     return new Promise((resolve, reject) => {
       this.conectar();
 
@@ -36,15 +35,6 @@ class Conexao {
 
         resolve(result);
       });
-=======
-    this.conectar();
-
-    this.conexao.query(sql, (err, result) => {
-      if (err) {
-        console.error("Erro ao executar a query: " + err);
-        return;
-      }
->>>>>>> Stashed changes
     });
   }
 
