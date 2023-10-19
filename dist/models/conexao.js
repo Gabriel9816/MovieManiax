@@ -16,7 +16,6 @@ class Conexao {
         console.error("Erro ao conectar: " + err);
         return;
       }
-
       console.log("Conectado");
     });
   }
