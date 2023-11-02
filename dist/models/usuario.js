@@ -1,7 +1,7 @@
 const Conexao = require("./conexao.js");
 const md5 = require("md5");
 
-class UsuarioModel {
+export class UsuarioModel {
   tabela = "usuario";
   db = new Conexao();
 
@@ -70,10 +70,3 @@ class UsuarioModel {
 }
 
 module.exports = UsuarioModel;
-
-async function teste() {
-  const user = new UsuarioModel();
-  user.login("rai@gmail.com", "123456");
-}
-
-teste();
