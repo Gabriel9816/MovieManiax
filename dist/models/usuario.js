@@ -1,7 +1,7 @@
 const Conexao = require("./conexao.js");
 const md5 = require("md5");
 
-export class UsuarioModel {
+class UsuarioModel {
   tabela = "usuario";
   db = new Conexao();
 
@@ -38,18 +38,18 @@ export class UsuarioModel {
     }
   }
 
-  async cadastrarUsuario(nome, email, senha) {
+  async add(nome, email, senha) {
     const senhaenc = md5(senha);
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (nome, email, senha) VALUES (${nome}, ${email}, ${senhaenc})`
+        `INSERT INTO ${this.tabela} (nome, email, senha) VALUES ('${nome}', '${email}', '${senhaenc}')`
       );
     } catch (error) {
       throw error;
     }
   }
 
-  async editaUsuario(id, nome, email, senha) {
+  async edita(id, nome, email, senha) {
     const senhaenc = md5(senha);
     try {
       await this.db.query(
@@ -60,7 +60,7 @@ export class UsuarioModel {
     }
   }
 
-  async delUsuario(id) {
+  async del(id) {
     try {
       await this.db.query(`DELETE FROM ${this.tabela} WHERE id = ${id}`);
     } catch (error) {
