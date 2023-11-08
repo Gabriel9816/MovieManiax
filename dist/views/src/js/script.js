@@ -1,5 +1,5 @@
 var email = document.querySelector("#email"),
-  password = document.querySelector("#password"),
+  password = document.querySelector("#senha"),
   mySVG = document.querySelector(".svgContainer"),
   armL = document.querySelector(".armL"),
   armR = document.querySelector(".armR"),

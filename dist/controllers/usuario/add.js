@@ -7,7 +7,7 @@ const senha = document.querySelector("#senha");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const res = await fetch("/cadastro/add", {
+  await fetch("/cadastro/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,5 +17,7 @@ form.addEventListener("submit", async (event) => {
       email: email.value,
       senha: senha.value,
     }),
+  }).then(() => {
+    window.location.href = "/login";
   });
 });

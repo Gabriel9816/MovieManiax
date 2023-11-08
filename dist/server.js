@@ -29,12 +29,24 @@ app.use(express.json());
 
 app.post("/cadastro/add", async (req, res) => {
   const usuarioModel = new UsuarioModel();
-
   await usuarioModel.add(req.body.nome, req.body.email, req.body.senha);
 
-  window.location.href = "/login";
+  res.json({
+    success: true,
+    message: "Usuário criado com sucesso!",
+  });
 });
 
-app.listen(3000, () => {
-  console.log("Servidor iniciado na porta 3000!");
+app.post("/login/enter", async (req, res) => {
+  const usuarioModel = new UsuarioModel();
+  await usuarioModel.login(req.body.email, req.body.senha);
+
+  res.json({
+    success: true,
+    message: "Usuário logado com sucesso!",
+  });
+});
+
+app.listen(8080, () => {
+  console.log("Servidor iniciado na porta 8080!");
 });

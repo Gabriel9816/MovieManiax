@@ -11,7 +11,7 @@
 
 <body>
 	<div class="container-login">
-		<form class="form-login">
+		<form class="form-login" id="loginUser">
 			<div class="svgContainer">
 				<div>
 					<svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -156,26 +156,26 @@
 			</div>
 
 			<div class="inputGroup">
-				<label for="email1">Email</label>
-				<input type="text" id="email" />
+				<label for="email">Email</label>
+				<input type="email" id="email" />
 
-				<p class="helper">email@exemplo.com</p>
-				<span class="indicator"></span>
+				<span class="helper">email@exemplo.com</span>
 			</div>
 
 			<div class="inputGroup">
-				<label for="password">Senha</label>
-				<input type="password" id="password" />
+				<label for="senha">Senha</label>
+				<input type="password" id="senha" />
 			</div>
 
 			<div class="inputGroup">
-				<a href="/home" id="login">Login</a>
+				<button type="submit">Login</button>
 			</div>
 		</form>
 	</div>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src="/source/js/script.js"></script>
+	<script src="/controllers/usuario/login.js"></script>
 </body>
 
 </html>
