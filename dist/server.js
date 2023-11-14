@@ -1,7 +1,15 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
+
 const UsuarioModel = require("./models/usuario");
 
 const app = express();
+
+app.use("/source", express.static(__dirname + "/views/src"));
+app.use("/controllers", express.static(__dirname + "/controllers"));
+app.use(express.json());
+app.use(cookieParser());
 
 //Rotas paginas
 
@@ -18,12 +26,10 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
+  autentication(req, res, req.cookies.token);
+  console.log(req.cookies.token);
   res.sendFile(__dirname + "/views/visualizacao.html");
 });
-
-app.use("/source", express.static(__dirname + "/views/src"));
-app.use("/controllers", express.static(__dirname + "/controllers"));
-app.use(express.json());
 
 //Rotas CRUD
 
@@ -39,7 +45,23 @@ app.post("/cadastro/add", async (req, res) => {
 
 app.post("/login/enter", async (req, res) => {
   const usuarioModel = new UsuarioModel();
-  await usuarioModel.login(req.body.email, req.body.senha);
+  const user = await usuarioModel.login(req.body.email, req.body.senha);
+
+  if (!user) {
+    return res.json({
+      success: false,
+      message: "Email ou senha inválidos!",
+    });
+  }
+
+  const token = jwt.sign(user, "secret", {
+    expiresIn: "1h",
+  });
+
+  res.cookie("token", token, {
+    httpOnly: true,
+    secure: true,
+  });
 
   res.json({
     success: true,
@@ -50,3 +72,13 @@ app.post("/login/enter", async (req, res) => {
 app.listen(8080, () => {
   console.log("Servidor iniciado na porta 8080!");
 });
+
+function autentication(req, res, token) {
+  try {
+    const user = jwt.verify(token, "secret");
+    req.user = user;
+  } catch (error) {
+    res.clearCookie("token");
+    return res.redirect("/");
+  }
+}

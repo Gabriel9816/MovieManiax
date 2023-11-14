@@ -1,5 +1,6 @@
 const Conexao = require("./conexao.js");
 const md5 = require("md5");
+const jwt = require("jsonwebtoken");
 
 class UsuarioModel {
   tabela = "usuario";
@@ -19,7 +20,7 @@ class UsuarioModel {
       if (results) {
         const user = results[0];
         if (user.senha === senhaenc) {
-          console.log("Autenticacao Completa");
+          return user;
         }
       }
     } catch (error) {
