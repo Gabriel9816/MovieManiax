@@ -1,46 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>visualizaçao</title>
-    <link rel="stylesheet" href="/css/style03.css">
+    <link rel="stylesheet" href="/dist/source/css/style03.css">
 </head>
-<body>
 
-    <div class="header">
+<body class="body-visualizacao">
+    <header class="header">
         <div class="img">
-            <img class="logo" src="/MovieManiax logo.png" alt="logo">
+            <img class="logo" src="/dist/source/image/MovieManiax logo.png" alt="logo">
         </div>
         <div class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="">
+            <input class="search-txt" type="text">
         </div>
-        <div class="links" >
+        <div class="links">
             <a class="l01" href="/">Filmes</a>
             <a class="l02" href="/">Séries</a>
             <a class="l03" href="/">Animes</a>
             <a href="/">Doramas</a>
         </div>
-        <div class="icones" >
+        <div class="icones">
             <a href="/">
-            <img class="incon1" src="/6073873.png" alt="icone1">
+                <img class="incon1" src="/source/img/6073873.png" alt="icone1">
             </a>
             <a href="/">
-            <img class="incon2" src="/Sem Título-1.png" alt="icone2">
+                <img class="incon2" src="/dist/source/image/Sem Título-1.png" alt="icone2">
             </a>
         </div>
-        
-    </div>
-    <div class="titulo" >
+    </header>
+
+    <div class="titulo">
         <h1>Você deu seu primeiro<br>
             passo para um mundo maior...</h1>
+
+        <a href="/assistido">Besouro Azul</a>
     </div>
-    <div class="descricao" >
+
+    <div class="descricao">
         <h2>O MovieManiax permite que você acompanhe todos os<br>
             filmes/séries que viu, verificar as reações a um<br>
             filme sobre o qual acabou de ouvir falar. Somos uma<br>
             comunidade global de fãs de cinema que vivem para<br>
             discutir, avaliar e classificar o que assistimos.</h2>
     </div>
+
+    <footer>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="filme">
+                    <img src="/poster-avatar-2-bra_96b8c77c.jpeg" alt="Imagem 1">
+                    <div class="filme-info">
+                        <h3>Avatar: O Caminho da Agua</h3>
+                        <p>Após formar uma família, Jake Sully e Ney'tiri fazem de tudo para ficarem juntos. No
+                            entanto,
+                            eles devem sair de casa e explorar as regiões de Pandora quando uma antiga ameaça
+                            ressurge,
+                            e Jake deve travar uma guerra difícil contra os humanos.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="/themarvels.jpeg" alt="Imagem 2">
+                    <div class="filme-info">
+                        <h3>The Marvels</h3>
+                        <p>Carol Danvers aka Capitã Marvel, tomou de volta sua identidade dos Kree tiranos e se
+                            vingou
+                            da Inteligência Suprema, mas consequências não imaginadas fazem Carol ter que carregar o
+                            peso de um universo desestabilizado.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="/download.jpeg" alt="Imagem 3">
+                    <div class="filme-info">
+                        <h3>Som da Liberdade</h3>
+                        <p>Um ex-agente federal embarca em uma perigosa missão para salvar uma menina dos cruéis
+                            traficantes de crianças. Com o tempo se esgotando, ele viaja pelas profundezas da selva
+                            colombiana, colocando sua vida em risco para libertá-la.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="/batem.jpg" alt="Imagem 4">
+                    <div class="filme-info">
+                        <h3>Batem a Porta</h3>
+                        <p>Durante as férias em uma cabana remota, uma jovem e seus pais são feitos reféns por
+                            quatro
+                            estranhos armados que exigem que a família faça uma escolha impensável para evitar o
+                            apocalipse.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="/jojo.jpeg" alt="Imagem 5">
+                    <div class="filme-info">
+                        <h3>Jojo Rabbit</h3>
+                        <p>
+                            Durante a segunda guerra mundial, Jojo, um menino de dez anos se define como nazista
+                            convicto e espera cumprir com seus treinamentos no exército para auxiliar a vitória
+                            alemã no
+                            combate armado.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+                <div class="filme">
+                    <img src="/o-projeto-adam-1.jpg" alt="Imagem 6">
+                    <div class="filme-info">
+                        <h3>Projeto Adam</h3>
+                        <p>Um viajante do tempo volta ao ano de 2022 por acidente e acaba se encontrando com seu eu
+                            mais
+                            novo. Juntos, e sendo caçados por forças do futuro, os dois embarcam em uma missão para
+                            consertar a linha temporal e salvar seus entes queridos.</p>
+                        <button class="ver-mais-btn">Ver Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="navigation">
+        <div class="dot" onclick="showFilmes(0)"></div>
+        <div class="dot" onclick="showFilmes(3)"></div>
+    </div>
+
+    <script src="dist/source/js/script.js"></script>
 </body>
+
 </html>

@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url(/css/cropped-1360-768-1319119.png);
+  background-image: url(/dist/source/image/besouro_azul_big.png);
 }
 
 .header {
@@ -38,28 +38,28 @@ body {
   margin-left: 290px;
   padding: 20px, 50px, 20px, 20px;
   font-size: 20px;
-  border: 1px solid #D6F1FB;
+  border: 1px solid #d6f1fb;
   border-radius: 20px;
   background-image: url(/css/lupa.png); /* Adicione a imagem do ícone de pesquisa */
   background-repeat: no-repeat;
   background-position: right center; /* Posicione o ícone à direita do campo de entrada de texto */
   background-size: 24px 24px; /* Defina o tamanho do ícone */
   background-color: #5a5858;
-  color: #D6F1FB;
+  color: #d6f1fb;
 }
 
 .links a {
   margin-right: 5px;
-  border-right: 1px solid #D6F1FB;
+  border-right: 1px solid #d6f1fb;
   padding-right: 5px;
   font-family: "Rock";
   margin-left: 15px;
   text-decoration: none;
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 18px;
 }
 
-.links a:nth-last-child(-n+3) {
+.links a:nth-last-child(-n + 3) {
   margin-left: 0px;
 }
 
@@ -81,7 +81,7 @@ body {
 .titulo {
   margin-left: 15px;
   font-family: "Rock";
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 16px;
   text-align: left;
   margin-top: 80px;
@@ -90,7 +90,7 @@ body {
 .descricao {
   margin-left: 30px;
   font-family: "Rock";
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 16px;
   text-align: left;
   margin-top: 40px;
@@ -101,7 +101,7 @@ footer {
   margin-top: 45px;
   border-radius: 6px;
   background-color: #333;
-  color: #D6F1FB;
+  color: #d6f1fb;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -137,7 +137,7 @@ footer {
 }
 
 .ver-mais-btn {
-  background-color: #D6F1FB;
+  background-color: #d6f1fb;
   color: #333;
   padding: 5px 10px;
   cursor: pointer;
@@ -161,4 +161,4 @@ footer {
 
 .dot:hover {
   background-color: #ddd;
-}/*# sourceMappingURL=style03.css.map */
+} /*# sourceMappingURL=style03.css.map */
