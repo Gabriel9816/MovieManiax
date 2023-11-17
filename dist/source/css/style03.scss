@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Rock';
+    src: url('rockwen.ttf') format('truetype'); 
+    
+}
+
+*{
+    padding: 0px;
+    margin: 0px
+}
+body{
+    background-image: url(/css/cropped-1360-768-1319119.png);
+}
+.header{
+    display: flex;
+    align-items: center;
+    
+}
+.logo{
+    flex: 1;
+}
+.logo{
+    padding-left: 50px;
+    max-width: 150px; /* Defina o tamanho máximo da imagem do logotipo */
+    vertical-align: mid
+}
+
+.search-box{
+    display: grid;
+    justify-content: space-between;
+}
+
+.search-txt{
+    font-family: 'Rock';
+    width: 400px;
+    margin-left:290px;
+    padding: 20px, 50px, 20px, 20px;
+    font-size: 20px;
+    border: 1px solid #D6F1FB;
+    border-radius: 20px;
+    background-image: url(/css/lupa.png); /* Adicione a imagem do ícone de pesquisa */
+    background-repeat: no-repeat;
+    background-position: right center; /* Posicione o ícone à direita do campo de entrada de texto */
+    background-size: 24px 24px; /* Defina o tamanho do ícone */
+    background-color: #5a5858;
+    color: #D6F1FB;
+   
+}
+.links a{
+    margin-right: 5px;
+    border-right: 1px solid #D6F1FB;
+    padding-right: 5px;
+    font-family: 'Rock';
+    margin-left: 15px;
+    text-decoration: none;
+    color: #D6F1FB;
+    font-size: 18px;
+}
+
+
+.links a:nth-last-child(-n+3){
+    margin-left: 0px;
+}
+.links a:last-child {
+    border-right: none; /* Remova a borda direita */
+    padding-right: 0; /* Remova o espaço à direita */
+}
+.incon1{
+    max-width: 40px;
+    margin-left: 15px;
+}
+.incon2{
+    max-width: 40px;
+    margin-left: 5px;
+}
+.titulo{
+    margin-left: 15px;
+    font-family: "Rock";
+    color: #D6F1FB;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 80px;
+  }
+  .descricao{
+    margin-left: 30px;
+    font-family: 'Rock';
+    color: #D6F1FB;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 40px;
+  }
