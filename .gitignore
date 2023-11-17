@@ -1,7 +1,4 @@
 node_modules
-<<<<<<< HEAD
-package-lock.json
-=======
 package-lock.json
 package.json
->>>>>>> d9448d7 (Organizando um pouco as pastas do projeto)
+
