@@ -3,6 +3,67 @@
     padding: 0px;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+
+    .logo {
+        padding-left: 50px;
+        max-width: 150px;
+        vertical-align: mid;
+        flex: 1;
+    }
+
+    .search-box {
+        display: grid;
+        justify-content: space-between;
+
+        .search-txt {
+            width: 400px;
+            margin-left: 290px;
+            padding: 20px, 50px, 20px, 20px;
+            font-size: 20px;
+            border: 1px solid #D6F1FB;
+            border-radius: 20px;
+            background-image: url(../img/lupa.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 24px 24px;
+            background-color: #5a5858;
+            color: #D6F1FB;
+        }
+    }
+
+    .links a {
+        margin-right: 5px;
+        border-right: 1px solid #D6F1FB;
+        padding-right: 5px;
+        font-family: 'Rock';
+        margin-left: 15px;
+        text-decoration: none;
+        color: #D6F1FB;
+        font-size: 18px;
+
+        &:nth-last-child(-n+3) {
+            margin-left: 0px;
+        }
+
+        &:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+
+    .icones {
+        a {
+            img {
+                max-width: 40px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
 .container-login {
     background-color: #a9a9a9;
     width: 100%;
@@ -160,67 +221,6 @@
 .body-visualizacao {
     background-color: gray;
 
-    #header {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        padding-left: 50px;
-        max-width: 150px;
-        vertical-align: mid;
-        flex: 1;
-    }
-
-    .search-box {
-        display: grid;
-        justify-content: space-between;
-    }
-
-    .search-txt {
-        width: 400px;
-        margin-left: 290px;
-        padding: 20px, 50px, 20px, 20px;
-        font-size: 20px;
-        border: 1px solid #D6F1FB;
-        border-radius: 20px;
-        background-image: url(../img/lupa.png);
-        background-repeat: no-repeat;
-        background-position: right center;
-        background-size: 24px 24px;
-        background-color: #5a5858;
-        color: #D6F1FB;
-    }
-
-    .links a {
-        margin-right: 5px;
-        border-right: 1px solid #D6F1FB;
-        padding-right: 5px;
-        font-family: 'Rock';
-        margin-left: 15px;
-        text-decoration: none;
-        color: #D6F1FB;
-        font-size: 18px;
-
-        &:nth-last-child(-n+3) {
-            margin-left: 0px;
-        }
-
-        &:last-child {
-            border-right: none;
-            padding-right: 0;
-        }
-    }
-
-    .icones {
-        a {
-            img {
-                max-width: 40px;
-                margin-left: 15px;
-            }
-        }
-    }
-
     .titulo,
     .descricao {
         color: #D6F1FB;
@@ -339,4 +339,82 @@
             }
         }
     }
+}
+
+.body-assistido {
+    background-image: url(../img/besouro_azul_MkY9xfp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    .poster {
+        width: 200px;
+        position: relative;
+        top: -60px;
+        left: 160px;
+        border-radius: 10px;
+    }
+
+    .visto {
+        width: 50px;
+        position: relative;
+        top: 110px;
+        left: 850px;
+        color: #d6f1fb;
+    }
+
+    .container {
+        width: 50%;
+        border: .2rem solid black;
+        color: #d6f1fb;
+
+        p,
+        h4 {
+            width: 500px;
+            position: relative;
+            left: 400px;
+            font-size: 2rem;
+        }
+
+        p {
+            top: -255px;
+        }
+
+        h4 {
+            top: -260px;
+        }
+
+        h3 {
+            font-family: "Rock";
+            color: #d6f1fb;
+            width: 200px;
+            position: relative;
+            top: -5px;
+            left: 910px;
+            font-size: 2.5rem;
+        }
+
+        h1 {
+            font-family: "Rock";
+            color: #d6f1fb;
+            width: 470px;
+            position: relative;
+            top: 50px;
+            left: 400px;
+            font-size: 70px;
+            letter-spacing: 5px;
+        }
+    }
+
+    .avalicao {
+        font-family: "Rock";
+        color: #d6f1fb;
+        width: 150px;
+        position: relative;
+        top: -260px;
+        left: 400px;
+        font-size: 2rem;
+    }
+
+    /*# sourceMappingURL=style04.css.map */
 }

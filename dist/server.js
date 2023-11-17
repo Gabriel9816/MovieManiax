@@ -27,8 +27,11 @@ app.get("/cadastro", (req, res) => {
 
 app.get("/home", (req, res) => {
   autentication(req, res, req.cookies.token);
-  console.log(req.cookies.token);
   res.sendFile(__dirname + "/views/visualizacao.html");
+});
+
+app.get("/assistido", (req, res) => {
+  res.sendFile(__dirname + "/views/assistido.html");
 });
 
 //Rotas CRUD
