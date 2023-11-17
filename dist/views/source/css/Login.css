@@ -1,0 +1,211 @@
+/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+body {
+  background: url(/dist/views/source/image/filmes1.jpg) fixed;
+  background-size: cover; /* Isso faz com que a imagem cubra todo o corpo */
+  background-position: center; /* Isso centraliza a imagem no corpo */
+  height: 100vh; /* Isso define a altura do corpo como 100% da altura da janela de visualização */
+  overflow: hidden;
+  text-align: center;
+}
+
+body::before {
+  /* Coloca a cor por cima da imagem usando POSITION e Z-INDEX */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
+  background: #282e3ab3;
+  z-index: 1; /* Ajuste o índice z conforme necessário para a sobreposição correta */
+}
+
+.container-login {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.form-login {
+  grid-column: 2;
+  grid-row: 2;
+
+  position: relative;
+  z-index: 1;
+}
+
+.container-login .form-login {
+  grid-column: 2;
+  grid-row: 2;
+  width: 29rem;
+  height: 29.9rem;
+  background-color: rgba(19, 24, 29, 0.8);
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: grid;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+}
+.container-login .form-login .svgContainer {
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem auto 1rem;
+  border-radius: 50%;
+  /* border: 0.2rem solid #000000; */
+  overflow: hidden;
+}
+.container-login .form-login .svgContainer div {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+.container-login .form-login .svgContainer div .mySVG {
+  width: 100%;
+  height: 100%;
+}
+
+.container-login .form-login #input-botao {
+  /* margin: 2em 2em;  */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0px;
+  position: relative;
+  display: grid;
+  justify-content: center;
+}
+
+.container-login .form-login .inputGroup {
+  /* margin: 2em 2em;  */
+  margin-top: 7px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0px;
+  position: relative;
+}
+
+.container-login .form-login .inputGroup .helper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translate(1.2rem, 3.3rem) scale(1);
+  color: #d6f1fb;
+  font-size: 1.25rem;
+  font-weight: 400;
+  opacity: 0.65;
+  pointer-events: none;
+  transition: transform 0.2s ease-out, opacity 0.2s linear;
+}
+
+.container-login .form-login .inputGroup label {
+  margin-bottom: 3px;
+  display: block;
+  font-size: 1.25rem;
+  color: #d6f1fb;
+  font-weight: 500;
+}
+.container-login .form-login .inputGroup input {
+  display: block;
+  padding: 0.6rem 1rem;
+  background-color: #434c5170;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 4.3rem;
+  font-size: 1.4rem;
+  color: #2c3440;
+  font-weight: 500;
+  text-align: start;
+
+  transition: 0.2s;
+  transform: scale(1.03);
+
+  box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+}
+
+.container-login .form-login .inputGroup input:hover {
+  transform: scale(1.06);
+  background-color: rgba(44, 52, 64, 0.4);
+  color: #2c3440;
+}
+
+.container-login .form-login .inputGroup input:focus {
+  background-color: aliceblue;
+  color: #2c3440;
+}
+
+.container-login .form-login .inputGroup input::placeholder {
+  color: #d6f1fb;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container-login .form-login .inputGroup input:focus::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3440; /* Substitua pela cor desejada */
+}
+.container-login .form-login .inputGroup button {
+  background-color: aliceblue;
+  color: #2c3440;
+
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.4rem;
+
+  border: none;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: 0.2s;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid;
+
+  box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+}
+.container-login .form-login .inputGroup button:hover,
+.container-login .form-login .inputGroup button:active {
+  font-weight: 500;
+  transform: scale(1.02);
+  background-color: rgba(44, 52, 64, 0.4);
+  color: #d6f1fb;
+}
+.container-login .form-login .focusWithText .helper {
+  transform: translate(-0.6rem, 2.2rem) scale(0.65);
+  opacity: 1;
+}

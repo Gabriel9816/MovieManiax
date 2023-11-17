@@ -1,0 +1,221 @@
+/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+body {
+  background: url(/dist/views/source/image/filmes1.jpg) fixed;
+  background-size: cover; /* Isso faz com que a imagem cubra todo o corpo */
+  background-position: center; /* Isso centraliza a imagem no corpo */
+  height: 100vh; /* Isso define a altura do corpo como 100% da altura da janela de visualização */
+  overflow: hidden;
+  text-align: center;
+}
+
+body::before {
+  /* Coloca a cor por cima da imagem usando POSITION e Z-INDEX */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
+  background: #282e3ab3;
+  z-index: 1; /* Ajuste o índice z conforme necessário para a sobreposição correta */
+}
+
+/* AGORA VAMOS MEXER NA PÁGINA DE CADASTRO/REGISTER/SIGN UP */
+.container-register {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imagem-logo {
+  width: 10rem;
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 21.7%;
+  transition: transform 0.2s ease-in-out;
+  padding-left: 2rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.imagem-logo:hover {
+  transform: scale(1.1);
+}
+
+#form {
+  grid-column: 2;
+  grid-row: 2;
+  width: 29rem;
+  height: 27rem;
+  background-color: rgba(19, 24, 29, 0.8);
+  border-radius: 10px;
+  padding: 1.2rem;
+
+  display: grid;
+  margin-top: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
+  position: relative;
+  z-index: 1;
+
+  box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
+}
+
+.input-user {
+  padding: 2rem;
+  padding-top: 11px;
+  padding-bottom: 0;
+  width: 90%;
+}
+
+.input-user input {
+  width: 86%;
+  height: 2rem;
+  padding: 4rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 1.1rem;
+  transition: 0.2s;
+  transform: scale(1.03);
+  color: #d6f1fb;
+  background-color: #434c5170; /*  rgba(67, 76, 81, 0.44) RGBA(61,69,73,0.74) RGBA(65, 68, 73, 0.5)  #414449 */
+
+  padding: 14px;
+  text-align: start;
+  font-size: 16px;
+
+  box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+}
+
+.input-user input:hover {
+  transform: scale(1.1);
+  background-color: rgba(44, 52, 64, 0.4);
+  color: #d6f1fb;
+}
+
+.input-user input:focus::placeholder,
+.input-user input:valid::placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: aliceblue; /* Substitua pela cor desejada */
+  /* Outros estilos que você queira aplicar */
+}
+
+.input-user input:focus {
+  background-color: aliceblue;
+  color: #2c3440;
+}
+
+.input-user input:focus::placeholder {
+  color: #2c3440;
+}
+
+.caixa-termos {
+  margin-left: 1rem;
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  align-content: center;
+  align-content: center;
+  align-self: center;
+  gap: 5px;
+}
+
+.caixa-termos input {
+  appearance: none;
+  background: #fff;
+  border-radius: 3px;
+  transition: background-color 0.2s, border-color 0.2s;
+  transform: scale(1.03);
+
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  align-self: center;
+  box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
+}
+
+.caixa-termos input:hover {
+  transform: scale(1.1);
+  border: 1px solid;
+  border-color: aliceblue;
+  background-color: rgba(44, 52, 64, 0.4);
+}
+
+.caixa-termos input:checked {
+  background-color: #d6f1fb; /* Cor de fundo do checkbox marcado */
+  border-color: aliceblue; /* Cor da borda do checkbox marcado */
+
+  box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+}
+
+.caixa-termos .termo1 {
+  color: #d6f1fb;
+  font-size: 15px;
+  width: 25.6rem;
+}
+
+.caixa-termos .termo2 {
+  color: #d6f1fb;
+  font-size: 15px;
+  margin-bottom: 0.4rem;
+  width: 25.6rem;
+}
+
+.botao-registro {
+  margin-top: 3px;
+  background-color: aliceblue;
+  width: 7.7rem;
+  padding: 5px;
+  text-align: center;
+  color: #2c3440;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 8px;
+  margin-left: 10.5rem;
+  margin-right: 2rem;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  transform: scale(1.05);
+
+  box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.botao-registro:hover {
+  transform: scale(1.1);
+  background-color: rgba(44, 52, 64, 0.4);
+  color: aliceblue;
+}
+
+/* --------------------------FIM PÁGINA CADRASTO--------------------------------------- */

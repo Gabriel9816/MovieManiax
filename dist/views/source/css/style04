@@ -1,4 +1,37 @@
-@charset "UTF-8";
+/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+body {
+  background: url(/dist/views/source/image/filmes1.jpg) fixed;
+  background-size: cover; /* Isso faz com que a imagem cubra todo o corpo */
+  background-position: center; /* Isso centraliza a imagem no corpo */
+  height: 100vh; /* Isso define a altura do corpo como 100% da altura da janela de visualização */
+  overflow: hidden;
+  text-align: center;
+}
+
+body::before {
+  /* Coloca a cor por cima da imagem usando POSITION e Z-INDEX */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
+  background: #282e3ab3;
+  z-index: 1; /* Ajuste o índice z conforme necessário para a sobreposição correta */
+}
+
 @font-face {
   font-family: "Rock";
   src: url("rockwen.ttf") format("truetype");
