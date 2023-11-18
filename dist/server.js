@@ -52,8 +52,30 @@ app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/views/visualizacao.html");
 });
 
+//Esboco para rota perfil
+
+app.get("/perfil", (req, res) => {
+  const usuarioModel = new UsuarioModel();
+
+  usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
+    res.render("teste", {
+      users: users,
+    });
+  });
+});
+
+app.get("/filmes", (req, res) => {
+  console.log("Filmes");
+});
+
 app.get("/assistido", (req, res) => {
   res.sendFile(__dirname + "/views/assistido.html");
+});
+
+app.get("/sair", (req, res) => {
+  res.clearCookie("token");
+  res.clearCookie("id");
+  res.redirect("/");
 });
 
 //Rotas CRUD
