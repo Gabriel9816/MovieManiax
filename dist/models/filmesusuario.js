@@ -10,7 +10,8 @@ class FilmesUsuarioModel {
 
   async getAllFilmsByUserId(id) {
     try {
-      const results = await this.db.query(`SELECT * FROM ${this.tabela}
+      const results = await this.db
+        .query(`SELECT filme.duracao, filme.titulo, ${this.tabela}.data FROM ${this.tabela}
           INNER JOIN filme ON ${this.tabela}.filme = filme.id
           WHERE ${this.tabela}.usuario = ${id};`);
       return results;

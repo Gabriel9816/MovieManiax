@@ -6,16 +6,38 @@ const UsuarioModel = require("./models/usuario");
 
 const app = express();
 
+//Configs
+// --------------------------------------------------------------------
+
 app.use("/source", express.static(__dirname + "/views/src"));
 app.use("/controllers", express.static(__dirname + "/controllers"));
 app.use(express.json());
 app.use(cookieParser());
+
+app.set("views", __dirname + "/views");
+app.set("view engine", "pug");
+
+// ----------------------------------------------------------------------
 
 //Rotas paginas
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
+
+//Rota de teste para passar para o htlm dados do banco de dados
+
+// app.get("/teste", async (req, res) => {
+//   const usuarioModel = new UsuarioModel();
+
+//   usuarioModel.getAllUsers().then((users) => {
+//     res.render("teste", {
+//       users: users,
+//     });
+
+//     console.log(users);
+//   });
+// });
 
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/views/login.html");
@@ -35,6 +57,7 @@ app.get("/assistido", (req, res) => {
 });
 
 //Rotas CRUD
+// ------------------------------------------------------------------------
 
 app.post("/cadastro/add", async (req, res) => {
   const usuarioModel = new UsuarioModel();
@@ -66,11 +89,18 @@ app.post("/login/enter", async (req, res) => {
     secure: true,
   });
 
+  res.cookie("id", user.id, {
+    httpOnly: true,
+    secure: true,
+  });
+
   res.json({
     success: true,
     message: "Usuário logado com sucesso!",
   });
 });
+
+// ----------------------------------------------------------------------------
 
 app.listen(8080, () => {
   console.log("Servidor iniciado na porta 8080!");

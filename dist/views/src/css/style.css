@@ -4,6 +4,11 @@
   padding: 0px;
 }
 
+#lista {
+  color: red;
+  border: 2px solid black;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -23,26 +28,26 @@
   margin-left: 290px;
   padding: 20px, 50px, 20px, 20px;
   font-size: 20px;
-  border: 1px solid #D6F1FB;
+  border: 1px solid #d6f1fb;
   border-radius: 20px;
   background-image: url(../img/lupa.png);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 24px 24px;
   background-color: #5a5858;
-  color: #D6F1FB;
+  color: #d6f1fb;
 }
 .header .links a {
   margin-right: 5px;
-  border-right: 1px solid #D6F1FB;
+  border-right: 1px solid #d6f1fb;
   padding-right: 5px;
   font-family: "Rock";
   margin-left: 15px;
   text-decoration: none;
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 18px;
 }
-.header .links a:nth-last-child(-n+3) {
+.header .links a:nth-last-child(-n + 3) {
   margin-left: 0px;
 }
 .header .links a:last-child {
@@ -117,8 +122,8 @@
   border: 0.15rem solid #000000;
   border-radius: 0.3rem;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   box-sizing: border-box;
   width: 100%;
   height: 4.3rem;
@@ -142,7 +147,8 @@
   color: #fff;
   font-weight: 600;
 }
-.container-login .form-login .inputGroup button:hover, .container-login .form-login .inputGroup button:active {
+.container-login .form-login .inputGroup button:hover,
+.container-login .form-login .inputGroup button:active {
   background-color: #000000;
 }
 .container-login .form-login .focusWithText .helper {
@@ -172,12 +178,12 @@
   text-decoration: none;
 }
 .container-index .conteudo .login {
-  color: #D6F1FB;
+  color: #d6f1fb;
   margin-right: 3rem;
 }
 .container-index .conteudo .sing {
   color: black;
-  background-color: #D6F1FB;
+  background-color: #d6f1fb;
   border-radius: 0.5rem;
   padding: 0.6rem;
 }
@@ -186,7 +192,7 @@
   justify-content: center;
   flex-direction: column;
   padding-left: 3rem;
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 5rem;
   margin-top: 15rem;
 }
@@ -196,7 +202,7 @@
 }
 .body-visualizacao .titulo,
 .body-visualizacao .descricao {
-  color: #D6F1FB;
+  color: #d6f1fb;
   text-align: left;
 }
 .body-visualizacao .titulo {
@@ -255,7 +261,7 @@
 .container-cadastro #forme .formulario .input #senha {
   background-color: rgba(72, 71, 77, 0.6);
   font-size: 1.3rem;
-  color: #D6F1FB;
+  color: #d6f1fb;
   border-radius: 0.5rem;
   width: 80%;
   height: 3rem;
@@ -275,14 +281,19 @@
   border: 0.1rem solid black;
   margin-right: 0.7rem;
 }
-.container-cadastro #forme .formulario .checkbox-label .checkbox-input:checked + .custom-checkbox::before {
+.container-cadastro
+  #forme
+  .formulario
+  .checkbox-label
+  .checkbox-input:checked
+  + .custom-checkbox::before {
   content: "✓";
   font-size: 0.5rem;
   color: black;
   text-align: center;
 }
 .container-cadastro #forme .formulario .checkbox-label .termo {
-  color: #D6F1FB;
+  color: #d6f1fb;
   font-size: 0.8rem;
 }
 .container-cadastro #forme .formulario .botao {
@@ -293,7 +304,7 @@
   width: 60%;
   height: 3rem;
   text-align: center;
-  background-color: #D6F1FB;
+  background-color: #d6f1fb;
   border-radius: 0.6rem;
   font-weight: bold;
 }
@@ -303,7 +314,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-
 }
 .body-assistido .poster {
   width: 200px;
@@ -338,8 +348,6 @@
   top: -260px;
 }
 .body-assistido .container h3 {
-  font-family: "Rock";
-  color: #d6f1fb;
   width: 200px;
   position: relative;
   top: -5px;
@@ -347,8 +355,6 @@
   font-size: 2.5rem;
 }
 .body-assistido .container h1 {
-  font-family: "Rock";
-  color: #d6f1fb;
   width: 470px;
   position: relative;
   top: 50px;
@@ -364,4 +370,4 @@
   top: -260px;
   left: 400px;
   font-size: 2rem;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

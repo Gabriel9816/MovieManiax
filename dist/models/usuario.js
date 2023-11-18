@@ -39,6 +39,15 @@ class UsuarioModel {
     }
   }
 
+  async getAllUsers() {
+    try {
+      const results = await this.db.query(`SELECT * FROM ${this.tabela}`);
+      return results;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async add(nome, email, senha) {
     const senhaenc = md5(senha);
     try {
