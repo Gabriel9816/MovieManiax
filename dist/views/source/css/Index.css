@@ -67,6 +67,7 @@ body::before {
     margin-right: 5px;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.2rem;
     transition: 0.2s;
     text-shadow: 0px 1px 11px rgba(214, 241, 251, 0.38);
 
@@ -74,12 +75,13 @@ body::before {
   }
 
   .login-home:hover {
-    transform: scale(1.2);
+    transform: scale(1.06);
     color: #d6f1fb;
     text-shadow: -1px -1px 2px #2c3440;
   }
 
   .register-home {
+    font-size: 1.2rem;
     background-color: aliceblue;
     grid-column: 12;
     width: 6rem;
@@ -102,7 +104,7 @@ body::before {
   }
 
   .register-home:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
     background-color: rgba(44, 52, 64, 0.4);
     color: aliceblue;
   }

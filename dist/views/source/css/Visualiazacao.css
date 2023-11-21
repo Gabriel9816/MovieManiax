@@ -1,0 +1,404 @@
+/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+body {
+  background: url(/dist/views/source/image/mario-big.jpg) fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(2px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que o desfoque fique atrás do conteúdo da página */
+}
+
+.header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  grid-column: 5 / 1;
+}
+
+.logo {
+  width: 10rem;
+  margin-left: -27rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+.search-box {
+  grid-area: 1 / 9 / auto / 5;
+  justify-content: end;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  display: grid;
+  color: var(--secundary-text-color);
+}
+
+.search-txt {
+  text-align: start;
+  grid-column: 1;
+  grid-row: 1;
+  height: 2rem;
+  outline: none;
+  padding-left: 1rem;
+  transition: 0.5s;
+  width: 32rem;
+  font-size: 20px;
+  border: 1px solid #d6f1fb;
+  border-radius: 44px;
+  background-color: #5a5858;
+  color: #d6f1fb;
+  /* background-image: url(/dist/views/source/image/lupa.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 24px; */
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-box i {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.3rem;
+  margin-left: -2.1rem;
+  transition: 0.5s;
+  color: #d6f1fb;
+  opacity: 1;
+}
+
+.links {
+  display: grid;
+  grid-column: 9;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  align-self: center;
+  width: 100%;
+}
+
+.links a {
+  margin-right: 5px;
+  border-right: 1.5px solid #d6f1fb;
+  padding-right: 5px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #d6f1fb;
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.links a:nth-last-child(-n + 3) {
+  margin-left: 0px;
+}
+
+.links a:last-child {
+  border-right: none; /* Remova a borda direita */
+  padding-right: 0; /* Remova o espaço à direita */
+}
+
+.icones {
+  display: grid;
+  grid-column: 11;
+  align-self: center;
+  justify-content: end;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.icon1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.icon2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#icon {
+  font-size: 2.5rem;
+  color: rgb(214, 241, 251);
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.titulo {
+  grid-column: 1;
+  margin-top: 8rem;
+  margin-left: 4rem;
+  grid-row: 2;
+}
+
+.titulo h1 {
+  color: #d6f1fb;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: justify;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.descricao {
+  grid-column: 1;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  grid-row: 3;
+}
+
+.descricao h2 {
+  color: #d6f1fb;
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-align: justify;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(19, 24, 29, 0.6);
+  color: #d6f1fb;
+  display: grid;
+}
+
+footer .tendencias {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: start;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.carousel-container {
+  margin-left: 15px;
+  display: grid;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 1rem;
+}
+
+.filme {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid;
+  border-radius: 20px;
+  width: 48.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+#filme1 {
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/avatar-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+  opacity: 200px;
+}
+
+#filme1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/avatar-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+}
+
+#filme2 {
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/the-marvels-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+#filme2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/the-marvels-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+}
+
+#filme3 {
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/som-da-liberdade-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+#filme3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/som-da-liberdade-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+}
+
+.titulo-filme {
+  grid-column: 3 / 1;
+  display: flex;
+  gap: 10px;
+}
+
+.titulo-filme h3 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  top: 1rem;
+}
+
+.filme img {
+  border-radius: 10px;
+  width: 4rem;
+  margin-left: 0.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-right: 6px;
+}
+
+.info-filme {
+  grid-column: 4/1;
+  width: 48.5rem;
+  margin-bottom: 1px;
+}
+
+.info-filme p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+.ver-mais-btn {
+  position: relative;
+  grid-column: 3;
+  grid-row: 1;
+  border: none;
+  width: 8rem;
+  top: 2rem;
+  left: 6rem;
+  background-color: transparent;
+  border: 1px solid #d6f1fb;
+  color: #d6f1fb;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ver-mais-btn::before {
+  background-color: transparent;
+  border: #d6f1fb;
+  filter: blur(1.5px);
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ver-mais-btn:hover {
+  background-color: #d6f1fb;
+  /* border: 1px solid #000; */
+  color: #000;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #ddd;
+} /*# sourceMappingURL=style03.css.map */
+
+@media screen and (max-width: 1600px) {
+  .logo {
+    width: 10rem;
+    margin-left: -14rem;
+  }
+
+  .titulo {
+    grid-column: 1;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    grid-row: 2;
+  }
+
+  .descricao {
+    grid-column: 1;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    grid-row: 3;
+  }
+}
