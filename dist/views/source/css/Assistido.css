@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Rock";
+  src: url("rockwen.ttf") format("truetype");
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: url(/dist/views/source/image/fundo-besouro-azul.jpg) fixed;
+  background-size: contain;
+  overflow: hidden;
+  display: grid;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
+  background: rgba(40, 46, 58, 0.7);
+  z-index: 1; /* Ajuste o índice z conforme necessário para a sobreposição correta */
+}
+
+/* .body-assistido::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,1); O ultimo digito 0.7 altera a opacidade */
+/* background: #282e3ab3;
+  clip-path: polygon(0% 100%, 0% 60%, 100% 15%, 100% 100%);
+  z-index: 1; Ajuste o índice z conforme necessário para a sobreposição correta */
+
+.pagina-inteira {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 46, 58, 1);
+  clip-path: polygon(0% 100%, 0% 60%, 100% 15%, 100% 100%);
+  z-index: 1;
+}
+
+.container-tudo {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo {
+  padding-left: 50px;
+  max-width: 150px; /* Defina o tamanho máximo da imagem do logotipo */
+  vertical-align: mid;
+}
+
+.search-box {
+  display: grid;
+  justify-content: space-between;
+}
+
+.search-txt {
+  font-family: "Rock";
+  width: 400px;
+  margin-left: 290px;
+  padding: 20px, 50px, 20px, 20px;
+  font-size: 20px;
+  border: 1px solid #d6f1fb;
+  border-radius: 20px;
+  background-image: url(/css/lupa.png); /* Adicione a imagem do ícone de pesquisa */
+  background-repeat: no-repeat;
+  background-position: right center; /* Posicione o ícone à direita do campo de entrada de texto */
+  background-size: 24px 24px; /* Defina o tamanho do ícone */
+  background-color: #5a5858;
+  color: #d6f1fb;
+}
+
+.links a {
+  margin-right: 5px;
+  border-right: 1px solid #d6f1fb;
+  padding-right: 5px;
+  font-family: "Rock";
+  margin-left: 15px;
+  text-decoration: none;
+  color: #d6f1fb;
+  font-size: 18px;
+}
+
+.links a:nth-last-child(-n + 3) {
+  margin-left: 0px;
+}
+
+.links a:last-child {
+  border-right: none; /* Remova a borda direita */
+  padding-right: 0; /* Remova o espaço à direita */
+}
+
+.incon1 {
+  max-width: 40px;
+  margin-left: 15px;
+}
+
+.incon2 {
+  max-width: 40px;
+  margin-left: 5px;
+}
+
+.poster {
+  width: 200px;
+  position: relative;
+  top: -60px;
+  left: 160px;
+  border-radius: 10px;
+}
+
+.visto {
+  width: 50px;
+  position: relative;
+  top: 110px;
+  left: 850px;
+  color: #d6f1fb;
+}
+
+.container h1 {
+  font-family: "Rock";
+  color: #d6f1fb;
+  width: 470px;
+  position: relative;
+  top: 50px;
+  left: 400px;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+.container h3 {
+  font-family: "Rock";
+  color: #d6f1fb;
+  width: 200px;
+  position: relative;
+  top: -5px;
+  left: 910px;
+  font-size: 2.5rem;
+}
+
+.container h4 {
+  font-family: "Rock";
+  color: #d6f1fb;
+  width: 500px;
+  position: relative;
+  top: -260px;
+  left: 400px;
+  font-size: 2rem;
+}
+
+.container p {
+  font-family: "Rock";
+  color: #d6f1fb;
+  width: 500px;
+  position: relative;
+  top: -255px;
+  left: 400px;
+  font-size: 2rem;
+}
+
+.container {
+  width: 10px;
+}
+
+.avalicao {
+  font-family: "Rock";
+  color: #d6f1fb;
+  width: 150px;
+  position: relative;
+  top: -260px;
+  left: 400px;
+  font-size: 2rem;
+} /*# sourceMappingURL=style04.css.map */
