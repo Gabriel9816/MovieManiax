@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/mario-big.jpg) fixed;
+  background: url(/dist/views/source/image/fundos/mario-big.jpg) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;

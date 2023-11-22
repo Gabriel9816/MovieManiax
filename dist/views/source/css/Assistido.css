@@ -9,21 +9,22 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundo-besouro-azul.jpg) fixed;
-  background-size: contain;
-  overflow: hidden;
+  background: url(/dist/views/source/image/fundos/fundo-besouro-azul.jpg) fixed;
+  background-size: cover;
+  overflow: auto;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
-  background: rgba(40, 46, 58, 0.7);
+  background: rgba(40, 46, 58, 0.7) fixed;
   z-index: 1; /* Ajuste o índice z conforme necessário para a sobreposição correta */
 }
 
@@ -41,14 +42,18 @@ body::before {
 
 .pagina-inteira {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
-  background: rgba(40, 46, 58, 1);
-  clip-path: polygon(0% 100%, 0% 60%, 100% 15%, 100% 100%);
+  background-color: rgba(40, 46, 58, 1);
+  clip-path: polygon(0% 100%, 0% 47%, 100% 15%, 100% 100%);
   z-index: 1;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 
 .container-tudo {
@@ -57,8 +62,19 @@ body::before {
 }
 
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
   align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
 }
 
 .logo {
