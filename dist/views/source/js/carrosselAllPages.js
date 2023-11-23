@@ -1,18 +1,20 @@
-const imgs = document.querySelector("#img");
-const imgList = document.querySelectorAll("#img .filmes-conteudo");
+if (window.location.pathname === "/dist/views/popular.html") {
+  const imgs = document.querySelector("#img");
+  const imgList = document.querySelectorAll("#img .filmes-conteudo");
 
-let idx = 0;
+  let idx = 0;
 
-function carrossel() {
-  idx++;
+  function carrossel() {
+    idx++;
 
-  imgList.forEach((img, index) => {
-    const newIndex = (index + idx) % imgList.length;
-    img.style.order = newIndex;
-  });
+    imgList.forEach((img, index) => {
+      const newIndex = (index + idx) % imgList.length;
+      img.style.order = newIndex;
+    });
+  }
+
+  setInterval(carrossel, 3200);
 }
-
-setInterval(carrossel, 3200);
 
 if (window.location.pathname === "/dist/views/visualizacao.html") {
   // Seletor para a seção "Atividade da comunidade"
