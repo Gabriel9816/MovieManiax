@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/views/source/css/Assistido.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
     <title>Filme Assistido</title>
 </head>
 
@@ -43,14 +44,14 @@
         <div class="container">
             <div class="filme-assistido">
                 <div class="check-assistido">
-                    <img src="/dist/views/source/image/imagenspopular/imagem-catalogo-besouro-azul.jpg" alt="">
+                    <img class="filme-usuario-assistiu" src="/dist/views/source/image/imagenspopular/imagem-catalogo-besouro-azul.jpg" alt="">
                     <div class="titulo-filme">
                         <h1>Besouro Azul</h1>
                     </div>
-                    <div class="status-filme">
+                    <button class="status-filme">
                         <i class='bx bxs-badge-check'></i>
                         <h3>Já Assistido</h3>
-                    </div>
+                    </button>
 
                     <div class="dados-filme">
                         <p class="ano"> 2023 ‧</p>
@@ -67,10 +68,96 @@
                     </div>
                 </div>
             </div>
-            <!-- <img class="poster" src="/source/img/besouro.jpeg"> -->
-        </div>
 
-    </div>
+            <div class="comentarios">
+                <h1 class="titulo-comentario">Comentários</h1>
+                <ul class="comentarios-lista">
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="criar-comentario">
+                    <h1>Comentário</h1>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                    <button class="submit-imagem" type="submit"><i class="bx bx-image-add"></i> Anexar foto</button>
+                    <button class="send-comentario" type="submit">Postar</button>
+                </form>
+                </li>
+            </div>
+        </div>
 </body>
 
 </html>
