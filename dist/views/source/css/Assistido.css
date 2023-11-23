@@ -223,7 +223,10 @@ body::before {
   grid-row: 1;
   display: grid;
   align-items: center;
-  margin-left: 1rem;
+  border: 1px solid;
+  margin-left: -2rem;
+  border-radius: 10px;
+  width: 13.5rem;
 }
 
 .filme-assistido .status-filme h3 {
@@ -257,11 +260,13 @@ body::before {
   justify-content: center;
   align-self: center;
   margin-left: 1rem;
+  width: 20rem;
 }
 
 .check-assistido .sobre-filme {
-  grid-column: 4/2;
+  grid-column: 5/2;
   grid-row: 4;
+  width: 74rem;
 }
 
 .container h1 {
@@ -316,22 +321,59 @@ body::before {
   align-items: center;
   align-content: center;
   justify-content: center;
+  width: 21rem;
+  margin-bottom: 0.5rem;
 }
 
 .dados-filme .ano {
   grid-column: 1;
   width: 4rem;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .dados-filme .categoria {
   grid-column: 2;
   width: 10rem;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 .dados-filme .tempo-tela {
   grid-column: 3;
   width: 4.4rem;
   margin-left: 0;
+  border: 1px solid;
+  border-radius: 7px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Estilizando a barra de rolagem para navegadores WebKit */
+::-webkit-scrollbar {
+  background-color: rgba(40, 46, 58, 1);
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007af4; /* Cor da parte "arrastável" da barra de rolagem */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Estilizando a barra de rolagem para navegadores (Firefox) */
+::-moz-scrollbar {
+  width: 100%;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #d6f1fb;
+}
+
+::-moz-scrollbar-track {
+  background-color: transparent;
+  margin-right: 10rem;
 }

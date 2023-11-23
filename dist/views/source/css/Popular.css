@@ -201,11 +201,12 @@ body {
 
 /* Estilizando a barra de rolagem para navegadores WebKit */
 ::-webkit-scrollbar {
+  background-color: rgba(40, 46, 58, 1);
   width: 10px; /* Largura da barra de rolagem */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d6f1fb; /* Cor da parte "arrastável" da barra de rolagem */
+  background-color: #007af4; /* Cor da parte "arrastável" da barra de rolagem */
   border-radius: 3px;
 }
 
