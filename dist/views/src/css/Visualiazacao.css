@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundos/mario-big.jpg) fixed;
+  background: url(/source/img/mario-big.jpg) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -222,7 +222,7 @@ footer .tendencias {
 }
 
 #filme1 {
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/avatar-fundo.jpg);
+  background: url(/source/img/avatar-fundo.jpg);
   background-position: center;
   background-size: cover;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
@@ -236,7 +236,7 @@ footer .tendencias {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/avatar-fundo.jpg);
+  background: url(/source/img/avatar-fundo.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 30px;
@@ -245,7 +245,7 @@ footer .tendencias {
 }
 
 #filme2 {
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/the-marvels-fundo.jpg);
+  background: url(/source/img/the-marvels-fundo.jpg);
   background-position: center;
   background-size: cover;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));

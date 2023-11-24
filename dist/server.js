@@ -17,29 +17,12 @@ app.use(cookieParser());
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 
-app.get("/", (req, res) => {
-  res.render("teste");
-});
+// ----------------------------------------------------------------------
+//Rotas paginas
 // ----------------------------------------------------------------------
 
-//Rotas paginas
-
 app.get("/", (req, res) => {
-  res.render();
-});
-
-//Rota de teste para passar para o htlm dados do banco de dados
-
-app.get("/teste", async (req, res) => {
-  const usuarioModel = new UsuarioModel();
-
-  usuarioModel.getAllUsers().then((users) => {
-    res.render("teste", {
-      users: users,
-    });
-
-    console.log(users);
-  });
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/login", (req, res) => {
@@ -52,26 +35,28 @@ app.get("/cadastro", (req, res) => {
 
 app.get("/home", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.render();
+  res.sendFile(__dirname + "/views/visualizacao.html");
 });
 
-//Esboco para rota perfil
-
 app.get("/perfil", (req, res) => {
-  const usuarioModel = new UsuarioModel();
+  //const usuarioModel = new UsuarioModel();
 
-  usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
-    res.render("teste", {
-      users: users,
-    });
-  });
+  // usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
+  //   res.render("teste", {
+  //     users: users,
+  //   });
+  // });
+
+  autentication(req, res, req.cookies.token);
+  res.sendFile(__dirname + "/views/perfil.html");
 });
 
 app.get("/filmes", (req, res) => {
-  console.log("Filmes");
+  autentication(req, res, req.cookies.token);
+  res.sendFile(__dirname + "/views/popular.html");
 });
 
-app.get("/assistido", (req, res) => {
+app.get("/filmes/detalhes", (req, res) => {
   res.sendFile(__dirname + "/views/assistido.html");
 });
 

@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundos/wakanda-cartoon.jpg) fixed;
+  background: url(/source/img/wakanda-cartoon.jpg) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
