@@ -49,14 +49,23 @@
             <li>
               <div class="tempo-filmes">
                 <p class="titulo-dados">Tempo vendo filmes</p>
+                <div id="info-filme" class="meses-filmes">
+                  <p id="texto" class="total-meses">18</p>
+                  <p id="texto" class="titulo-meses-filmes">MESES</p>
+                </div>
 
-                <p class="meses-filmes">MESES</p>
-                <p class="dias-filmes">DIAS</p>
-                <p class="horas-filmes">HORAS</p>
+                <div id="info-filme" class="dias-filmes">
+                  <p id="texto" class="total-dias">3</p>
+                  <p id="texto" class="titulo-dias-filmes">DIAS</p>
+                </div>
 
-                <p id="total-meses">18</p>
-                <p id="total-dias">3</p>
-                <p id="total-horas">17</p>
+                <div id="info-filme" class="horas-filme">
+                  <p id="texto" class="total-horas">17</p>
+                  <p id="texto" class="titulo-horas-filmes">HORAS</p>
+                </div>
+
+
+
               </div>
             </li>
             <li>
@@ -69,6 +78,116 @@
           </ul>
         </div>
       </div>
+
+      <div class="series-recentes">
+        <h1>Filmes recentemente assistidas</h1>
+        <button class="seta-esquerda" onclick="handleLeftCLick()"> <i class='bx bx-chevron-left'></i> </button>
+        <div class="filmes-assistidos">
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/jogos-mortais-x.webp" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/avatar-caminho-agua.webp" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/aranha.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/the-marvels.jpg" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+          <div class="filme">
+            <a href="">
+              <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+            </a>
+          </div>
+        </div>
+        <button class="seta-direita" onclick="handleRightCLick()"> <i class='bx bx-chevron-right'></i> </button>
+      </div>
+
+      <script>
+        const slider = document.querySelector(".filmes-assistidos");
+
+        const handleLeftCLick = (e) => {
+          console.log(slider);
+          console.log(slider.offsetWidth);
+          slider.scrollLeft -= slider.offsetWidth;
+        }
+        const handleRightCLick = (e) => {
+          console.log(slider);
+          console.log(slider.offsetWidth);
+          slider.scrollLeft += slider.offsetWidth;
+        }
+      </script>
 </body>
 
 </html>

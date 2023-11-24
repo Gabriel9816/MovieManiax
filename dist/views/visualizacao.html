@@ -84,7 +84,7 @@
     }
 </style>
 
-<body class="body-visualizacao">
+<body>
     <header class="header">
         <div class="img">
             <img class="logo" src="/dist/views/source/image/pagina/MovieManiax logo.png" alt="logo">
@@ -174,7 +174,27 @@
         </div> -->
 
     </footer>
-    <script src="/dist/views/source/js/carrosselAllPages.js"></script>
+
+    <script>
+        const filmes = document.querySelectorAll(".carousel");
+
+        console.log(filmes);
+
+        let visualizaIdx = 0;
+
+        function carrosselVisualiza() {
+            visualizaIdx++;
+
+            const filmesList = document.querySelectorAll(".carousel .filme");
+
+            filmesList.forEach((div, index) => {
+                const newIndex = (index + visualizaIdx) % filmesList.length;
+                div.style.order = newIndex;
+            });
+        }
+
+        setInterval(carrosselVisualiza, 3500);
+    </script>
 </body>
 
 </html>

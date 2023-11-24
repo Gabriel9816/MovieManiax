@@ -10,33 +10,35 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="img">
+            <img class="logo" src="/dist/views/source/image/pagina/MovieManiax logo.png" alt="logo">
+        </div>
+        <div class="search-box">
+            <input class="search-txt" type="text">
+            <i class="bx bx-search"></i>
+        </div>
+        <div class="links">
+            <a class="l01" href="/">Filmes</a>
+            <a class="l02" href="/">Séries</a>
+            <a class="l03" href="/">Animes</a>
+            <a href="/">Doramas</a>
+        </div>
+        <div class="icones">
+            <a class="icon1" href="/dist/views/perfil.html">
+                <i id="icon" class='bx bxs-user-circle'></i>
+            </a>
+            <a class="icon2" href="/dist/views/home.html">
+                <i id="icon" class='bx bx-log-out'></i>
+            </a>
+        </div>
+    </header>
 
-    <body class="body-visualizacao">
-        <header class="header">
-            <div class="img">
-                <img class="logo" src="/dist/views/source/image/pagina/MovieManiax logo.png" alt="logo">
-            </div>
-            <div class="search-box">
-                <input class="search-txt" type="text">
-                <i class="bx bx-search"></i>
-            </div>
-            <div class="links">
-                <a class="l01" href="/">Filmes</a>
-                <a class="l02" href="/">Séries</a>
-                <a class="l03" href="/">Animes</a>
-                <a href="/">Doramas</a>
-            </div>
-            <div class="icones">
-                <a class="icon1" href="/dist/views/perfil.html">
-                    <i id="icon" class='bx bxs-user-circle'></i>
-                </a>
-                <a class="icon2" href="/dist/views/home.html">
-                    <i id="icon" class='bx bx-log-out'></i>
-                </a>
-            </div>
-        </header>
+    <div class="container">
+
         <h1 class="titulo">Popular</h1>
         <div class="filmes-popular" id="img">
+
             <div class="filmes-conteudo">
                 <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
             </div>
@@ -68,7 +70,29 @@
             <div class="filmes-conteudo">
                 <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
             </div>
+
+            <div class="filmes-conteudo">
+                <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+            </div>
+
+            <div class="filmes-conteudo">
+                <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+            </div>
+
+            <div class="filmes-conteudo">
+                <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+            </div>
+
+            <div class="filmes-conteudo" id="ultimo-filme">
+                <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+            </div>
         </div>
+
+        <div class="passa-slide">
+            <button class="seta-esquerda" onclick="handleLeftCLick()"> <i id="seta" class='bx bx-chevron-left'></i> </button>
+            <button class="seta-direita" onclick="handleRightCLick()"> <i id="seta" class='bx bx-chevron-right'></i> </button>
+        </div>
+
         <h1 class="titulo">Atividade da comunidade</h1>
         <div class="comunidade">
             <div class="filmes-conteudo">
@@ -85,8 +109,22 @@
             </div>
 
         </div>
+    </div>
 
-        <script src="/dist/views/source/js/carrosselAllPages.js"></script>
-    </body>
+    <script>
+        const slider = document.querySelector(".filmes-popular");
+
+        const handleLeftCLick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft -= slider.offsetWidth;
+        }
+        const handleRightCLick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft += slider.offsetWidth;
+        }
+    </script>
+</body>
 
 </html>

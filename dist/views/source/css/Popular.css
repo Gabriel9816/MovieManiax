@@ -15,6 +15,7 @@ body {
   background-size: cover;
   overflow-x: hidden;
   display: grid;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -130,33 +131,84 @@ body {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
 }
 
-.titulo {
+.container {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 4rem;
+}
+
+.container .passa-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -25rem;
+  margin-top: -1rem;
+}
+
+.container .seta-esquerda {
+  background: transparent;
+  border: none;
   color: #d6f1fb;
-  margin-top: 1rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.container .seta-direita {
+  background: transparent;
+  border: none;
+  color: #d6f1fb;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.container button #seta {
+  font-size: 4rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+  transition: 0.3s;
+}
+
+.container button #seta:hover {
+  transform: scale(1.1);
+  color: #007af4;
+}
+
+.container .titulo {
+  color: #d6f1fb;
   font-weight: 100;
-  margin-bottom: 1rem;
   margin-left: -24rem;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
   cursor: context-menu;
   overflow: hidden;
 }
 
-.filmes-popular {
-  display: grid;
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(0);
-  justify-content: center;
-  grid-template-columns: repeat(8, 15rem);
+.container .filmes-popular {
+  position: relative;
+  display: flex;
+  gap: 2.4rem;
+  margin-left: -3.2rem;
+  margin-right: 9rem;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 }
 
+.filmes-popular::-webkit-scrollbar {
+  display: none;
+}
+
+.filmes-popular .filmes-conteudo {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.filmes-popular #ultimo-filme {
+  margin-right: 17rem;
+}
 .filmes-popular img {
-  object-fit: cover;
   width: 12.5rem;
-  height: 18.5rem;
-  margin-left: -9rem;
+  height: 100%;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
   transition: 0.2s;
-  transform: scale(1);
 }
 
 .filmes-popular img:hover {
@@ -165,6 +217,7 @@ body {
 
 .comunidade {
   display: grid;
+  margin-top: 1rem;
   transition: transform 0.5s ease-in-out;
   transform: translateX(0);
   justify-content: center;
@@ -174,7 +227,7 @@ body {
 .comunidade img {
   object-fit: cover;
   width: 12.5rem;
-  height: 18.5rem;
+  height: 100%;
   margin-left: 19rem;
   margin-bottom: 1rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
