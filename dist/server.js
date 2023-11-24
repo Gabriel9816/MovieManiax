@@ -27,17 +27,17 @@ app.get("/", (req, res) => {
 
 //Rota de teste para passar para o htlm dados do banco de dados
 
-// app.get("/teste", async (req, res) => {
-//   const usuarioModel = new UsuarioModel();
+app.get("/teste", async (req, res) => {
+  const usuarioModel = new UsuarioModel();
 
-//   usuarioModel.getAllUsers().then((users) => {
-//     res.render("teste", {
-//       users: users,
-//     });
+  usuarioModel.getAllUsers().then((users) => {
+    res.render("teste", {
+      users: users,
+    });
 
-//     console.log(users);
-//   });
-// });
+    console.log(users);
+  });
+});
 
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/views/login.html");

@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  color: #d6f1fb;
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+body {
+  background: url(/dist/views/source/image/fundos/besouro-azul-salto.jpg) fixed;
+  background-size: cover;
+  display: grid;
+  overflow-x: hidden;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade  */
+  background: rgba(40, 46, 58, 0.7) fixed;
+  z-index: 1;
+}
+
+.pagina-inteira {
+  content: "";
+  position: absolute;
+  margin-top: -35rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 345vh;
+  background-color: rgba(40, 46, 58, 1);
+  clip-path: polygon(0% 100%, 0% 37%, 100% 29%, 100% 100%);
+  z-index: 1;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pagina-inteira img {
+  position: relative;
+  z-index: 1;
+  top: 76rem;
+  left: 30rem;
+  width: 63rem;
+  opacity: 0.6;
+  rotate: 2deg;
+}
+
+.container-tudo {
+  grid-column: 2;
+  z-index: 1;
+}
+
+.pagina-inteira::before {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  grid-column: 4/1;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: -0.5rem;
+  left: -0.5rem;
+  height: 3.5rem;
+  width: 98.5%;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.img {
+  grid-column: 5 / 1;
+}
+
+.logo {
+  width: 10rem;
+  margin-left: 7rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+.search-box {
+  grid-area: 1 / 9 / auto / 5;
+  justify-content: end;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  display: grid;
+  color: var(--secundary-text-color);
+}
+
+.search-txt {
+  text-align: start;
+  grid-column: 1;
+  grid-row: 1;
+  height: 2rem;
+  outline: none;
+  padding-left: 1rem;
+  transition: 0.5s;
+  width: 32rem;
+  font-size: 20px;
+  border: 1px solid #d6f1fb;
+  border-radius: 44px;
+  background-color: #5a5858;
+  color: #d6f1fb;
+  /* background-image: url(/dist/views/source/image/lupa.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 24px; */
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-box i {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.3rem;
+  margin-left: -2.1rem;
+  transition: 0.5s;
+  color: #d6f1fb;
+  opacity: 1;
+}
+
+.links {
+  display: grid;
+  grid-column: 9;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  align-self: center;
+  width: 100%;
+}
+
+.links a {
+  margin-right: 5px;
+  border-right: 1.5px solid #d6f1fb;
+  padding-right: 5px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #d6f1fb;
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.links a:nth-last-child(-n + 3) {
+  margin-left: 0px;
+}
+
+.links a:last-child {
+  border-right: none; /* Remova a borda direita */
+  padding-right: 0; /* Remova o espaço à direita */
+}
+
+.icones {
+  display: grid;
+  grid-column: 11;
+  align-self: center;
+  justify-content: end;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.icon1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.icon2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#icon {
+  font-size: 2.5rem;
+  color: rgb(214, 241, 251);
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 18rem;
+}
+
+.container .filme-usuario-assistiu {
+  grid-row: span 5;
+  width: 19rem;
+  height: 27rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+.container .filme-assistido {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 28rem;
+}
+
+.container .filme-assistido .status-filme {
+  color: #d6f1fb;
+  margin-top: 0.1rem;
+  grid-column: 3;
+  grid-row: 1;
+  display: grid;
+  align-items: center;
+  border: 1px solid;
+  margin-left: -2rem;
+  border-radius: 10px;
+  width: 13.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container .filme-assistido .status-filme h3 {
+  color: #d6f1fb;
+}
+
+.container .filme-assistido .status-filme:hover {
+  background-color: #d6f1fb;
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container .filme-assistido .status-filme:hover h3 {
+  color: #282e3a;
+  text-shadow: none;
+}
+
+.container .filme-assistido .status-filme:hover i {
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.64);
+}
+
+.filme-assistido .status-filme h3 {
+  grid-column: 2;
+  width: 47rem;
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+  font-weight: 100;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.status-filme i {
+  font-size: 4rem;
+  text-shadow: 1px 1px 8px rgba(255, 205, 0, 0.4);
+  color: #ffc900;
+  transition: 0.3s;
+}
+
+.container .check-assistido {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+.check-assistido .titulo-filme {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 1rem;
+  width: 20rem;
+}
+
+.check-assistido .sobre-filme {
+  grid-column: 5/2;
+  grid-row: 4;
+  width: 74rem;
+}
+
+.container .titulo-filme h1 {
+  position: relative;
+  width: 20rem;
+  font-size: 3rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.container .titulo-filme h3 {
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.container .sobre-filme h4 {
+  position: relative;
+  width: 72rem;
+  height: 14rem;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-left: 1.2rem;
+  letter-spacing: -1px;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.container .titulo-filme p {
+  grid-column: 2;
+  grid-row: 2;
+  position: relative;
+  font-size: 1.2rem;
+  width: 18rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.check-assistido .avaliacao {
+  position: relative;
+  width: 13rem;
+  height: 2.5rem;
+  grid-column: 2;
+  grid-row: 3;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0));
+}
+
+.dados-filme {
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 21rem;
+  margin-bottom: 0.5rem;
+}
+
+.dados-filme .ano {
+  grid-column: 1;
+  width: 4rem;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.dados-filme .categoria {
+  grid-column: 2;
+  width: 10rem;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.dados-filme .tempo-tela {
+  grid-column: 3;
+  width: 4.4rem;
+  margin-left: 0;
+  border: 1px solid;
+  border-radius: 7px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Estilizando a barra de rolagem para navegadores WebKit */
+::-webkit-scrollbar {
+  background-color: rgba(40, 46, 58, 1);
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007af4; /* Cor da parte "arrastável" da barra de rolagem */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Estilizando a barra de rolagem para navegadores (Firefox) */
+::-moz-scrollbar {
+  width: 100%;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #d6f1fb;
+}
+
+::-moz-scrollbar-track {
+  background-color: transparent;
+  margin-right: 10rem;
+}
+
+.container .comentarios {
+  display: grid;
+  grid-column: 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0fr 0.3fr;
+}
+
+.comentarios .user-comentario {
+  margin-bottom: 2rem;
+  padding: 3px;
+  display: grid;
+  border-radius: 10px;
+  background-color: #8ea1ac;
+  width: 38rem;
+  height: 23rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.user-comentario .icone-user {
+  display: grid;
+  height: 2rem;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+
+.icone-user .nome-user {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  width: 16rem;
+  height: 4rem;
+}
+
+.icone-user a {
+  text-decoration: none;
+  grid-column: 1;
+  grid-row: span 2;
+  width: 0;
+}
+
+.icone-user #icon {
+  font-size: 3.9rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.icone-user h1 {
+  grid-column: 2;
+  width: 0;
+  margin-right: 8rem;
+  margin-bottom: -1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.icone-user p {
+  width: 0;
+  margin-left: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.comentario-user {
+  grid-column: 4/1;
+  grid-row: 2;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.comentario-user h4 {
+  text-align: left;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+.titulo-comentario {
+  text-align: center;
+  grid-column: 4/1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.user-comentario .imagem-filme-comentario {
+  grid-column: 3/1;
+  grid-row: 3;
+}
+
+.imagem-filme-comentario img {
+  width: 19rem;
+  margin-left: 11rem;
+  border-radius: 10px;
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 1));
+}
+
+.criar-comentario {
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+
+  display: grid;
+  background-color: #8ea1ac;
+  border-radius: 10px;
+  position: absolute;
+  top: 77.6rem;
+  left: 77rem;
+  height: 26rem;
+  width: 26rem;
+  gap: 1rem;
+  padding: 2rem;
+  grid-template-rows: 0.1fr 0.7fr 0.2fr;
+}
+
+.criar-comentario h1 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.criar-comentario textarea {
+  padding-left: 0.4rem;
+  padding-top: 0.4rem;
+  color: #d6f1fb;
+  background-color: #55626e;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  resize: none; /* A minha ideia era usar o javascript para deixar essa caixa dinâmica, mas acho que é muito empenho resize: vertical; */
+  height: 14rem;
+  transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+}
+
+.criar-comentario textarea:hover,
+textarea:focus {
+  background-color: #d6f1fb;
+  color: #55626e;
+}
+
+.criar-comentario .submit-imagem {
+  height: 3.5rem;
+  outline: none;
+  border-radius: 9px;
+  text-align: center;
+  border: none;
+  font-size: 2.5rem;
+  width: 26rem;
+  background-color: #2c3440;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+}
+
+.criar-comentario .submit-imagem i {
+  background-color: transparent;
+  color: #d6f1fb;
+}
+
+.criar-comentario .submit-imagem:hover {
+  background-color: #d6f1fb;
+  color: #2c3440;
+}
+
+.criar-comentario .submit-imagem:hover i {
+  color: #2c3440;
+}
+
+.criar-comentario .send-comentario {
+  color: #2c3440;
+  background-color: #d6f1fb;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-left: 8.5rem;
+  width: 9rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.criar-comentario .send-comentario:hover {
+  background-color: #2c3440;
+  color: #d6f1fb;
+}
