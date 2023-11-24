@@ -17,12 +17,15 @@ app.use(cookieParser());
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 
+app.get("/", (req, res) => {
+  res.render("teste");
+});
 // ----------------------------------------------------------------------
 
 //Rotas paginas
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  res.render();
 });
 
 //Rota de teste para passar para o htlm dados do banco de dados
