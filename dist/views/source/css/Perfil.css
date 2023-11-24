@@ -180,6 +180,10 @@ body::before {
   grid-row: 1;
 }
 
+.perfil-user .dados-perfil {
+  margin-top: -1rem;
+}
+
 .dados-perfil .user {
   position: fixed;
   top: 11rem;
@@ -306,7 +310,7 @@ body::before {
   cursor: pointer;
   border: 0;
   top: 32rem;
-  left: -0.5rem;
+  left: -0.9rem;
 }
 
 .seta-esquerda i {
@@ -321,7 +325,18 @@ body::before {
   cursor: pointer;
   border: 0;
   top: 32rem;
-  left: 93rem;
+  left: 92.5rem;
+}
+
+.series-recentes button #seta {
+  font-size: 4rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+  transition: 0.3s;
+}
+
+.series-recentes button #seta:hover {
+  transform: scale(1.1);
+  color: #007af4;
 }
 
 .seta-direita i {
@@ -344,6 +359,13 @@ body::before {
 }
 
 .filmes-assistidos .filme {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.filmes-assistidos #ultimo-filme {
+  margin-right: 0rem;
 }
 
 .filmes-assistidos img {
