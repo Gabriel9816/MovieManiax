@@ -52,7 +52,7 @@ app.get("/cadastro", (req, res) => {
 
 app.get("/home", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.sendFile(__dirname + "/views/visualizacao.html");
+  res.render();
 });
 
 //Esboco para rota perfil

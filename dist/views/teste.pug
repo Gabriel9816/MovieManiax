@@ -1,12 +1,72 @@
 html 
     head 
-        title = Titulo vamo 
 
     body 
-        div.container-index 
-            main.conteudo 
-                a(href="/login").login Login 
-                a(href="/cadastro").sing Sign Up
-            div.descricao
-                h2 Acompanhe as Séries 
-                h2 e Filmes que você adora
+        header.header 
+            div.img
+                img(src="/source/img/MovieManiax logo.png" alt="logo").logo
+            div.search-box
+                input(type="text").search-text
+            div.links 
+                a(href="/filmes").links
+            div.icones 
+                a(href="/perfil")  
+                    img(src="/source/img/6073873.png" alt="icone1").incon1
+                a(href="/sair") 
+                    img.incon2(src="/source/img/Sem Título-1.png" alt="icone2")
+        .titulo 
+            h1 Você deu seu primeiro <br> passo para um mundo maior...
+            a(href="/assistido") Besouro Azul 
+
+        .descricao 
+            h2  O MovieManiax permite que você acompanhe todos os
+                <br>filmes/séries que viu, verificar as reações a um
+                <br>filme sobre o qual acabou de ouvir falar. Somos uma
+                <br>comunidade global de fãs de cinema que vivem para
+                <br>discutir, avaliar e classificar o que assistimos.
+        footer 
+            .carousel-container 
+                .carousel 
+                    .filme 
+                        img(src="/poster-avatar-2-bra_96b8c77c.jpeg" alt="Imagem 1")
+                        .filme-info 
+                            h3  Avatar: O Caminho da Agua 
+                            p   Após formar uma família, Jake Sully e Ney'tiri fazem de tudo para ficarem juntos. No entanto, eles devem sair de casa e explorar as regiões de Pandora quando uma antiga ameaça ressurge, e Jake deve travar uma guerra difícil contra os humanos.
+                            button.ver-mais-btn Ver Mais 
+                    .filme 
+                        img(src="/themarvels.jpeg" alt="Imagem 2")
+                        .filme-info 
+                            h3  The Marvels
+                            p   Carol Danvers aka Capitã Marvel, tomou de volta sua identidade dos Kree tiranos e se vingou da Inteligência Suprema, mas consequências não imaginadas fazem Carol ter que carregar o peso de um universo desestabilizado.
+                            button.ver-mais-btn 
+                    .filme 
+                        img(src="/download.jpeg" alt="Imagem 3")
+                        .filme-info 
+                            h3  Som da Liberdade
+                            p   Um ex-agente federal embarca em uma perigosa missão para salvar uma menina dos cruéis traficantes de crianças. Com o tempo se esgotando, ele viaja pelas profundezas da selva colombiana, colocando sua vida em risco para libertá-la.
+                            button.ver-mais-btn 
+                    .filme 
+                        img(src="/batem.jpg" alt="Imagem 4")
+                        .filme-info 
+                            h3  Batem a Porta
+                            p   Durante as férias em uma cabana remota, uma jovem e seus pais são feitos reféns por quatro estranhos armados que exigem que a família faça uma escolha impensável para evitar o apocalipse.
+                            button.ver-mais-btn 
+                    .filme 
+                        img(src="/jojo.jpeg" alt="Imagem 5")
+                        .filme-info 
+                            h3  Jojo Rabbit
+                            p   Durante a segunda guerra mundial, Jojo, um menino de dez anos se define como nazista convicto e espera cumprir com seus treinamentos no exército para auxiliar a vitória alemã no combate armado.
+                            button.ver-mais-btn 
+                    .filme 
+                        img(src="/o-projeto-adam-1.jpg" alt="Imagem 6")
+                        .filme-info 
+                            h3  Projeto Adam
+                            p   Um viajante do tempo volta ao ano de 2022 por acidente e acaba se encontrando com seu eu mais novo. Juntos, e sendo caçados por forças do futuro, os dois embarcam em uma missão para consertar a linha temporal e salvar seus entes queridos.
+                            button.ver-mais-btn 
+
+                    //.filme 
+                        img(src="" alt="")
+                        .filme-info 
+                            h3 
+                            p 
+                            button.ver-mais-btn 
