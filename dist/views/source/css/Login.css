@@ -56,13 +56,13 @@ body::before {
   background-color: rgba(19, 24, 29, 0.8);
   border-radius: 10px;
   padding: 1.2rem;
+
   display: grid;
-  margin-top: 13rem;
-  margin-bottom: 10rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  position: relative;
+  position: fixed;
+  top: 6rem;
+  left: 32rem;
   z-index: 1;
+
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
   -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
   -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
