@@ -148,11 +148,18 @@
                     </li>
                 </ul>
 
-                <form class="criar-comentario">
+                <form class="criar-comentario" action="" method="post" enctype="multipart/form-data">
                     <h1>Comentário</h1>
                     <textarea id="comentario" name="comentario" rows="4" required></textarea>
 
-                    <button class="submit-imagem" type="submit"><i class="bx bx-image-add"></i> Anexar foto</button>
+                    <label class="submit-imagem" for="imagem">
+                        <i class="bx bx-image-add"></i> Anexar foto
+                    </label>
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
+
+                    <!-- <input type="file" name="imagem" id="imagem" accept="image/*">
+
+                    <button class="submit-imagem" type="submit"><i class="bx bx-image-add"></i> Anexar foto</button> -->
                     <button class="send-comentario" type="submit">Postar</button>
                 </form>
                 </li>
