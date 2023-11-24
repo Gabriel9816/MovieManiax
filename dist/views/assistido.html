@@ -1,56 +1,163 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/source/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha384-B4V4f0IeUq8q3qZb3bL5ySs6e/1NDmwJDD+qniV8NEFMYXJa0kwiSlT5BFs0nby6" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dist/views/source/css/Assistido.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+    <title>Filme Assistido</title>
 </head>
 
 <body class="body-assistido">
-    <header class="header">
-        <div class="img">
-            <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
-        </div>
+    <div class="pagina-inteira">
 
-        <div class="search-box">
-            <input class="search-txt" type="text">
-        </div>
-
-        <div class="links">
-            <a class="l01" href="/">Filmes</a>
-            <a class="l02" href="/">Séries</a>
-            <a class="l03" href="/">Animes</a>
-            <a href="/">Doramas</a>
-        </div>
-
-        <div class="icones">
-            <a href="/">
-                <img class="incon1" src="/source/img/6073873.png">
-            </a>
-
-            <a href="/">
-                <img class="incon2" src="/source/img/Sem Título-1.png">
-            </a>
-        </div>
-    </header>
-
-    <div class="container">
-        <img class="visto" src="/source/img/circle-check-regular.svg">
-        <h1>Besouro Azul</h1>
-        <h3>Já Assistido</h3>
-        <!-- <img class="poster" src="/source/img/besouro.jpeg"> -->
-        <p>2023 ‧ Ação/Aventura ‧ 2h 7m</p>
-        <!-- <img class="avalicao" src="/Sem Título-12.png"> -->
-        <h4>O adolescente Jaime Reyes ganha superpoderes
-            quando um misterioso escaravelho se prende à
-            sua coluna e lhe fornece uma poderosa armadura
-            alienígena azul.</h3>
+        <img src="/dist/views/source/image/fundos/Spoiler Alert.png" alt="">
     </div>
+
+    <div class="container-tudo">
+        <header class="header">
+            <div class="img">
+                <img class="logo" src="/dist/views/source/image/pagina/MovieManiax logo.png" alt="logo">
+            </div>
+            <div class="search-box">
+                <input class="search-txt" type="text">
+                <i class="bx bx-search"></i>
+            </div>
+            <div class="links">
+                <a class="l01" href="/">Filmes</a>
+                <a class="l02" href="/">Séries</a>
+                <a class="l03" href="/">Animes</a>
+                <a href="/">Doramas</a>
+            </div>
+            <div class="icones">
+                <a class="icon1" href="/">
+                    <i id="icon" class='bx bxs-user-circle'></i>
+                </a>
+                <a class="icon2" href="/dist/views/index.html">
+                    <i id="icon" class='bx bx-log-out'></i>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="filme-assistido">
+                <div class="check-assistido">
+                    <img class="filme-usuario-assistiu" src="/dist/views/source/image/imagenspopular/imagem-catalogo-besouro-azul.jpg" alt="">
+                    <div class="titulo-filme">
+                        <h1>Besouro Azul</h1>
+                    </div>
+                    <button class="status-filme">
+                        <i class='bx bxs-badge-check'></i>
+                        <h3>Já Assistido</h3>
+                    </button>
+
+                    <div class="dados-filme">
+                        <p class="ano"> 2023 ‧</p>
+                        <p class="categoria"> Ação/Aventura ‧</p>
+                        <p class="tempo-tela"> 2h 7m </p>
+                    </div>
+
+                    <img class="avaliacao" src="/dist/views/source/image/pagina/stars.png" alt="">
+                    <div class="sobre-filme">
+                        <h4>O adolescente Jaime Reyes ganha superpoderes
+                            quando um misterioso escaravelho se prende à
+                            sua coluna e lhe fornece uma poderosa armadura
+                            alienígena azul.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comentarios">
+                <h1 class="titulo-comentario">Comentários</h1>
+                <ul class="comentarios-lista">
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+
+                    <li class="user-comentario">
+                        <div class="icone-user">
+                            <div class="nome-user">
+                                <a class="icon1" href="/"> <i id="icon" class='bx bxs-user-circle'></i></a>
+                                <h1>iTOSHIBA</h1>
+                                <div class="data-comentario">
+                                    <p id="data-comentario">26/08/2023</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comentario-user">
+                            <h4>O Besouro Azul se estabeleceu como um novo favorito entre os
+                                heróis da DC em minha opinião. Este filme atendeu às minhas
+                                expectativas, embora elas não fossem excessivamente elevadas.
+                                Antecipei que poderia apresentar alguns dos tropos comuns
+                                associados aos filmes de super-heróis, mas surpreendentemente,
+                                esses elementos ainda mantêm seu apelo, especialmente neste contexto.</h4>
+                        </div>
+
+                        <div class="imagem-filme-comentario">
+                            <img src="/dist/views/source/image/fundos/fundo-besouro-azul.jpg" alt="">
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="criar-comentario">
+                    <h1>Comentário</h1>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                    <button class="submit-imagem" type="submit"><i class="bx bx-image-add"></i> Anexar foto</button>
+                    <button class="send-comentario" type="submit">Postar</button>
+                </form>
+                </li>
+            </div>
+        </div>
 </body>
 
 </html>

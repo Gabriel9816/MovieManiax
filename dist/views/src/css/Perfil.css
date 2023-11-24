@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+body {
+  background: url(/dist/views/source/image/fundos/wakanda-cartoon.jpg) fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #282e3ab3;
+  z-index: -1; /* Garante que o desfoque fique atrás do conteúdo da página */
+}
+
+.pagina-inteira {
+  content: "";
+  position: absolute;
+  margin-top: 16rem;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 345vh;
+  background-color: rgba(40, 46, 58, 1);
+  z-index: 1;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  display: grid;
+  width: 213vh;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.img {
+  grid-column: 5 / 1;
+}
+
+.logo {
+  width: 10rem;
+  margin-left: 6rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+.search-box {
+  grid-area: 1 / 9 / auto / 5;
+  justify-content: end;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  display: grid;
+  color: var(--secundary-text-color);
+}
+
+.search-txt {
+  text-align: start;
+  grid-column: 1;
+  grid-row: 1;
+  height: 2rem;
+  outline: none;
+  padding-left: 1rem;
+  transition: 0.5s;
+  width: 32rem;
+  font-size: 20px;
+  border: 1px solid #d6f1fb;
+  border-radius: 44px;
+  background-color: #5a5858;
+  color: #d6f1fb;
+  /* background-image: url(/dist/views/source/image/lupa.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 24px 24px; */
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-box i {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.3rem;
+  margin-left: -2.1rem;
+  transition: 0.5s;
+  color: #d6f1fb;
+  opacity: 1;
+}
+
+.links {
+  display: grid;
+  grid-column: 9;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  align-self: center;
+  width: 100%;
+}
+
+.links a {
+  margin-right: 5px;
+  border-right: 1.5px solid #d6f1fb;
+  padding-right: 5px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #d6f1fb;
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.links a:nth-last-child(-n + 3) {
+  margin-left: 0px;
+}
+
+.links a:last-child {
+  border-right: none; /* Remova a borda direita */
+  padding-right: 0; /* Remova o espaço à direita */
+}
+
+.icones {
+  display: grid;
+  grid-column: 11;
+  align-self: center;
+  justify-content: end;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.icon1 {
+  grid-column: 1;
+  grid-row: 1;
+  cursor: context-menu;
+  pointer-events: none;
+}
+
+.icon1 i {
+  transform: scale(0);
+}
+
+.icon2 {
+  grid-column: 2;
+  grid-row: 1;
+  color: rgb(214, 241, 251);
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+#icon {
+  font-size: 2.5rem;
+}
+
+.container-tudo {
+  z-index: 2;
+  display: grid;
+  gap: 12rem;
+}
+
+.container-tudo .container {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: -131rem;
+}
