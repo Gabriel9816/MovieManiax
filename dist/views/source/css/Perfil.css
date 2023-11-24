@@ -29,12 +29,12 @@ body::before {
 .pagina-inteira {
   content: "";
   position: absolute;
-  margin-top: 16rem;
+  margin-top: 12.5rem;
   top: 0;
   left: 0;
   width: 100vw;
   height: 345vh;
-  background: #282e3a repeating-linear-gradient(360deg, black, transparent 65%)
+  background: #282e3a repeating-linear-gradient(360deg, black, transparent 74%)
     fixed;
   z-index: 1;
 
@@ -181,12 +181,12 @@ body::before {
 }
 
 .perfil-user .dados-perfil {
-  margin-top: -1rem;
+  margin-top: -2.6rem;
 }
 
 .dados-perfil .user {
   position: fixed;
-  top: 11rem;
+  top: 7.6rem;
   left: 3rem;
 }
 
@@ -219,6 +219,7 @@ body::before {
   gap: 1rem;
   position: relative;
   left: 12.5rem;
+  top: 1.5rem;
 }
 
 .dados-user li {
@@ -233,7 +234,7 @@ body::before {
   color: rgba(40, 46, 58, 1);
   background-color: #d6f1fb;
   border-radius: 10px;
-  height: 6rem;
+  height: 7rem;
   position: relative;
 }
 
@@ -254,10 +255,13 @@ body::before {
 
 .tempo-filmes #info-filme {
   position: relative;
-  top: -1.2rem;
+  top: -1.5rem;
 }
 
-.tempo-filmes #texto {
+.tempo-filmes #texto1 {
+  font-size: 1.9rem;
+}
+.tempo-filmes #texto2 {
   font-size: 1rem;
 }
 
@@ -268,7 +272,7 @@ body::before {
   border-bottom: 2px solid;
   font-size: 1.2rem;
   margin-top: 4px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .tempo-filmes #total-filmes {
@@ -278,8 +282,8 @@ body::before {
   justify-content: center;
   text-align: center;
   position: relative;
-  top: -1.2rem;
-  left: 4rem;
+  top: -1.6rem;
+  left: 4.1rem;
   font-size: 2rem;
 }
 
@@ -287,6 +291,8 @@ body::before {
   grid-column: 1;
   grid-row: 2;
   display: grid;
+  position: relative;
+  top: 3rem;
 }
 
 .series-recentes h1 {
@@ -298,7 +304,6 @@ body::before {
   grid-row: 1;
   font-size: 1.5rem;
   margin-top: 0.3rem;
-  margin-bottom: 0.5rem;
   font-weight: 100;
 }
 
@@ -369,7 +374,7 @@ body::before {
 }
 
 .filmes-assistidos img {
-  width: 11rem;
+  width: 10rem;
   height: 100%;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
   transition: 0.3s;
