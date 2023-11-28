@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Upload de imagem</title>
-  </head>
-  <body>
-    <form method="post" action="/addcapa" enctype="multipart/form-data">
-      <input type="text" name="titulo" />
-      <input type="text" name="sinopse" />
-      <input type="number" name="duracao" />
-      <input type="file" name="imagem" id="capafilme" />
-      <input type="submit" value="Enviar" />
-    </form>
-    <!--<script>
-      const form = document.querySelector("#formulario");
-      const img = document.querySelector("#capafilme");
-      console.log(img.value);
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
 
-        await fetch("/addcapa", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            imagem: img.value,
-          }),
-        });
-      });
-    </script> -->
-  </body>
+<head>
+  <title>Upload de imagem</title>
+</head>
+
+<body>
+  <form method="post" action="/addcapa" enctype="multipart/form-data">
+    <input type="text" name="titulo" />
+    <input type="text" name="sinopse" />
+    <input type="number" name="duracao" />
+    <input type="file" name="imagem" id="capafilme" />
+    <input type="submit" value="Enviar" />
+  </form>
+</body>
+
 </html>

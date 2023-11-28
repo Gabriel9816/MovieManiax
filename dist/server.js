@@ -28,28 +28,24 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("/teste", async (req, res) => {
-  const FilmeModel = new FilmeModel();
+// app.get("/teste", async (req, res) => {
+//   const FilmeModel = new FilmeModel();
 
-  FilmeModel.getAllFilme().then((filmes) => {
-    res.render("teste", {
-      filmes: filmes,
-    });
+//   FilmeModel.getAllFilme().then((filmes) => {
+//     res.render("teste", {
+//       filmes: filmes,
+//     });
 
-    console.log(filmes);
-  });
-});
+//     console.log(filmes);
+//   });
+// });
 
-app.get("/cadastrafilme", (req, res) => {
+app.get("/filmes/add", (req, res) => {
   res.sendFile(__dirname + "/views/insertfilme.html");
 });
 
 app.get("/filmes/cadastro", (req, res) => {
   res.sendFile(__dirname + "/views/superusuario.html");
-});
-
-app.get("/teste", (req, res) => {
-  res.render("teste");
 });
 
 app.get("/login", (req, res) => {
@@ -135,7 +131,7 @@ app.post("/addcapa", upload.single("imagem"), async (req, res) => {
   const titulo = req.body.titulo;
   const sinopse = req.body.sinopse;
   const duracao = req.body.duracao;
-  const image = req.file.buffer;
+  const image = req.file.buffer.toString("base64");
 
   await filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
