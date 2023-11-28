@@ -9,10 +9,10 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
-<body class="body-visualizacao">
+<body>
     <header class="header">
         <div class="img">
-            <a href="/home"><img class="imagem-logo" src="/source/img/MovieManiax logo.png"></a>
+            <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
         </div>
         <div class="search-box">
             <input class="search-txt" type="text">
@@ -47,10 +47,16 @@
     <footer>
         <h1 class="tendencias"> Tendências </h1>
         <div class="carousel-container">
+            <div class="passa-slide">
+                <button class="seta-esquerda" onclick="handleLeftCLick()"> <i id="seta" class='bx bx-chevron-left'></i>
+                </button>
+                <button class="seta-direita" onclick="handleRightCLick()"> <i id="seta" class='bx bx-chevron-right'></i>
+                </button>
+            </div>
             <div class="carousel">
                 <div class="filme" id="filme1">
                     <div class="titulo-filme">
-                        <img src="/source/img/avatar.jpg" alt="Imagem 1">
+                        <img class="imagem-filme" src="/source/img/avatar.jpg" alt="Imagem 1">
                         <h3>Avatar: O Caminho da Agua</h3>
                     </div>
 
@@ -64,7 +70,7 @@
 
                 <div class="filme" id="filme2">
                     <div class="titulo-filme">
-                        <img src="/source/img/the-marvels.jpg" alt="Imagem 2">
+                        <img class="imagem-filme" src="/source/img/the-marvels.jpg" alt="Imagem 2">
                         <h3>The Marvels</h3>
                     </div>
 
@@ -78,7 +84,7 @@
 
                 <div class="filme" id="filme3">
                     <div class="titulo-filme">
-                        <img src="/source/img/som-da-liberdade.jpg" alt="Imagem 3">
+                        <img class="imagem-filme" src="/source/img/som-da-liberdade.jpg">
                         <h3>Som da Liberdade</h3>
                     </div>
 
@@ -87,13 +93,26 @@
                             traficantes de crianças. Com o tempo se esgotando, ele viaja pelas profundezas da selva
                             colombiana, colocando sua vida em risco para libertá-la.</p>
                     </div>
-                    <button class="ver-mais-btn">Ver Mais</button>
+                    <a href="/filmes" class="ver-mais-btn">Ver Mais</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="/source/js/carrosselAllPages.js"></script>
+    <script>
+        const slider = document.querySelector(".carousel");
+
+        const handleLeftCLick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft -= slider.offsetWidth;
+        }
+        const handleRightCLick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft += slider.offsetWidth;
+        }
+    </script>
 </body>
 
 </html>

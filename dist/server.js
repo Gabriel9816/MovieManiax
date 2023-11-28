@@ -1,11 +1,11 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
-//middleware pra gerenciar upload de arquivos, pra ver se sobe as capas de filmes
 const multer = require("multer");
 
 const UsuarioModel = require("./models/usuario");
 const FilmeModel = require("./models/filme");
+
 const upload = multer({ storage: multer.memoryStorage() });
 const app = express();
 
@@ -20,37 +20,14 @@ app.use(cookieParser());
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 
+//----------------------------------------------------------------------
+// Rotas Paginas
+//----------------------------------------------------------------------
+
 app.get("/", (req, res) => {
-  res.render("teste");
+  res.sendFile(__dirname + "/views/index.html");
 });
 
-//https://www.youtube.com/watch?v=_Xwf-Q3F-Gs mt bom indiano
-app.post("/addcapa", upload.single("imagem"), (req, res) => {
-  //placeholder pros campos
-  titulo = req.body.titulo;
-  sinopse = req.body.sinopse;
-  duracao = req.body.duracao;
-  image = req.file.buffer;
-  const filme = new FilmeModel();
-  //mandando pro bd
-  filme.cadastrarFilme(titulo, sinopse, duracao, image);
-});
-
-/*app.post("/upload", async (req, res) => {
-  const filme = new FilmeModel();
-  await filme.cadastrarFilme(
-    "Avatar: O Caminho da Agua",
-    "Sinopse 2",
-    "120",
-    req.body.imagem
-  );
-  res.json({
-    success: true,
-    message: "Filme cadastrado com sucesso!",
-  });
-});*/
-
-//tentando listar
 app.get("/teste", async (req, res) => {
   const FilmeModel = new FilmeModel();
 
@@ -67,6 +44,14 @@ app.get("/cadastrafilme", (req, res) => {
   res.sendFile(__dirname + "/views/insertfilme.html");
 });
 
+app.get("/filmes/cadastro", (req, res) => {
+  res.sendFile(__dirname + "/views/superusuario.html");
+});
+
+app.get("/teste", (req, res) => {
+  res.render("teste");
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/views/login.html");
 });
@@ -76,18 +61,11 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
-  res.render();
+  autentication(req, res, req.cookies.token);
+  res.sendFile(__dirname + "/views/visualizacao.html");
 });
 
 app.get("/perfil", (req, res) => {
-  //const usuarioModel = new UsuarioModel();
-
-  // usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
-  //   res.render("teste", {
-  //     users: users,
-  //   });
-  // });
-
   autentication(req, res, req.cookies.token);
   res.sendFile(__dirname + "/views/perfil.html");
 });
@@ -149,6 +127,17 @@ app.post("/login/enter", async (req, res) => {
     success: true,
     message: "Usuário logado com sucesso!",
   });
+});
+
+app.post("/addcapa", upload.single("imagem"), async (req, res) => {
+  const filme = new FilmeModel();
+
+  const titulo = req.body.titulo;
+  const sinopse = req.body.sinopse;
+  const duracao = req.body.duracao;
+  const image = req.file.buffer;
+
+  await filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
 
 // ----------------------------------------------------------------------------

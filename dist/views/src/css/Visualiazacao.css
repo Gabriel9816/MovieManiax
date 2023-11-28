@@ -1,5 +1,3 @@
-/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
-
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
 * {
@@ -26,8 +24,8 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: inherit;
-  filter: blur(2px); /* Ajuste o valor conforme necessário */
-  z-index: -1; /* Garante que o desfoque fique atrás do conteúdo da página */
+  filter: blur(2px);
+  z-index: -1;
 }
 
 .header {
@@ -72,11 +70,6 @@ body::before {
   border-radius: 44px;
   background-color: #5a5858;
   color: #d6f1fb;
-  /* background-image: url(/dist/views/source/image/lupa.png);
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 24px 24px; */
-
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -118,8 +111,8 @@ body::before {
 }
 
 .links a:last-child {
-  border-right: none; /* Remova a borda direita */
-  padding-right: 0; /* Remova o espaço à direita */
+  border-right: none;
+  padding-right: 0;
 }
 
 .icones {
@@ -181,44 +174,226 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: rgba(19, 24, 29, 0.6);
+  height: 14rem;
+  background: #282e3a
+    repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
   color: #d6f1fb;
   display: grid;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 
 footer .tendencias {
   text-align: start;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  font-size: 1.5rem;
   font-weight: 400;
   text-align: start;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 
 .carousel-container {
-  margin-left: 15px;
+  margin-left: 16px;
   display: grid;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .carousel {
+  position: relative;
   display: flex;
-  transition: transform 0.5s ease;
-  gap: 1rem;
+  gap: 2.4rem;
+  margin-right: 9rem;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: 93.5rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container .passa-slide {
+  position: absolute;
+  top: 14px;
+  left: 104rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -25rem;
+  margin-top: -1rem;
+  gap: 8rem;
+}
+
+.passa-slide .seta-esquerda {
+  background: transparent;
+  border: none;
+  color: #d6f1fb;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.passa-slide .seta-direita {
+  background: transparent;
+  border: none;
+  color: #d6f1fb;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.passa-slide #seta {
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+  transition: 0.3s;
+}
+
+.passa-slide button #seta:hover {
+  transform: scale(1.1);
+  color: #007af4;
+}
+
+.imagem-filme1 {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36rem;
+  height: 11.1rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.imagem-filme2 {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 37.8rem;
+  width: 36rem;
+  margin-left: -0.5rem;
+  height: 11.1rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  z-index: -1;
+}
+
+.imagem-filme3 {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 76rem;
+  width: 36rem;
+  margin-left: -1.2rem;
+  height: 11.1rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  z-index: -1;
 }
 
 .filme {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid;
-  border-radius: 20px;
-  width: 48.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  width: 35.5rem;
+  height: 11rem;
   align-items: center;
   text-align: center;
-  /* color: #d6f1fb; */
+  margin-bottom: 5px;
+  margin-right: 23px;
+}
+
+.titulo-filme {
+  grid-column: 2 / 1;
+  display: flex;
+  gap: 10px;
+}
+
+.titulo-filme h3 {
+  color: #fff;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  top: 1rem;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.imagem-filme {
+  border-radius: 10px;
+  width: 4rem;
+  margin-left: 0.8rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+.info-filme {
+  grid-column: 4/1;
+  width: 33.5rem;
+  margin-bottom: 1px;
+}
+
+.info-filme p {
+  color: #fff;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 34rem;
+  text-align: justify;
+  letter-spacing: 0;
+  font-size: 13px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+.ver-mais-btn {
+  color: #fff;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  width: 8rem;
+  top: -1.8rem;
+  left: 9rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ver-mais-btn:hover {
+  background-color: #d6f1fb;
+  border: 1px solid #d6f1fb;
+  color: #2c3440;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #ddd;
 }
 
 #filme1 {
@@ -258,7 +433,7 @@ footer .tendencias {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/the-marvels-fundo.jpg);
+  background: url(/source/img/the-marvels-fundo.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 30px;
@@ -267,7 +442,7 @@ footer .tendencias {
 }
 
 #filme3 {
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/som-da-liberdade-fundo.jpg);
+  background: url(/source/img/som-da-liberdade-fundo.jpg);
   background-position: center;
   background-size: cover;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
@@ -280,12 +455,12 @@ footer .tendencias {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/dist/views/source/image/filmescarrossel/fundo-carrossel/som-da-liberdade-fundo.jpg);
+  background: url(/source/img/som-da-liberdade-fundo.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 30px;
-  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
-  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+  filter: blur(1.5px);
+  z-index: -1;
 }
 
 .titulo-filme {
@@ -385,7 +560,7 @@ footer .tendencias {
 
 .dot:hover {
   background-color: #ddd;
-} /*# sourceMappingURL=style03.css.map */
+}
 
 @media screen and (max-width: 1600px) {
   .logo {
