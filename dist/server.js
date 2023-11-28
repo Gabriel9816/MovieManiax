@@ -86,23 +86,25 @@ app.get("/home", (req, res) => {
   res.render();
 });
 
-//Esboco para rota perfil
-
 app.get("/perfil", (req, res) => {
-  const usuarioModel = new UsuarioModel();
+  //const usuarioModel = new UsuarioModel();
 
-  usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
-    res.render("teste", {
-      users: users,
-    });
-  });
+  // usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
+  //   res.render("teste", {
+  //     users: users,
+  //   });
+  // });
+
+  autentication(req, res, req.cookies.token);
+  res.sendFile(__dirname + "/views/perfil.html");
 });
 
 app.get("/filmes", (req, res) => {
-  console.log("Filmes");
+  autentication(req, res, req.cookies.token);
+  res.sendFile(__dirname + "/views/popular.html");
 });
 
-app.get("/assistido", (req, res) => {
+app.get("/filmes/detalhes", (req, res) => {
   res.sendFile(__dirname + "/views/assistido.html");
 });
 

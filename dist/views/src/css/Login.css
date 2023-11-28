@@ -1,5 +1,3 @@
-/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
-
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
 * {
@@ -11,7 +9,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundos/fundo-filmes1.jpg) fixed;
+  background: url(/source/img/fundo-filmes1.jpg) fixed;
   background-size: cover; /* Isso faz com que a imagem cubra todo o corpo */
   background-position: center; /* Isso centraliza a imagem no corpo */
   height: 100vh; /* Isso define a altura do corpo como 100% da altura da janela de visualização */
