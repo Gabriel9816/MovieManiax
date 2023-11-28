@@ -1,9 +1,12 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
+//middleware pra gerenciar upload de arquivos, pra ver se sobe as capas de filmes
+const multer = require("multer");
 
 const UsuarioModel = require("./models/usuario");
-
+const FilmeModel = require("./models/filme");
+const upload = multer({ storage: multer.memoryStorage() });
 const app = express();
 
 //Configs
@@ -20,26 +23,55 @@ app.set("view engine", "pug");
 app.get("/", (req, res) => {
   res.render("teste");
 });
-// ----------------------------------------------------------------------
 
-//Rotas paginas
+//https://www.youtube.com/watch?v=_Xwf-Q3F-Gs mt bom indiano
+app.post("/addcapa", upload.single("imagem"), (req, res) => {
+  //placeholder pros campos
+  titulo = req.body.titulo;
+  sinopse = req.body.sinopse;
+  duracao = req.body.duracao;
+  image = req.file.buffer.toString("base64");
 
-app.get("/", (req, res) => {
-  res.render();
+  //isso aqui deve ter q mudar
+  preenchedb = "INSERT INTO n sei VALUES(?,?,?,?)";
+  //fiz o if mas n sei se precisa
+  db.query(
+    preenchedb[(titulo, sinopse, duracao, buffer)],
+    (err, rows, fields) => {
+      if (err) throw err;
+    }
+  );
 });
 
-//Rota de teste para passar para o htlm dados do banco de dados
+/*app.post("/upload", async (req, res) => {
+  const filme = new FilmeModel();
+  await filme.cadastrarFilme(
+    "Avatar: O Caminho da Agua",
+    "Sinopse 2",
+    "120",
+    req.body.imagem
+  );
+  res.json({
+    success: true,
+    message: "Filme cadastrado com sucesso!",
+  });
+});*/
 
+//tentando listar
 app.get("/teste", async (req, res) => {
-  const usuarioModel = new UsuarioModel();
+  const FilmeModel = new FilmeModel();
 
-  usuarioModel.getAllUsers().then((users) => {
+  FilmeModel.getAllFilme().then((filmes) => {
     res.render("teste", {
-      users: users,
+      filmes: filmes,
     });
 
-    console.log(users);
+    console.log(filmes);
   });
+});
+
+app.get("/cadastrafilme", (req, res) => {
+  res.sendFile(__dirname + "/views/insertfilme.html");
 });
 
 app.get("/login", (req, res) => {
@@ -51,7 +83,6 @@ app.get("/cadastro", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
-  autentication(req, res, req.cookies.token);
   res.render();
 });
 
