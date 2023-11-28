@@ -5,8 +5,6 @@ const filmeModel = new FilmeModel();
 const filmesUsuarioModel = new FilmesUsuarioModel();
 let tempo = 0;
 
-//Calculo de tempo adicionar ao server depois
-
 filmesUsuarioModel.getAllFilmsByUserId(1).then((filmes) => {
   filmes.forEach((element) => {
     tempo += element.duracao;
