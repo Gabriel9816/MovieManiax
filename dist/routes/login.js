@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require("node:path");
 const UsuarioModel = require("../models/usuario");
+const jwt = require("jsonwebtoken");
 
 router.get("/login", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "views", "login.html"));
