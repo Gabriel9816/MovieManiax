@@ -1,9 +1,12 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
+const multer = require("multer");
 
 const UsuarioModel = require("./models/usuario");
+const FilmeModel = require("./models/filme");
 
+const upload = multer({ storage: multer.memoryStorage() });
 const app = express();
 
 //Configs
@@ -17,12 +20,28 @@ app.use(cookieParser());
 app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 
-// ----------------------------------------------------------------------
-//Rotas paginas
-// ----------------------------------------------------------------------
+//----------------------------------------------------------------------
+// Rotas Paginas
+//----------------------------------------------------------------------
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
+});
+
+app.get("/teste", async (req, res) => {
+  const FilmeModel = new FilmeModel();
+
+  FilmeModel.getAllFilme().then((filmes) => {
+    res.render("teste", {
+      filmes: filmes,
+    });
+
+    console.log(filmes);
+  });
+});
+
+app.get("/cadastrafilme", (req, res) => {
+  res.sendFile(__dirname + "/views/insertfilme.html");
 });
 
 app.get("/filmes/cadastro", (req, res) => {
@@ -47,14 +66,6 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/perfil", (req, res) => {
-  //const usuarioModel = new UsuarioModel();
-
-  // usuarioModel.getUsuarioById(req.cookies.id).then((users) => {
-  //   res.render("teste", {
-  //     users: users,
-  //   });
-  // });
-
   autentication(req, res, req.cookies.token);
   res.sendFile(__dirname + "/views/perfil.html");
 });
@@ -116,6 +127,17 @@ app.post("/login/enter", async (req, res) => {
     success: true,
     message: "Usuário logado com sucesso!",
   });
+});
+
+app.post("/addcapa", upload.single("imagem"), async (req, res) => {
+  const filme = new FilmeModel();
+
+  const titulo = req.body.titulo;
+  const sinopse = req.body.sinopse;
+  const duracao = req.body.duracao;
+  const image = req.file.buffer;
+
+  await filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
 
 // ----------------------------------------------------------------------------
