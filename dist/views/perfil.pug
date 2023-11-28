@@ -1,0 +1,83 @@
+html 
+    head 
+        link(rel="stylesheet" href="/source/css/Perfil.css")
+    body 
+        .imagem-fundo 
+            .pagina-inteira 
+        .container-tudo 
+            header 
+                a(href="/home").img
+                    img.logo(src="/source/img/MovieManiax logo.png" alt="") 
+                .search-box 
+                    input.search-txt(type="text")
+                    i.bx.bx-search 
+                .links
+                    a.101(href="/filmes") Filmes 
+                .icones 
+                    a.icon2(href="/sair") 
+                        i.bx.bx-log-out#icon 
+            .container 
+                .perfil-user 
+                    .dados-perfil 
+                        .user 
+                            a.icon-user(href="#")
+                                i.bx.bxs-user-circle#icon 
+                            h1.nome-user iTOSHIBA 
+                        ul.dados-user 
+                            li
+                                .tempo-filmes 
+                                    p.titulo-dados Tempo vendo filmes 
+                                    .meses-filmes#info-filme 
+                                        p.total-meses#texto1 18 
+                                        p.titulo-meses-filmes#texto2 MESES
+                                    .dias-filmes#info-filme 
+                                        p.total-meses#texto1 3 
+                                        p.titulo-meses-filmes#texto2 DIAS
+                                    .horas-filme#info-filme 
+                                        p.total-meses#texto1 17 
+                                        p.titulo-meses-filmes#texto2 HORAS
+                            li 
+                                .tempo-filmes 
+                                    p.titulo-dados-assistidos Filmes assistidos
+                                    p#total-filmes 340
+                .series-recentes 
+                    h1 Filmes recentemente assistidos 
+                    button(onclick="handleLeftClick()").seta-esquerda
+                        i.bx.bx-chevron-left#seta
+                    .filmes-assistidos 
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                        .filme 
+                            a(href="") 
+                                img(src="/source/img/openheimer.webp" alt="")
+                    button(onclick="handleRightCLick()").seta-direita
+                        i.bx.bx-chevron-right#seta
+
+                //script const slider = document.querySelector(".filmes-assistidos");
+                    const handleLeftCLick = (e) => {
+                        console.log(slider);
+                        console.log(slider.offsetWidth);
+                        slider.scrollLeft -= slider.offsetWidth;
+                    }
+                    const handleRightCLick = (e) => {
+                        console.log(slider);
+                        console.log(slider.offsetWidth);
+                        slider.scrollLeft += slider.offsetWidth;
+                    }
+

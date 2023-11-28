@@ -1,7 +1,7 @@
 html 
     head 
         link(rel="stylesheet" href="/source/css/Assistido.css")
-        
+
     body.body-assistido 
         .pagina-inteira 
             img(src="/source/img/Spoiler Alert.png" )
@@ -9,18 +9,18 @@ html
             header.header 
                 .img 
                     a(href="/user")
-                        img.imagem-logo(src="/source/img/MovieManiax logo.png") 
+                        img.logo(src="/source/img/MovieManiax logo.png") 
                 .search-box
                     input(type="text").search-txt
                     i.bx.bx-search 
                 .links 
-                    a.l01(href="/filmes") 
+                    a.l01(href="/filmes") Filmes
                 .icones
                     a.icon1(href="/perfil")
                         i.bx.bxs-ser-circle#icon1
                     a.icon2(href="/sair") 
                         i.bx.bx-log-out#icon 
-            .contianer 
+            .container 
                 .filme-assistido 
                     .check-assistido
                         img.filme-usuario-assistiu(src="/source/img/imagem-catalogo-besouro-azul.jpg" alt="")
@@ -42,7 +42,7 @@ html
                         li.user-comentario
                             .icone-user 
                                 .nome-user 
-                                    a.icon1.bx.bxs-user-circle(href="/")#icon
+                                    a.icon1.bx.bxs-user-circle#icon(href="/")
                                     h1 iToshiba 
                                     .data-comentario
                                         p#data-comentario 26/08/2023
@@ -50,10 +50,10 @@ html
                                 h4 O Besouro Azul se estabeleceu como um novo favorito entre os heróis da DC em minha opinião. Este filme atendeu às minhas expectativas, embora elas não fossem excessivamente elevadas. Antecipei que poderia apresentar alguns dos tropos comuns associados aos filmes de super-heróis, mas surpreendentemente, esses elementos ainda mantêm seu apelo, especialmente neste contexto.
                             .imagem-filme-comentario 
                                 img(src="/source/img/fundo-besouro-azul.jpg" alt="")
-                        form.criar-comentario
-                            h1 Comentário
-                            textarea#comentario(name="comentario" rows="4" required)
-                            button(type="submit").submit-imagem.bx.bx-image-add
-                                i Anexar foto
-                            button(type="submit").send-comentario Postar 
+                    form.criar-comentario
+                        h1 Comentário
+                        textarea#comentario(name="comentario" rows="4" required)
+                        button(type="submit").submit-imagem.bx.bx-image-add
+                            i Anexar foto
+                        button(type="submit").send-comentario Postar 
 
