@@ -4,7 +4,7 @@ html
         title visualizaçao
         link(rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
 
-    body 
+    body
         <header class="header">
             <a href="/user" class="img">
                 <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
@@ -17,10 +17,10 @@ html
                 <a class="l01" href="/filmes">Filmes</a>
             </div>
             <div class="icones">
-                <a class="icon1" href="/perfil">
+                <a class="icon1" href="/user/perfil">
                     <i id="icon" class='bx bxs-user-circle'></i>
                 </a>
-                <a class="icon2" href="/sair">
+                <a class="icon2" href="/user/sair">
                     <i id="icon" class='bx bx-log-out'></i>
                 </a>
             </div>
@@ -47,46 +47,17 @@ html
                     </button>
                 </div>
                 <div class="carousel">
-                    <div class="filme" id="filme1">
-                        <div class="titulo-filme">
-                            <img class="imagem-filme" src="/source/img/avatar.jpg" alt="Imagem 1">
-                            <h3>Avatar: O Caminho da Agua</h3>
+                    for filme in filmes
+                        <div class="filme" id="filme1">
+                            <div class="titulo-filme">
+                                <img class="imagem-filme" src="/source/img/avatar.jpg" alt="Imagem 1">
+                                h3 #{filme.titulo}
+                            </div>
+                            <div class="info-filme">
+                                p #{filme.sinopse}
+                            </div>
+                            <button class="ver-mais-btn">Ver Mais</button>
                         </div>
-                        <div class="info-filme">
-                            p Após formar uma família, Jake Sully e Ney'tiri fazem de tudo para ficarem juntos. No entanto,
-                                <br>eles devem sair de casa e explorar as regiões de Pandora quando uma antiga ameaça ressurge,
-                                <br>e Jake deve travar uma guerra difícil contra os humanos.
-                        </div>
-                        <button class="ver-mais-btn">Ver Mais</button>
-                    </div>
-
-                    <div class="filme" id="filme2">
-                        <div class="titulo-filme">
-                            <img class="imagem-filme" src="/source/img/the-marvels.jpg" alt="Imagem 2">
-                            <h3>The Marvels</h3>
-                        </div>
-
-                        <div class="info-filme">
-                            p Carol Danvers aka Capitã Marvel, tomou de volta sua identidade dos Kree tiranos e se vingou
-                                <br>da Inteligência Suprema, mas consequências não imaginadas fazem Carol ter que carregar o
-                                <br>peso de um universo desestabilizado.
-                        </div>
-                        <button class="ver-mais-btn">Ver Mais</button>
-                    </div>
-
-                    <div class="filme" id="filme3">
-                        <div class="titulo-filme">
-                            <img class="imagem-filme" src="/source/img/som-da-liberdade.jpg">
-                            <h3>Som da Liberdade</h3>
-                        </div>
-
-                        <div class="info-filme">
-                            p Um ex-agente federal embarca em uma perigosa missão para salvar uma menina dos cruéis
-                                <br>traficantes de crianças. Com o tempo se esgotando, ele viaja pelas profundezas da selva
-                                <br>colombiana, colocando sua vida em risco para libertá-la.
-                        </div>
-                        <a href="/filmes" class="ver-mais-btn">Ver Mais</a>
-                    </div>
                 </div>
             </div>
         </div>
