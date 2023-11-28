@@ -3,10 +3,18 @@ const cookieParser = require("cookie-parser");
 const autentication = require("../middlewares/authentication");
 const router = express.Router();
 const path = require("node:path");
+const FilmeModel = require("../models/filme");
 
-router.get("/", (req, res) => {
+const filmeModel = new FilmeModel();
+
+router.get("/", async (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.render("visualizacao");
+
+  const filmes = await filmeModel.getThreeFilme();
+
+  res.render("visualizacao", {
+    filmes: filmes,
+  });
 });
 
 router.get("/perfil", (req, res) => {

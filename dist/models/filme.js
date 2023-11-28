@@ -16,6 +16,17 @@ class FilmeModel {
       throw err;
     }
   }
+
+  async getThreeFilme() {
+    try {
+      const results = await this.db.query(
+        `SELECT * FROM ${this.tabela} LIMIT 3`
+      );
+      return results;
+    } catch (error) {
+      throw error;
+    }
+  }
   async getFilmeById(id) {
     try {
       const results = await this.db.query(
