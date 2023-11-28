@@ -32,15 +32,8 @@ app.post("/addcapa", upload.single("imagem"), (req, res) => {
   duracao = req.body.duracao;
   image = req.file.buffer.toString("base64");
 
-  //isso aqui deve ter q mudar
-  preenchedb = "INSERT INTO n sei VALUES(?,?,?,?)";
-  //fiz o if mas n sei se precisa
-  db.query(
-    preenchedb[(titulo, sinopse, duracao, buffer)],
-    (err, rows, fields) => {
-      if (err) throw err;
-    }
-  );
+  //mandando pro bd
+  FilmeModel.cadastrarFilme(titulo, sinopse, duracao, buffer);
 });
 
 /*app.post("/upload", async (req, res) => {
