@@ -11,9 +11,9 @@
 
 <body>
     <header class="header">
-        <div class="img">
+        <a href="/user" class="img">
             <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
-        </div>
+        </a>
         <div class="search-box">
             <input class="search-txt" type="text">
             <i class="bx bx-search"></i>
@@ -99,20 +99,7 @@
         </div>
     </footer>
 
-    <script>
-        const slider = document.querySelector(".carousel");
-
-        const handleLeftCLick = (e) => {
-            console.log(slider);
-            console.log(slider.offsetWidth);
-            slider.scrollLeft -= slider.offsetWidth;
-        }
-        const handleRightCLick = (e) => {
-            console.log(slider);
-            console.log(slider.offsetWidth);
-            slider.scrollLeft += slider.offsetWidth;
-        }
-    </script>
+    <script src="/source/js/carroselHome.js"></script>
 </body>
 
 </html>

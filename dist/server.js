@@ -20,6 +20,7 @@ const app = express();
 
 app.use("/source", express.static(__dirname + "/views/src"));
 app.use("/controllers", express.static(__dirname + "/controllers"));
+app.use("/middlewares", express.static(__dirname + "/middlewares"));
 app.use(express.json());
 app.use(cookieParser());
 
