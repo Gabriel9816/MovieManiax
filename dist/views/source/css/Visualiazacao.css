@@ -209,7 +209,6 @@ footer .tendencias {
 .carousel {
   position: relative;
   display: flex;
-  gap: 2.4rem;
   margin-right: 9rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -262,54 +261,62 @@ footer .tendencias {
 .imagem-filme1 {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 36rem;
-  height: 11.1rem;
+  top: 0px;
+  left: 17px;
+  width: 36.4rem;
+  height: 11rem;
   background-position: center;
   background-size: cover;
-  border-radius: 30px;
+  border-radius: 25px;
   z-index: -1;
+  filter: blur(2px);
+  border: 1px solid #d6f1fb;
 }
 
 .imagem-filme2 {
   content: "";
   position: absolute;
   top: 0px;
-  left: 37.8rem;
-  width: 36rem;
+  left: 40.6rem;
+  width: 36.4rem;
   margin-left: -0.5rem;
-  height: 11.1rem;
+  height: 10.9rem;
   background-position: center;
   background-size: cover;
-  border-radius: 30px;
+  border-radius: 25px;
   z-index: -1;
+  filter: blur(2px);
+  border: 1px solid #d6f1fb;
 }
 
 .imagem-filme3 {
   content: "";
   position: absolute;
   top: 0;
-  left: 76rem;
-  width: 36rem;
+  left: 80.4rem;
+  width: 36.4rem;
   margin-left: -1.2rem;
-  height: 11.1rem;
+  height: 11rem;
   background-position: center;
   background-size: cover;
-  border-radius: 30px;
+  border-radius: 25px;
   z-index: -1;
+  filter: blur(2px);
+  border: 1px solid #d6f1fb;
 }
 
 .filme {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-radius: 10px;
-  width: 35.5rem;
+  border-radius: 25px;
+  width: 38.5rem;
   height: 11rem;
   align-items: center;
   text-align: center;
   margin-bottom: 5px;
   margin-right: 23px;
+  border: 1px solid;
+  margin-left: 1rem;
 }
 
 .titulo-filme {
@@ -336,7 +343,7 @@ footer .tendencias {
 
 .info-filme {
   grid-column: 4/1;
-  width: 33.5rem;
+  width: 36.5rem;
   margin-bottom: 1px;
 }
 
