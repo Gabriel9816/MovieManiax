@@ -25,6 +25,14 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get("/filmes/cadastro", (req, res) => {
+  res.sendFile(__dirname + "/views/superusuario.html");
+});
+
+app.get("/teste", (req, res) => {
+  res.render("teste");
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/views/login.html");
 });

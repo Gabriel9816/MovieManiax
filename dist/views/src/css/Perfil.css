@@ -13,7 +13,6 @@ body {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  display: grid;
 }
 
 body::before {
@@ -30,27 +29,28 @@ body::before {
 .pagina-inteira {
   content: "";
   position: absolute;
-  margin-top: 16rem;
+  margin-top: 12.5rem;
   top: 0;
   left: 0;
   width: 100vw;
   height: 345vh;
-  background-color: rgba(40, 46, 58, 1);
+  background: #282e3a repeating-linear-gradient(360deg, black, transparent 74%)
+    fixed;
   z-index: 1;
-
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
-
 .header {
   display: grid;
-  width: 213vh;
+  width: 100%;
   grid-template-columns: repeat(9, 1fr);
   align-items: center;
   justify-content: center;
+  height: 3.5rem;
   grid-column: 1;
   grid-row: 1;
+  position: fixed;
 }
 
 .img {
@@ -59,7 +59,7 @@ body::before {
 
 .logo {
   width: 10rem;
-  margin-left: 6rem;
+  margin-left: 7rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
 }
 
@@ -77,20 +77,15 @@ body::before {
   text-align: start;
   grid-column: 1;
   grid-row: 1;
-  height: 2rem;
   outline: none;
   padding-left: 1rem;
   transition: 0.5s;
-  width: 32rem;
+  width: 27rem;
   font-size: 20px;
   border: 1px solid #d6f1fb;
   border-radius: 44px;
   background-color: #5a5858;
   color: #d6f1fb;
-  /* background-image: url(/dist/views/source/image/lupa.png);
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 24px 24px; */
 
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -149,23 +144,19 @@ body::before {
 .icon1 {
   grid-column: 1;
   grid-row: 1;
-  cursor: context-menu;
+  opacity: 0;
   pointer-events: none;
-}
-
-.icon1 i {
-  transform: scale(0);
 }
 
 .icon2 {
   grid-column: 2;
   grid-row: 1;
-  color: rgb(214, 241, 251);
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
 }
 
 #icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: rgb(214, 241, 251);
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
 }
 
 .container-tudo {
@@ -174,8 +165,225 @@ body::before {
   gap: 12rem;
 }
 
+.container-tudo {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  grid-template-rows: repeat(6, 1fr);
+}
+
 .container-tudo .container {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
-  margin-left: -131rem;
+  display: grid;
+  margin-top: -5rem;
+}
+
+.container .perfil-user {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.perfil-user .dados-perfil {
+  margin-top: -2.6rem;
+}
+
+.dados-perfil .user {
+  position: fixed;
+  top: 7.6rem;
+  left: 3rem;
+}
+
+.user .icon-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-user #icon {
+  font-size: 9rem;
+  color: #d6f1fb;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.user .nome-user {
+  position: relative;
+  top: -6.5rem;
+  left: 9.7rem;
+  font-size: 2rem;
+  color: #d6f1fb;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.dados-user {
+  list-style: none;
+  justify-content: flex-start;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  left: 12.5rem;
+  top: 1.5rem;
+}
+
+.dados-user li {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.dados-user li .tempo-filmes {
+  grid-column: 1;
+  display: grid;
+  width: 13rem;
+  color: rgba(40, 46, 58, 1);
+  background-color: #d6f1fb;
+  border-radius: 10px;
+  height: 7rem;
+  position: relative;
+}
+
+.tempo-filmes p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tempo-filmes .titulo-dados {
+  grid-column: 4/1;
+  grid-row: 1;
+  text-align: center;
+  border-bottom: 2px solid;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  margin-bottom: 2rem;
+}
+
+.tempo-filmes #info-filme {
+  position: relative;
+  top: -1.5rem;
+}
+
+.tempo-filmes #texto1 {
+  font-size: 1.9rem;
+}
+.tempo-filmes #texto2 {
+  font-size: 1rem;
+}
+
+.tempo-filmes .titulo-dados-assistidos {
+  grid-column: 4/1;
+  grid-row: 1;
+  text-align: center;
+  border-bottom: 2px solid;
+  font-size: 1.2rem;
+  margin-top: 4px;
+  margin-bottom: 3rem;
+}
+
+.tempo-filmes #total-filmes {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: -1.6rem;
+  left: 4.1rem;
+  font-size: 2rem;
+}
+
+.container .series-recentes {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  position: relative;
+  top: 3rem;
+}
+
+.series-recentes h1 {
+  color: #d6f1fb;
+  position: relative;
+  top: 0rem;
+  left: 2rem;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  font-weight: 100;
+}
+
+.series-recentes .seta-esquerda {
+  position: fixed;
+  z-index: 1;
+  color: #d6f1fb;
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  top: 32rem;
+  left: -0.9rem;
+}
+
+.seta-esquerda i {
+  font-size: 3rem;
+}
+
+.series-recentes .seta-direita {
+  position: fixed;
+  z-index: 1;
+  color: #d6f1fb;
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  top: 32rem;
+  left: 92.5rem;
+}
+
+.series-recentes button #seta {
+  font-size: 4rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+  transition: 0.3s;
+}
+
+.series-recentes button #seta:hover {
+  transform: scale(1.1);
+  color: #007af4;
+}
+
+.seta-direita i {
+  font-size: 3rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
+}
+
+.series-recentes .filmes-assistidos {
+  position: relative;
+  display: flex;
+  gap: 2.4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.filmes-assistidos::-webkit-scrollbar {
+  display: none;
+}
+
+.filmes-assistidos .filme {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.filmes-assistidos #ultimo-filme {
+  margin-right: 0rem;
+}
+
+.filmes-assistidos img {
+  width: 10rem;
+  height: 100%;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+  transition: 0.3s;
+}
+
+.filmes-assistidos img:hover {
+  transform: scale(1.06);
 }
