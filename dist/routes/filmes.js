@@ -7,14 +7,14 @@ const multer = require("multer");
 
 const upload = multer({ storage: multer.memoryStorage() });
 
-router.get("/filmes", (req, res) => {
+router.get("/", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.render("assistido");
+  res.render("popular");
 });
 
-router.get("/cadastro", upload.single("imagem"), async (req, res) => {
+router.get("/add", upload.single("imagem"), async (req, res) => {
   //res.sendFile(__dirname + "/views/superusuario.html");
-  res.sendFile(__dirname + "/views/insertfilme.html");
+  res.sendFile(path.resolve(__dirname, "..", "views", "insertfilme.html"));
 
   // const filme = new FilmeModel();
 
@@ -26,9 +26,10 @@ router.get("/cadastro", upload.single("imagem"), async (req, res) => {
   // await filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
 
-router.get("/detelhes/:id", (req, res) => {
+router.get("/detalhes/:id", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.sendFile(__dirname + "/views/assistido.html");
+  //console.log(req.params.id);
+  res.sendFile(path.resolve(__dirname, "..", "views", "assistido.html"));
 });
 
 module.exports = router;

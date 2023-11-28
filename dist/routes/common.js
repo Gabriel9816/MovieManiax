@@ -2,16 +2,16 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const autentication = require("../middlewares/authentication");
 const router = express.Router();
+const path = require("node:path");
 
-router.get("/home", (req, res) => {
-  console.log(req.cookies);
+router.get("/", (req, res) => {
   autentication(req, res, req.cookies.token);
   res.render("visualizacao");
 });
 
 router.get("/perfil", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.sendFile(__dirname + "/views/perfil.html");
+  res.sendFile(path.resolve(__dirname, "..", "views", "perfil.html"));
 });
 
 router.get("/sair", (req, res) => {

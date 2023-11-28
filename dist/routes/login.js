@@ -4,7 +4,7 @@ const path = require("node:path");
 const UsuarioModel = require("../models/usuario");
 const jwt = require("jsonwebtoken");
 
-router.get("/login", (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "views", "login.html"));
 });
 
@@ -33,7 +33,7 @@ router.post("/enter", async (req, res) => {
     secure: true,
   });
 
-  res.json({
+  return res.json({
     success: true,
     message: "Usuário logado com sucesso!",
   });

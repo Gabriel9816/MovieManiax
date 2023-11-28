@@ -3,7 +3,7 @@ const router = express.Router();
 const UsuarioModel = require("../models/usuario");
 const path = require("node:path");
 
-router.get("/cadastro", (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "views", "cadastro.html"));
 });
 

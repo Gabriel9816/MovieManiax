@@ -10,6 +10,7 @@ const filmes = require("./routes/filmes");
 const login = require("./routes/login");
 const cadastro = require("./routes/cadastro");
 const common = require("./routes/common");
+const superusuario = require("./routes/superuser");
 
 //---------------------------------------------------------------------
 //Configs
@@ -29,11 +30,12 @@ app.set("view engine", "pug");
 // Rotas Paginas
 //----------------------------------------------------------------------
 
-app.get("/", index);
-app.get("/login", login);
-app.get("/cadastro", cadastro);
-app.get("/filmes", filmes);
-app.get("/home", common);
+app.use("/", index);
+app.use("/login", login);
+app.use("/cadastro", cadastro);
+app.use("/filmes", filmes);
+app.use("/user", common);
+app.use("/superuser", superusuario);
 
 //----------------------------------------------------------------------
 
