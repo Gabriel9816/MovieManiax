@@ -8,6 +8,17 @@ class FilmesUsuarioModel {
     this.db.conectar();
   }
 
+  async getCountFilmesByUserId(id) {
+    try {
+      const results = await this.db.query(
+        `SELECT COUNT(*) as total FROM ${this.tabela} WHERE usuario = ${id}`
+      );
+      return results;
+    } catch (err) {
+      throw err;
+    }
+  }
+
   async getAllFilmsByUserId(id) {
     try {
       const results = await this.db

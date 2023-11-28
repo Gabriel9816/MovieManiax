@@ -25,8 +25,6 @@ class Conexao {
       this.conectar();
 
       this.conexao.query(sql, (err, result) => {
-        this.desconectar();
-
         if (err) {
           console.error("Erro ao executar a query" + err);
           reject(err);

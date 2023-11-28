@@ -1,83 +1,68 @@
 html 
-    head 
-        link(rel="stylesheet" href="/source/css/Perfil.css")
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/source/css/Perfil.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+        <title>Perfil</title>
+    </head>
+
     body 
         .imagem-fundo 
             .pagina-inteira 
         .container-tudo 
-            header 
-                a(href="/home").img
-                    img.logo(src="/source/img/MovieManiax logo.png" alt="") 
-                .search-box 
-                    input.search-txt(type="text")
-                    i.bx.bx-search 
-                .links
-                    a.101(href="/filmes") Filmes 
-                .icones 
-                    a.icon2(href="/sair") 
-                        i.bx.bx-log-out#icon 
+            <header class="header">
+                <a href="/home" class="img">
+                    <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
+                </a>
+                <div class="search-box">
+                    <input class="search-txt" type="text">
+                    <i class="bx bx-search"></i>
+                </div>
+                <div class="links">
+                    <a class="l01" href="/filmes">Filmes</a>
+                </div>
+                <div class="icones">
+                    <a class="icon2" href="/sair">
+                    <i id="icon" class='bx bx-log-out'></i>
+                    </a>
+                </div>
+            </header>
             .container 
                 .perfil-user 
                     .dados-perfil 
                         .user 
                             a.icon-user(href="#")
                                 i.bx.bxs-user-circle#icon 
-                            h1.nome-user iTOSHIBA 
+                            h1.nome-user #{user.nome} 
                         ul.dados-user 
                             li
                                 .tempo-filmes 
                                     p.titulo-dados Tempo vendo filmes 
                                     .meses-filmes#info-filme 
-                                        p.total-meses#texto1 18 
+                                        p.total-meses#texto1 #{tempo.meses} 
                                         p.titulo-meses-filmes#texto2 MESES
                                     .dias-filmes#info-filme 
-                                        p.total-meses#texto1 3 
+                                        p.total-meses#texto1 #{tempo.dias} 
                                         p.titulo-meses-filmes#texto2 DIAS
                                     .horas-filme#info-filme 
-                                        p.total-meses#texto1 17 
+                                        p.total-meses#texto1 #{tempo.horas} 
                                         p.titulo-meses-filmes#texto2 HORAS
                             li 
                                 .tempo-filmes 
                                     p.titulo-dados-assistidos Filmes assistidos
-                                    p#total-filmes 340
+                                    p#total-filmes #{count.total}
                 .series-recentes 
                     h1 Filmes recentemente assistidos 
                     button(onclick="handleLeftClick()").seta-esquerda
                         i.bx.bx-chevron-left#seta
-                    .filmes-assistidos 
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
-                        .filme 
-                            a(href="") 
-                                img(src="/source/img/openheimer.webp" alt="")
+                    .filmes-assistidos
+                        for filme in filmes
+                            .filme 
+                                a(href="") 
+                                    img(src="/source/img/openheimer.webp" alt="")
+
                     button(onclick="handleRightCLick()").seta-direita
                         i.bx.bx-chevron-right#seta
-
-                //script const slider = document.querySelector(".filmes-assistidos");
-                    const handleLeftCLick = (e) => {
-                        console.log(slider);
-                        console.log(slider.offsetWidth);
-                        slider.scrollLeft -= slider.offsetWidth;
-                    }
-                    const handleRightCLick = (e) => {
-                        console.log(slider);
-                        console.log(slider.offsetWidth);
-                        slider.scrollLeft += slider.offsetWidth;
-                    }
 
