@@ -30,10 +30,10 @@ app.post("/addcapa", upload.single("imagem"), (req, res) => {
   titulo = req.body.titulo;
   sinopse = req.body.sinopse;
   duracao = req.body.duracao;
-  image = req.file.buffer.toString("base64");
-
+  image = req.file.buffer;
+  const filme = new FilmeModel();
   //mandando pro bd
-  FilmeModel.cadastrarFilme(titulo, sinopse, duracao, buffer);
+  filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
 
 /*app.post("/upload", async (req, res) => {
