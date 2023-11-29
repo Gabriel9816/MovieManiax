@@ -1,10 +1,10 @@
 html 
     head 
-        link(rel="stylesheet" href="/source/css/Visualiazacao.css")
+        link(rel="stylesheet" href="/source/css/style.css")
         title visualizaçao
         link(rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
 
-    body
+    body.body-visualizacao
         <header class="header">
             <a href="/user" class="img">
                 <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
@@ -49,7 +49,7 @@ html
                 <div class="carousel">
                     for filme in filmes
                         <div class="filme" id="filme1">
-                            
+                            <img class="imagem-filme1" src="/source/img/avatar-fundo.jpg" alt="">
                             <div class="titulo-filme">
                                 <img class="imagem-filme" src="/source/img/avatar.jpg" alt="Imagem 1">
                                 h3 #{filme.titulo}

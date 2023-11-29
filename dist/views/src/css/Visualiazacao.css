@@ -1,5 +1,3 @@
-/* ESTILIZAÇÃO GERAL PARA TODAS AS PÁGINAS */
-
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
 * {
@@ -11,7 +9,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundos/mario-big.jpg) fixed;
+  background: url(/source/img/mario-big.jpg) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -26,8 +24,8 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: inherit;
-  filter: blur(2px); /* Ajuste o valor conforme necessário */
-  z-index: -1; /* Garante que o desfoque fique atrás do conteúdo da página */
+  filter: blur(2px);
+  z-index: -1;
 }
 
 .header {
@@ -36,7 +34,6 @@ body::before {
   grid-template-columns: repeat(9, 1fr);
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
 }
 
 .img {
@@ -45,7 +42,7 @@ body::before {
 
 .logo {
   width: 10rem;
-  margin-left: -13rem;
+  margin-left: -27rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
 }
 
@@ -63,16 +60,16 @@ body::before {
   text-align: start;
   grid-column: 1;
   grid-row: 1;
+  height: 2rem;
   outline: none;
   padding-left: 1rem;
   transition: 0.5s;
-  width: 27rem;
+  width: 32rem;
   font-size: 20px;
   border: 1px solid #d6f1fb;
   border-radius: 44px;
   background-color: #5a5858;
   color: #d6f1fb;
-
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -114,8 +111,8 @@ body::before {
 }
 
 .links a:last-child {
-  border-right: none; /* Remova a borda direita */
-  padding-right: 0; /* Remova o espaço à direita */
+  border-right: none;
+  padding-right: 0;
 }
 
 .icones {
@@ -138,7 +135,7 @@ body::before {
 }
 
 #icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: rgb(214, 241, 251);
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
 }
@@ -152,10 +149,9 @@ body::before {
 
 .titulo h1 {
   color: #d6f1fb;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 500;
   text-align: justify;
-  letter-spacing: 1.5px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 }
 
@@ -168,7 +164,7 @@ body::before {
 
 .descricao h2 {
   color: #d6f1fb;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 100;
   text-align: justify;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
@@ -209,6 +205,7 @@ footer .tendencias {
 .carousel {
   position: relative;
   display: flex;
+  gap: 2.4rem;
   margin-right: 9rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -261,62 +258,54 @@ footer .tendencias {
 .imagem-filme1 {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 17px;
-  width: 36.4rem;
-  height: 11rem;
+  top: 0;
+  left: 0;
+  width: 36rem;
+  height: 11.1rem;
   background-position: center;
   background-size: cover;
-  border-radius: 25px;
+  border-radius: 30px;
   z-index: -1;
-  filter: blur(2px);
-  border: 1px solid #d6f1fb;
 }
 
 .imagem-filme2 {
   content: "";
   position: absolute;
   top: 0px;
-  left: 40.6rem;
-  width: 36.4rem;
+  left: 37.8rem;
+  width: 36rem;
   margin-left: -0.5rem;
-  height: 10.9rem;
+  height: 11.1rem;
   background-position: center;
   background-size: cover;
-  border-radius: 25px;
+  border-radius: 30px;
   z-index: -1;
-  filter: blur(2px);
-  border: 1px solid #d6f1fb;
 }
 
 .imagem-filme3 {
   content: "";
   position: absolute;
   top: 0;
-  left: 80.4rem;
-  width: 36.4rem;
+  left: 76rem;
+  width: 36rem;
   margin-left: -1.2rem;
-  height: 11rem;
+  height: 11.1rem;
   background-position: center;
   background-size: cover;
-  border-radius: 25px;
+  border-radius: 30px;
   z-index: -1;
-  filter: blur(2px);
-  border: 1px solid #d6f1fb;
 }
 
 .filme {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border-radius: 25px;
-  width: 38.5rem;
+  border-radius: 10px;
+  width: 35.5rem;
   height: 11rem;
   align-items: center;
   text-align: center;
   margin-bottom: 5px;
   margin-right: 23px;
-  border: 1px solid;
-  margin-left: 1rem;
 }
 
 .titulo-filme {
@@ -343,7 +332,7 @@ footer .tendencias {
 
 .info-filme {
   grid-column: 4/1;
-  width: 36.5rem;
+  width: 33.5rem;
   margin-bottom: 1px;
 }
 
@@ -405,9 +394,175 @@ footer .tendencias {
 
 .dot:hover {
   background-color: #ddd;
-} /*# sourceMappingURL=style03.css.map */
+}
 
-/* @media screen and (max-width: 1600px) {
+#filme1 {
+  background: url(/source/img/avatar-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+  opacity: 200px;
+}
+
+#filme1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/source/img/avatar-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+}
+
+#filme2 {
+  background: url(/source/img/the-marvels-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+#filme2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/source/img/the-marvels-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px); /* Ajuste o valor conforme necessário */
+  z-index: -1; /* Garante que a camada de fundo fique atrás do conteúdo da div */
+}
+
+#filme3 {
+  background: url(/source/img/som-da-liberdade-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
+}
+
+#filme3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/source/img/som-da-liberdade-fundo.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  filter: blur(1.5px);
+  z-index: -1;
+}
+
+.titulo-filme {
+  grid-column: 3 / 1;
+  display: flex;
+  gap: 10px;
+}
+
+.titulo-filme h3 {
+  color: #fff;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  top: 1rem;
+}
+
+.filme img {
+  border-radius: 10px;
+  width: 6rem;
+  margin-left: 0.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-right: 6px;
+}
+
+.info-filme {
+  grid-column: 4/1;
+  width: 48.5rem;
+  margin-bottom: 1px;
+}
+
+.info-filme p {
+  color: #fff;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+  letter-spacing: 0;
+}
+
+.ver-mais-btn {
+  color: #2f6894;
+  position: relative;
+  grid-column: 3;
+  grid-row: 1;
+  border: none;
+  width: 8rem;
+  top: 2rem;
+  left: 6rem;
+  background-color: #d6f1fb;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ver-mais-btn::before {
+  background-color: transparent;
+  border: #d6f1fb;
+  filter: blur(1.5px);
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ver-mais-btn:hover {
+  background-color: transparent;
+  border: 1px solid #d6f1fb;
+  color: #fff;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 1600px) {
   .logo {
     width: 10rem;
     margin-left: -14rem;
@@ -426,4 +581,4 @@ footer .tendencias {
     margin-left: 2rem;
     grid-row: 3;
   }
-} */
+}

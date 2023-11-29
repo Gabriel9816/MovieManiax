@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url(/dist/views/source/image/fundos/wakanda-cartoon.jpg) fixed;
+  background: url(/source/img/wakanda-cartoon.jpg) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -37,12 +37,10 @@ body::before {
   background: #282e3a repeating-linear-gradient(360deg, black, transparent 74%)
     fixed;
   z-index: 1;
-
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
-
 .header {
   display: grid;
   width: 100%;
@@ -162,6 +160,12 @@ body::before {
 }
 
 .container-tudo {
+  z-index: 2;
+  display: grid;
+  gap: 12rem;
+}
+
+.container-tudo {
   display: grid;
   position: relative;
   z-index: 1;
@@ -181,7 +185,7 @@ body::before {
 }
 
 .perfil-user .dados-perfil {
-  margin-top: 6.3rem;
+  margin-top: -2.6rem;
 }
 
 .dados-perfil .user {

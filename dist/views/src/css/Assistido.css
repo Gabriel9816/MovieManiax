@@ -14,8 +14,6 @@ body {
   background-size: cover;
   display: grid;
   overflow-x: hidden;
-  scroll-behavior: smooth;
-  width: 125vw;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -27,18 +25,18 @@ body::before {
   width: 100vw;
   height: 100vh;
   /* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade  */
-  background: rgba(40, 46, 58, 0.8) fixed;
+  background: rgba(40, 46, 58, 0.7) fixed;
   z-index: 1;
 }
 
 .pagina-inteira {
   content: "";
   position: absolute;
-  margin-top: -38rem;
+  margin-top: -35rem;
   top: 0;
   left: 0;
-  width: 125vw;
-  height: 392vh;
+  width: 100vw;
+  height: 345vh;
   background-color: rgba(40, 46, 58, 1);
   clip-path: polygon(0% 100%, 0% 37%, 100% 29%, 100% 100%);
   z-index: 1;
@@ -51,10 +49,10 @@ body::before {
 .pagina-inteira img {
   position: relative;
   z-index: 1;
-  top: 70rem;
-  left: 21rem;
-  width: 59rem;
-  opacity: 0.4;
+  top: 76rem;
+  left: 30rem;
+  width: 63rem;
+  opacity: 0.6;
   rotate: 2deg;
 }
 
@@ -79,7 +77,7 @@ body::before {
   justify-content: center;
   position: fixed;
   top: -0.5rem;
-  left: 0.5rem;
+  left: -0.5rem;
   height: 3.5rem;
   width: 98.5%;
   background-color: transparent;
@@ -200,44 +198,45 @@ body::before {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 14rem;
-  margin-left: -19rem;
+  margin-top: 18rem;
 }
 
 .container .filme-usuario-assistiu {
-  grid-row: span 4;
-  width: 15rem;
-  margin-bottom: 5rem;
+  grid-row: span 5;
+  width: 19rem;
+  height: 27rem;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 01));
 }
 
 .container .filme-assistido {
   grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   align-self: center;
   justify-content: center;
-  margin-bottom: 27rem;
+  margin-bottom: 28rem;
 }
 
 .container .filme-assistido .status-filme {
   color: #d6f1fb;
+  margin-top: 0.1rem;
   grid-column: 3;
   grid-row: 1;
-  display: flex;
+  display: grid;
   align-items: center;
-  align-self: center;
-  justify-content: center;
-  margin-left: -5rem;
+  border: 1px solid;
+  margin-left: -2rem;
   border-radius: 10px;
-  border: none;
-  width: 10.5rem;
-  text-align: center;
+  width: 13.5rem;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 3px;
+  margin-top: 5px;
   transition: 0.3s;
+
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 
 .container .filme-assistido .status-filme h3 {
@@ -261,11 +260,16 @@ body::before {
 }
 
 .filme-assistido .status-filme h3 {
-  color: #d6f1fb;
+  grid-column: 2;
+  width: 47rem;
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+  font-weight: 100;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.48);
 }
 
 .status-filme i {
-  font-size: 2rem;
+  font-size: 4rem;
   text-shadow: 1px 1px 8px rgba(255, 205, 0, 0.4);
   color: #ffc900;
   transition: 0.3s;
@@ -278,7 +282,6 @@ body::before {
   align-items: center;
   align-content: center;
   align-self: center;
-  margin-left: 7rem;
 }
 
 .check-assistido .titulo-filme {
@@ -288,20 +291,20 @@ body::before {
   align-items: center;
   justify-content: center;
   align-self: center;
-  margin-left: 1.5rem;
-  width: 19rem;
+  margin-left: 1rem;
+  width: 20rem;
 }
 
 .check-assistido .sobre-filme {
   grid-column: 5/2;
   grid-row: 4;
-  width: 45rem;
+  width: 74rem;
 }
 
 .container .titulo-filme h1 {
   position: relative;
   width: 20rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
 }
 
@@ -312,9 +315,9 @@ body::before {
 
 .container .sobre-filme h4 {
   position: relative;
-  width: 48rem;
+  width: 72rem;
   height: 14rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 100;
   margin-left: 1.2rem;
   letter-spacing: -1px;
@@ -334,7 +337,8 @@ body::before {
 
 .check-assistido .avaliacao {
   position: relative;
-  width: 11rem;
+  width: 13rem;
+  height: 2.5rem;
   grid-column: 2;
   grid-row: 3;
   margin-left: 1rem;
@@ -349,24 +353,22 @@ body::before {
   align-items: center;
   align-content: center;
   justify-content: center;
-  width: 18.5rem;
-  margin-top: -0.5rem;
+  width: 21rem;
   margin-bottom: 0.5rem;
 }
 
 .dados-filme .ano {
   grid-column: 1;
-  width: 3rem;
+  width: 4rem;
   margin-left: 0;
   margin-bottom: 0;
 }
 
 .dados-filme .categoria {
   grid-column: 2;
-  width: 9rem;
-  margin-left: 4px;
+  width: 10rem;
+  margin-left: 0;
   margin-bottom: 0;
-  margin-right: -8px;
 }
 
 .dados-filme .tempo-tela {
@@ -413,22 +415,16 @@ body::before {
   grid-column: 2;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0fr 0.3fr;
-  gap: 1rem;
-}
-
-.container .comentarios .comentarios-lista {
-  margin-right: 40rem;
 }
 
 .comentarios .user-comentario {
-  position: relative;
-  left: -5rem;
   margin-bottom: 2rem;
+  padding: 3px;
   display: grid;
-  border-radius: 26px;
+  border-radius: 10px;
   background-color: #8ea1ac;
-  width: 34rem;
-  height: 21rem;
+  width: 38rem;
+  height: 23rem;
   grid-template-columns: repeat(3, 1fr);
 
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -437,13 +433,10 @@ body::before {
 }
 
 .user-comentario .icone-user {
-  grid-column: 1;
-  grid-row: 1;
   display: grid;
-  height: 1rem;
-  margin-left: 0.2rem;
-  margin-right: -7rem;
-  margin-bottom: 2rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
 }
 
 .icone-user .nome-user {
@@ -452,7 +445,6 @@ body::before {
   align-content: center;
   width: 16rem;
   height: 4rem;
-  margin-left: 0.4rem;
 }
 
 .icone-user a {
@@ -463,15 +455,15 @@ body::before {
 }
 
 .icone-user #icon {
-  font-size: 2.9rem;
+  font-size: 3.9rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
 .icone-user h1 {
   grid-column: 2;
-  font-size: 1.5rem;
   width: 0;
-  margin-right: 9rem;
+  margin-right: 8rem;
+  margin-bottom: -1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
@@ -490,9 +482,10 @@ body::before {
 
 .comentario-user h4 {
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
   font-weight: 100;
+  margin-top: 1rem;
 }
 
 .titulo-comentario {
@@ -502,33 +495,33 @@ body::before {
 }
 
 .user-comentario .imagem-filme-comentario {
-  grid-column: 2;
+  grid-column: 3/1;
   grid-row: 3;
 }
 
 .imagem-filme-comentario img {
-  width: 16rem;
-  height: 7rem;
+  width: 19rem;
+  margin-left: 11rem;
   border-radius: 10px;
   filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 1));
 }
 
 .criar-comentario {
+  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+
   display: grid;
   background-color: #8ea1ac;
   border-radius: 10px;
   position: absolute;
-  top: 69.3rem;
-  left: 59.7rem;
+  top: 77.6rem;
+  left: 77rem;
   height: 26rem;
   width: 26rem;
   gap: 1rem;
   padding: 2rem;
   grid-template-rows: 0.1fr 0.7fr 0.2fr;
-
-  box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 
 .criar-comentario h1 {
