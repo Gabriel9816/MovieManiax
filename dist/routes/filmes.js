@@ -12,18 +12,15 @@ router.get("/", (req, res) => {
   res.render("popular");
 });
 
-router.get("/add", upload.single("imagem"), async (req, res) => {
-  //res.sendFile(__dirname + "/views/superusuario.html");
-  res.sendFile(path.resolve(__dirname, "..", "views", "insertfilme.html"));
+router.post("/add", upload.single("imagem"), async (req, res) => {
+  const filme = new FilmeModel();
 
-  // const filme = new FilmeModel();
+  const titulo = req.body.titulo;
+  const sinopse = req.body.sinopse;
+  const duracao = req.body.duracao;
+  const image = req.file.buffer.toString("base64");
 
-  // const titulo = req.body.titulo;
-  // const sinopse = req.body.sinopse;
-  // const duracao = req.body.duracao;
-  // const image = req.file.buffer.toString("base64");
-
-  // await filme.cadastrarFilme(titulo, sinopse, duracao, image);
+  await filme.cadastrarFilme(titulo, sinopse, duracao, image);
 });
 
 router.get("/detalhes/:id", (req, res) => {
