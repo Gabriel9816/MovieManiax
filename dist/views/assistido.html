@@ -12,30 +12,16 @@
 
 <style>
     .body-assistido {
-        background: url(/source/img/besouro-azul-salto.jpg) fixed;
-        background-size: cover;
+        background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%);
         display: grid;
         overflow-x: hidden;
         scroll-behavior: smooth;
         grid-template-columns: repeat(1, 1fr);
     }
-
-    .body-assistido::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(40, 46, 58, 0.8) fixed;
-        z-index: 1;
-    }
 </style>
 
 <body class="body-assistido">
-    <div class="pagina-inteira">
-        <img src="/source/img/Spoiler Alert.png" alt="">
-    </div>
+    <img class="spoiler" src="/source/img/Spoiler_Alert.png" alt="">
 
     <div class="container-tudo">
         <header class="header">
@@ -82,6 +68,7 @@
 
                     <form class="avaliacao">
                         <div class="div-avaliacao">
+                            <input type="radio" name="avalia" id="">
                             <label for="">1</label>
                             <input type="radio" name="avalia" id="">
                             <label for="">2</label>
@@ -91,7 +78,6 @@
                             <label for="">4</label>
                             <input type="radio" name="avalia" id="">
                             <label for="">5</label>
-                            <input type="radio" name="avalia" id="">
                         </div>
                     </form>
                     <div class="sobre-filme">

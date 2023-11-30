@@ -47,42 +47,40 @@
 
         <textarea class="texto-grande" name="Resumo Filme" rows="4" required></textarea>
         <div class="add-data">
-            <input class="ano" type="date">
-            <input class="horas" type="time">
-            <button class="abre-popup" onclick="openGenrePopup()">Escolher Gêneros</button>
+            <input class="ano" type="text" placeholder="ano">
+            <input class="horas" type="number" placeholder="minutos">
+            <div id="abre-popup" class="abre-popup">
+                <select class="genero1" id="genero-select" class="genero">
+                    <option> Ação</option>
+                    <option>Fantasia</option>
+                    <option>Comédia</option>
+                    <option>Drama</option>
+                    <option>Romance</option>
+                    <option>Documentário</option>
+                    <option>Suspense</option>
+                    <option>Terror</option>
+                    <option>Ficção Científica</option>
+                    <option>Aventura</option>
+                </select>
+
+                <select class="genero2" id="genero-select" class="genero">
+                    <option> Ação</option>
+                    <option>Fantasia</option>
+                    <option>Comédia</option>
+                    <option>Drama</option>
+                    <option>Romance</option>
+                    <option>Documentário</option>
+                    <option>Suspense</option>
+                    <option>Terror</option>
+                    <option>Ficção Científica</option>
+                    <option>Aventura</option>
+                </select>
+                <button onclick="applyGenres()">Salvar</button>
+            </div>
             <div id="generos-selecionados"></div>
         </div>
 
         <div id="blur-background" class="blur-background"></div>
-
-        <div id="genero-popup" class="popup">
-            <select class="genero1" id="genero-select" class="genero">
-                <option> Ação</option>
-                <option>Fantasia</option>
-                <option>Comédia</option>
-                <option>Drama</option>
-                <option>Romance</option>
-                <option>Documentário</option>
-                <option>Suspense</option>
-                <option>Terror</option>
-                <option>Ficção Científica</option>
-                <option>Aventura</option>
-            </select>
-
-            <select class="genero2" id="genero-select" class="genero">
-                <option> Ação</option>
-                <option>Fantasia</option>
-                <option>Comédia</option>
-                <option>Drama</option>
-                <option>Romance</option>
-                <option>Documentário</option>
-                <option>Suspense</option>
-                <option>Terror</option>
-                <option>Ficção Científica</option>
-                <option>Aventura</option>
-            </select>
-            <button onclick="applyGenres()">Salvar</button>
-        </div>
     </div>
 
     <script>
