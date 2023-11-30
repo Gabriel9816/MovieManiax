@@ -1,10 +1,11 @@
-const form = document.querySelector("#cadasFilme");
+const form = document.querySelector(".add");
 
-const nome = document.querySelector("#nome");
-const ano = document.querySelector("#ano");
-const capa = document.querySelector("#capa");
-const categoria = document.querySelector("#categoria");
-const duracao = document.querySelector("#duracao");
+const nome = document.querySelector(".texto");
+const sinopse = document.querySelector(".texto-grande");
+const ano = document.querySelector(".ano");
+const capa = document.querySelector("#imagem-filme");
+const categoria = document.querySelector("#generos-selecionados");
+const duracao = document.querySelector(".horas");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -16,9 +17,10 @@ form.addEventListener("submit", async (event) => {
     },
     body: JSON.stringify({
       nome: nome.value,
+      sinopse: sinopse.value,
       capa: capa.value,
       ano: ano.value,
-      categoria: categoria.value,
+      categoria: categoria.innerHTML,
       duracao: duracao.value,
     }),
   }).then(() => {

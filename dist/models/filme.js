@@ -38,10 +38,10 @@ class FilmeModel {
     }
   }
 
-  async cadastrarFilme(titulo, sinopse, duracao, capa) {
+  async cadastrarFilme(titulo, sinopse, duracao, capa, ano, genero) {
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa) VALUES (${titulo}, ${sinopse}, ${duracao}, ${capa})`
+        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa,ano,genero) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}")`
       );
     } catch (error) {
       throw error;

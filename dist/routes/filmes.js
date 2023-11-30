@@ -19,8 +19,10 @@ router.post("/add", upload.single("imagem"), async (req, res) => {
   const sinopse = req.body.sinopse;
   const duracao = req.body.duracao;
   const image = req.file.buffer.toString("base64");
+  const ano = req.body.ano;
+  const genero = req.body.genero;
 
-  await filme.cadastrarFilme(titulo, sinopse, duracao, image);
+  await filme.cadastrarFilme(titulo, sinopse, duracao, image, ano, genero);
 });
 
 router.get("/detalhes/:id", (req, res) => {
