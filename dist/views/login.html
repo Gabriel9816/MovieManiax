@@ -8,6 +8,33 @@
 	<link rel="stylesheet" href="/source/css/style.css">
 </head>
 
+<style>
+	.body-login {
+		background: url(/source/img/fundo-filmes1.jpg) fixed;
+		background-size: cover;
+		/* Isso faz com que a imagem cubra todo o corpo */
+		background-position: center;
+		/* Isso centraliza a imagem no corpo */
+		height: 100vh;
+		/* Isso define a altura do corpo como 100% da altura da janela de visualização */
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.body-login::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		/* background: rgba(40,46,58,0.7); O ultimo digito 0.7 altera a opacidade */
+		background: #282e3ab3;
+		z-index: 1;
+		/* Ajuste o índice z conforme necessário para a sobreposição correta */
+	}
+</style>
+
 <body class="body-login">
 	<div class="container-login">
 		<form class="form-login" id="loginUser">

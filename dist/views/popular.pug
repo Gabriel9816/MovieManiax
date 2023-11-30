@@ -5,7 +5,30 @@ html
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet")
+        style.
+            body.body-popular::before {
+                content: "";
+                position: fixed;
+                top: -5px;
+                left: -5px;
+                width: 100vw;
+                height: 101vh;
+                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
+                filter: blur(2px);
+                opacity: 0.94;
+                z-index: -1;
+            }
+
     body.body-popular 
+        style.
+            body.body-popular{
+                background: url(/source/img/fundo-filmes1.jpg) fixed;
+                height: 100vh;
+                background-size: cover;
+                overflow-x: hidden;
+                display: grid;
+                scroll-behavior: smooth;
+            }
         header.header 
             a.img(href="/home")
                 img.logo(src="/source/img/MovieManiax logo.png" alt="logo")

@@ -10,6 +10,28 @@
     <title>Filme Assistido</title>
 </head>
 
+<style>
+    .body-assistido {
+        background: url(/source/img/besouro-azul-salto.jpg) fixed;
+        background-size: cover;
+        display: grid;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .body-assistido::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(40, 46, 58, 0.8) fixed;
+        z-index: 1;
+    }
+</style>
+
 <body class="body-assistido">
     <div class="pagina-inteira">
         <img src="/source/img/Spoiler Alert.png" alt="">
@@ -65,8 +87,8 @@
                 </div>
             </div>
 
+            <h1 class="titulo-comentario">Comentários</h1>
             <div class="comentarios">
-                <h1 class="titulo-comentario">Comentários</h1>
                 <ul class="comentarios-lista">
                     <li class="user-comentario">
                         <div class="icone-user">
@@ -144,11 +166,15 @@
                     </li>
                 </ul>
 
-                <form class="criar-comentario">
+                <form class="criar-comentario" action="" method="post" enctype="multipart/form-data">
                     <h1>Comentário</h1>
                     <textarea id="comentario" name="comentario" rows="4" required></textarea>
 
-                    <button class="submit-imagem" type="submit"><i class="bx bx-image-add"></i> Anexar foto</button>
+                    <label class="submit-imagem" for="imagem">
+                        <i class="bx bx-image-add"></i> Anexar foto
+                    </label>
+                    <input type="file" name="imagem" id="imagem" accept="image/*">
+
                     <button class="send-comentario" type="submit">Postar</button>
                 </form>
                 </li>
