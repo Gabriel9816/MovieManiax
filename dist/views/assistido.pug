@@ -1,0 +1,58 @@
+html 
+    head 
+        link(rel="stylesheet" href="/source/css/style.css")
+
+    body.body-assistido 
+        .pagina-inteira 
+            img(src="/source/img/Spoiler Alert.png" )
+        .container-tudo 
+            header.header 
+                .img 
+                    a(href="/user")
+                        img.logo(src="/source/img/MovieManiax logo.png") 
+                .search-box
+                    input(type="text").search-txt
+                    i.bx.bx-search 
+                .links 
+                    a.l01(href="/filmes") Filmes
+                .icones
+                    a.icon1(href="/user/perfil")
+                        i.bx.bxs-ser-circle#icon1
+                    a.icon2(href="/user/sair") 
+                        i.bx.bx-log-out#icon 
+            .container 
+                .filme-assistido 
+                    .check-assistido
+                        img.filme-usuario-assistiu(src="/source/img/imagem-catalogo-besouro-azul.jpg" alt="")
+                        .titulo-filme 
+                            h1 Besouro Azul 
+                        button.status-filme 
+                            i.bx.bxs-badge-check 
+                            h3 Já Assistido
+                        .dados-filme 
+                            p.ano 2023
+                            p.categoria Ação/Aventura
+                            p.tempo-tela 2h 7m
+                        img.avaliacao(src="/source/img/stars.png" alt="")
+                        .sobre-filme 
+                            h4 O adolescente Jaime Reyes ganha superpoderes quando um misterioso escaravelho se prende à sua coluna e lhe fornece uma poderosa armadura alienígena azul
+                .comentarios 
+                    h1.titulo-comentario Comentários
+                    ul.comentarios-lista
+                        li.user-comentario 
+                            .icone-user
+                                .nome-user
+                                    a.icon1.bx.bxs-user-circle#icon(href="/")
+                                    h1 iToshiba 
+                                    .data-comentario
+                                        p#data-comentario 26/08/2023
+                            .comentario-user
+                                h4 O Besouro Azul se estabeleceu como um novo favorito entre os heróis da DC em minha opinião. Este filme atendeu às minhas expectativas, embora elas não fossem excessivamente elevadas. Antecipei que poderia apresentar alguns dos tropos comuns associados aos filmes de super-heróis, mas surpreendentemente, esses elementos ainda mantêm seu apelo, especialmente neste contexto.
+                            .imagem-filme-comentario
+                                img(src="/source/img/fundo-besouro-azul.jpg" alt="")
+                    form.criar-comentario
+                        h1 Comentário
+                        textarea#comentario(name="comentario" rows="4" required)
+                        button(type="submit").submit-imagem
+                            i.bx.bx-image-add Anexar foto
+                        button(type="submit").send-comentario Postar 

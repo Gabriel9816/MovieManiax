@@ -9,44 +9,32 @@
     <link rel="stylesheet" href="/source/css/style.css">
 </head>
 
-<body>
-    <div class="container-cadastro">
-        <header id="header">
-            <img src="/source/img/MovieManiax logo.png" alt="">
-        </header>
+<body class="body-register">
+    <div class="container-register">
+        <a href="/"><img class="imagem-logo" src="/source/img/MovieManiax logo.png"></a>
 
-        <div id="forme">
-            <form class="formulario" method="post" id="cadasUser">
-                <div class="input">
-                    <input id="user" placeholder="Usuario" type="text">
-                </div>
+        <form id="form">
+            <div class="input-user">
+                <input id="user" name="Usuario" placeholder="Usuario" type="text">
+                <input id="email" name="Email" placeholder="email@exemplo.com" type="text">
+                <input id="password" name="Senha" placeholder="Senha" type="password">
+            </div>
 
-                <div class="input">
-                    <input id="email" placeholder="email@exemplo.com" type="text">
-                </div>
+            <label class="caixa-termos">
+                <input type="checkbox" class="caixa-input">
+                <span class="caixa-input"></span>
+                <span class="termo1">Tenho pelo menos 16 anos e aceito os termos de Uso.</span>
+            </label>
+            <label class="caixa-termos" style="margin-top:0.4rem;">
+                <input type="checkbox" class="caixa-input">
+                <span class="caixa-input"></span>
+                <span class="termo2">Aceito a Politica de Privacidade e concordo com o uso das minhas informações
+                    pessoais de acordo com a mesma</span>
+            </label>
 
-                <div class="input">
-                    <input id="senha" placeholder="Senha" type="password">
-                </div>
+            <button class="botao-registro" type="submit">Sing Up</button>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox-input">
-                    <span class="custom-checkbox"></span>
-                    <span class="termo">Tenho pelo menos 16 anos e aceito os termos de Uso.</span>
-                </label>
-
-                <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox-input">
-                    <span class="custom-checkbox"></span>
-                    <span class="termo">
-                        Aceito a Politica de Privacidade e concordo com o processamento das minhas
-                        informações pessoais de acordo com a mesma
-                    </span>
-                </label>
-
-                <button class="botao" type="submit">Sing Up</button>
-            </form>
-        </div>
+        </form>
     </div>
 
     <script src="/controllers/usuario/add.js"></script>

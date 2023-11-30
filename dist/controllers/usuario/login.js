@@ -13,6 +13,6 @@ form.addEventListener("submit", async (event) => {
       senha: password.value,
     }),
   }).then(() => {
-    window.location.href = "/home";
+    window.location.href = "/user";
   });
 });

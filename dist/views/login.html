@@ -5,11 +5,10 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="/source/css/style.css">
 </head>
 
-<body>
+<body class="body-login">
 	<div class="container-login">
 		<form class="form-login" id="loginUser">
 			<div class="svgContainer">
@@ -155,23 +154,21 @@
 				</div>
 			</div>
 
-			<div class="inputGroup">
-				<label for="email">Email</label>
-				<input type="email" id="email" />
 
-				<span class="helper">email@exemplo.com</span>
+			<div class="inputGroup">
+				<input type="email" id="email" placeholder="email@exemplo.com" />
 			</div>
 
-			<div class="inputGroup">
-				<label for="senha">Senha</label>
-				<input type="password" id="senha" />
+			<div class="inputGroup" style="margin-top: 15px;">
+				<input type="password" id="senha" placeholder="Senha" />
 			</div>
 
-			<div class="inputGroup">
+			<div class="inputGroup" id="input-botao">
 				<button type="submit">Login</button>
 			</div>
 		</form>
 	</div>
+
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src="/source/js/script.js"></script>
