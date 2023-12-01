@@ -71,12 +71,10 @@ html
                 <div class="carousel">
                     for filme in filmes
                         <div class="filme" id="filme1">
-                            <img class="imagem-filme1" src="/source/img/avatar-fundo.jpg" alt="">
-                            <div class="imagem-filme">
-                                <img src="/source/img/avatar.jpg" alt="Imagem 1">
-                            </div>
-
-                            <div class="titulo-filme"> 
+                            <div class="titulo-filme">
+                                //corrigir aqui, talvez com a metodologia desse outro indiano https://www.youtube.com/watch?v=ZhGHIn0Xfj8&list=PLlGT4GXi8_8cwvruQYb72_s3-4rKwSnxu&index=8
+                                <img class="imagem-filme" src="data:img/png;base64,filme.imgHERE" alt="Embedded Image">
+                                //<img class="imagem-filme" src="/source/img/avatar.jpg" alt="Embedded Image">
                                 h3 #{filme.titulo}
                                 <div class="dados-filme">
                                     <p class="ano"> 2023 ‧</p>
@@ -84,7 +82,7 @@ html
                                     <p class="tempo-tela"> 2h 7m </p>
                                 </div>
                             </div>
-                                
+
                             <div class="info-filme">
                                 p #{filme.sinopse}
                             </div>
