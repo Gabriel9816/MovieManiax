@@ -25,7 +25,7 @@ router.get("/perfil", async (req, res) => {
 
   const user = await usuarioModel.getUsuarioById(id);
   const count = await filmesUsuarioModel.getCountFilmesByUserId(id);
-  const tempo = getTempoAssistido(id);
+  const tempo = await getTempoAssistido(id);
   const filmes = await filmesUsuarioModel.getAllFilmsByUserId(id);
 
   res.render("perfil", {
