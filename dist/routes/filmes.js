@@ -28,7 +28,8 @@ router.post("/add", upload.single("imagem"), async (req, res) => {
 router.get("/detalhes/:id", (req, res) => {
   autentication(req, res, req.cookies.token);
   //console.log(req.params.id);
-  res.sendFile(path.resolve(__dirname, "..", "views", "assistido.html"));
+  //res.sendFile(path.resolve(__dirname, "..", "views", "assistido.html"));
+  res.render("assistido");
 });
 
 module.exports = router;

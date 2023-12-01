@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/source/css/SuperUser.css" />
-    <title>Popular</title>
-  </head>
 
-  <body class="body-visualizacao">
-    <header class="header">
-      <a href="/user" class="img">
-        <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo" />
-      </a>
-      <div class="search-box">
-        <input class="search-txt" type="text" />
-        <i class="bx bx-search"></i>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/source/css/style.css">
+  <title>Super User</title>
+</head>
 
-      <div class="links">
-        <a class="l01" href="/superuser">Adicionar</a>
-        <a class="l02" href="/">Excluir</a>
-      </div>
-
-      <div class="icones">
-        <a class="icon2" href="/sair">
-          <i id="icon" class="bx bx-log-out"></i>
-        </a>
-      </div>
-    </header>
-    <div class="icones2">
-      <label class="submit-imagem-fundo" for="imagem">
-        <img class="imagem-fundo" src="/source/img/icone-add-image.png" />
-        <input type="file" name="imagem" id="imagem-fundo" accept="image/*" />
-      </label>
+<body class="body-super-user">
+  <header class="header">
+    <a href="/user" class="img">
+      <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
+    </a>
+    <div class="search-box">
+      <input class="search-txt" type="text">
+      <i class="bx bx-search"></i>
     </div>
-    <form
-      class="add"
-      method="post"
-      action="/filmes/add"
-      enctype="multipart/form-data"
-    >
-      <label class="submit-imagem-filme" for="imagem">
-        <img class="imagem-filme" src="/source/img/icone-add.png" />
-        <input type="file" name="imagem" id="imagem-filme" accept="image/*" />
-      </label>
 
-      <textarea class="texto" name="titulo" rows="2" required></textarea>
+    <div class="links">
+      <a class="l01" href="/filmes">Filmes</a>
+      <a class="l02" href="/superuser">Adicionar</a>
+      <a class="l03" href="/">Excluir</a>
+    </div>
+
+    <div class="icones">
+      <a class="icon2" href="/sair">
+        <i id="icon" class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </header>
+  <div class="add">
+    <label class="submit-imagem-filme" for="imagem">
+      <img class="imagem-filme" src="/source/img/icone-add.png">
+      <input type="file" name="imagem" id="imagem-filme" accept="image/*">
+    </label>
+
+    <textarea class="texto" name="Titulo Filme" rows="4" required></textarea>
 
       <!-- pq avaliação aqui?
         <img class="avaliacao" src="/source/img/stars.png" /> -->
@@ -75,13 +63,13 @@
           <option value="Ficção Científica">Ficção Científica</option>
           <option value="Aventura">Aventura</option>
         </select>
-
-        <div id="generos-selecionados" name="genero"></div>
+        <button onclick="applyGenres()">Salvar</button>
       </div>
+      <div id="generos-selecionados"></div>
+    </div>
 
-      <div id="blur-background" class="blur-background"></div>
+    <div id="blur-background" class="blur-background"></div>
+  </div>
+</body>
 
-      <button type="submit" class="cadastrar"></button>
-    </form>
-  </body>
 </html>

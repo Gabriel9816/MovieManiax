@@ -1,7 +1,34 @@
 html 
     head 
-        link(rel="stylesheet" href="/source/css/Popular.css")
-    body 
+        link(rel="stylesheet" href="/source/css/style.css")
+        link(href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet")
+        style.
+            body.body-popular::before {
+                content: "";
+                position: fixed;
+                top: -5px;
+                left: -5px;
+                width: 100vw;
+                height: 101vh;
+                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
+                filter: blur(2px);
+                opacity: 0.94;
+                z-index: -1;
+            }
+
+    body.body-popular 
+        style.
+            body.body-popular{
+                background: url(/source/img/fundo-filmes1.jpg) fixed;
+                height: 100vh;
+                background-size: cover;
+                overflow-x: hidden;
+                display: grid;
+                scroll-behavior: smooth;
+            }
         header.header 
             a.img(href="/home")
                 img.logo(src="/source/img/MovieManiax logo.png" alt="logo")
@@ -9,11 +36,13 @@ html
                 input.search-txt(type="text")
                 i.bx.bx-search 
             .links 
-                a.l01(href="/filmes")
+                a.l01(href="/filmes") Filmes
+                a.l02(href="/superuser") Adicionar
+                a.l03(href="/") Excluir
             .icones 
-                a.icon1(href="/perfil") 
+                a.icon1(href="/user/perfil") 
                     i.bx.bxs-user-circle#icon 
-                a.icon2(href="/sair")
+                a.icon2(href="/user/sair")
                     i.bx.bx-log-out#icon 
         .container
             h1.titulo Popular 
@@ -38,10 +67,28 @@ html
 
                 .filmes-conteudo 
                     img(src="/source/img/FNAF-lancamento.webp" alt="")
+
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
+
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
+
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
+
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
+
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
+                    
+                .filmes-conteudo 
+                    img(src="/source/img/FNAF-lancamento.webp" alt="")
             .passa-slide 
-                button(onclick="handleLeftCLick()").seta-esquerda
+                button(onclick="handleLeftClick()").seta-esquerda
                     i.bx.bx-chevron-left#seta
-                button(onclick="handleRightCLick()").seta-direita
+                button(onclick="handleRightClick()").seta-direita
                     i.bx.bx-chevron-right#seta
             h1.titulo Atividade da comunidade
             .comunidade 
@@ -57,4 +104,42 @@ html
                     img(src="/source/img/aranha.jpg" alt="")
                 .filmes-conteudo 
                     img(src="/source/img/aranha.jpg" alt="")
-            //script??
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+                .filmes-conteudo 
+                    img(src="/source/img/aranha.jpg" alt="")
+
+    script.
+        const slider = document.querySelector(".filmes-popular");
+
+        const handleLeftClick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft -= slider.offsetWidth;
+        }
+
+        const handleRightClick = (e) => {
+            console.log(slider);
+            console.log(slider.offsetWidth);
+            slider.scrollLeft += slider.offsetWidth;
+        }

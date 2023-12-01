@@ -1,10 +1,30 @@
 html 
     head 
-        link(rel="stylesheet" href="/source/css/Visualiazacao.css")
+        link(rel="stylesheet" href="/source/css/style.css")
         title visualizaçao
         link(rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
+        style.
+            body.body-visualizacao::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: inherit;
+                filter: blur(2px);
+                z-index: -1;
+            }
 
-    body
+        body.body-visualizacao
+            style.
+                body.body-visualizacao{
+                    background: url(/source/img/mario-big.jpg) fixed;
+                    background-position: center;
+                    background-size: cover;
+                    overflow: hidden;
+                    display: grid;
+                }
         <header class="header">
             <a href="/user" class="img">
                 <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
@@ -15,6 +35,8 @@ html
             </div>
             <div class="links">
                 <a class="l01" href="/filmes">Filmes</a>
+                <a class="l02" href="/superuser">Adicionar</a>
+                <a class="l03" href="/">Excluir</a>
             </div>
             <div class="icones">
                 <a class="icon1" href="/user/perfil">
@@ -54,11 +76,19 @@ html
                                 <img class="imagem-filme" src="data:img/png;base64,filme.imgHERE" alt="Embedded Image">
                                 //<img class="imagem-filme" src="/source/img/avatar.jpg" alt="Embedded Image">
                                 h3 #{filme.titulo}
+                                <div class="dados-filme">
+                                    <p class="ano"> 2023 ‧</p>
+                                    <p class="categoria"> Ação/Aventura ‧</p>
+                                    <p class="tempo-tela"> 2h 7m </p>
+                                </div>
                             </div>
+
                             <div class="info-filme">
                                 p #{filme.sinopse}
                             </div>
-                            <button class="ver-mais-btn">Ver Mais</button>
+
+                            a(href="/user/assistido")
+                                button.ver-mais-btn Ver Mais
                         </div>
                 </div>
             </div>
