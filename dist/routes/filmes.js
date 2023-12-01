@@ -6,6 +6,7 @@ const autentication = require("../middlewares/authentication");
 const multer = require("multer");
 
 const upload = multer({ storage: multer.memoryStorage() });
+const filmeModel = new FilmeModel();
 
 router.get("/", (req, res) => {
   autentication(req, res, req.cookies.token);
@@ -13,8 +14,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/add", upload.single("imagem"), async (req, res) => {
-  const filme = new FilmeModel();
-
   const titulo = req.body.titulo;
   const sinopse = req.body.sinopse;
   const duracao = req.body.duracao;
@@ -22,7 +21,7 @@ router.post("/add", upload.single("imagem"), async (req, res) => {
   const ano = req.body.ano;
   const genero = req.body.genero;
 
-  await filme.cadastrarFilme(titulo, sinopse, duracao, image, ano, genero);
+  await filmeModel.cadastrarFilme(titulo, sinopse, duracao, image, ano, genero);
 });
 
 router.get("/detalhes/:id", (req, res) => {

@@ -1,13 +1,13 @@
 const FilmesUsuarioModel = require("../models/filmesusuario");
 
-function getTempoAssistido(id) {
+async function getTempoAssistido(id) {
   const filmesUsuarioModel = new FilmesUsuarioModel();
   let tempo = 0;
   let horas = 0,
     dias = 0,
     meses = 0;
 
-  filmesUsuarioModel.getAllFilmsByUserId(id).then((filmes) => {
+  await filmesUsuarioModel.getAllFilmsByUserId(id).then((filmes) => {
     filmes.forEach((element) => {
       tempo += element.duracao;
     });
