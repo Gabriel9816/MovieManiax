@@ -20,10 +20,10 @@ class ComentarioModel {
     }
   }
 
-  async addComentario(comentario, filme, usuario) {
+  async addComentario(comentario, imagem, filme, usuario) {
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (comentario, idfilme, idusuario, data) VALUES (${comentario}, ${filme}, ${usuario}, NOW())`
+        `INSERT INTO ${this.tabela} (comentario, imagem, idfilme, idusuario, data) VALUES ("${comentario}", "${imagem}",${filme}, ${usuario}, NOW())`
       );
     } catch (error) {
       throw error;

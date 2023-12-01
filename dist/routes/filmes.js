@@ -29,7 +29,18 @@ router.get("/detalhes/:id", (req, res) => {
   autentication(req, res, req.cookies.token);
   //console.log(req.params.id);
   //res.sendFile(path.resolve(__dirname, "..", "views", "assistido.html"));
-  res.render("assistido");
+  res.render("assistido", { idfilme: req.params.id });
+});
+
+const ComentarioModel = require("../models/comentario");
+router.post("/addcomentario", upload.single("imagem"), async (req, res) => {
+  const comentario = new ComentarioModel();
+
+  const idfilme = req.body.idfilme;
+  console.log(idfilme);
+  const text = req.body.comentario;
+  const image = req.file.buffer.toString("base64");
+  //await comentario.addComentario(text, image, idfilme, req.cookies.id);
 });
 
 module.exports = router;

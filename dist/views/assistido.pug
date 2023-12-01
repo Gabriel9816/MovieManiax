@@ -20,7 +20,7 @@ html
 
     body.body-assistido 
         style.
-          .body-assistido {
+            .body-assistido {
                 background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%);
                 display: grid;
                 overflow-x: hidden;
@@ -87,9 +87,12 @@ html
                                 h4 O Besouro Azul se estabeleceu como um novo favorito entre os heróis da DC em minha opinião. Este filme atendeu às minhas expectativas, embora elas não fossem excessivamente elevadas. Antecipei que poderia apresentar alguns dos tropos comuns associados aos filmes de super-heróis, mas surpreendentemente, esses elementos ainda mantêm seu apelo, especialmente neste contexto.
                             .imagem-filme-comentario
                                 img(src="/source/img/fundo-besouro-azul.jpg" alt="")
-                    form.criar-comentario
+                    form.criar-comentario(action="/filmes/addcomentario" method="POST" enctype="multipart/form-data")
+                        input(type="hidden" name="idfilme" value="#{idfilme}")
                         h1 Comentário
                         textarea#comentario(name="comentario" rows="4" required)
-                        button(type="submit").submit-imagem
+                        //.submit-imagem funcionaria nele pra se livrar do botão
+                        input(type="file" name="imagem" accept="image/*")
+                        //button(type="submit").submit-imagem
                             i.bx.bx-image-add Anexar foto
                         button(type="submit").send-comentario Postar 
