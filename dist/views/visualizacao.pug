@@ -72,9 +72,7 @@ html
                     for filme in filmes
                         <div class="filme" id="filme1">
                             <div class="titulo-filme">
-                                //corrigir aqui, talvez com a metodologia desse outro indiano https://www.youtube.com/watch?v=ZhGHIn0Xfj8&list=PLlGT4GXi8_8cwvruQYb72_s3-4rKwSnxu&index=8
-                                <img class="imagem-filme" src="data:img/png;base64,filme.imgHERE" alt="Embedded Image">
-                                //<img class="imagem-filme" src="/source/img/avatar.jpg" alt="Embedded Image">
+                                img.imagem-filme(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}` height="125px" width="100px")
                                 h3 #{filme.titulo}
                                 <div class="dados-filme">
                                     <p class="ano"> 2023 ‧</p>
@@ -87,7 +85,7 @@ html
                                 p #{filme.sinopse}
                             </div>
 
-                            a(href="/user/assistido")
+                            a(href=`/filmes/detalhes/${filme.id}`)
                                 button.ver-mais-btn Ver Mais
                         </div>
                 </div>

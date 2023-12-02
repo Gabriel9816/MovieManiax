@@ -20,7 +20,7 @@ class FilmeModel {
   async getThreeFilme() {
     try {
       const results = await this.db.query(
-        `SELECT * FROM ${this.tabela} LIMIT 3`
+        `SELECT * FROM ${this.tabela} order by id desc LIMIT 3`
       );
       return results;
     } catch (error) {
@@ -38,10 +38,10 @@ class FilmeModel {
     }
   }
 
-  async cadastrarFilme(titulo, sinopse, duracao, capa, ano, genero) {
+  async cadastrarFilme(titulo, sinopse, capa, duracao, genero, ano, extensao) {
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa,ano,genero) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}")`
+        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa, ano, categoria, extensaoCapa) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}", "${extensao}")`
       );
     } catch (error) {
       throw error;

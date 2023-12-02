@@ -9,35 +9,18 @@
   text-align: justify;
 }
 
-/* Estilizando a barra de rolagem para navegadores WebKit */
 body::-webkit-scrollbar {
   background-color: rgb(40, 46, 58);
   width: 10px;
-  /* Largura da barra de rolagem */
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #007af4;
-  /* Cor da parte "arrastável" da barra de rolagem */
   border-radius: 3px;
 }
 
 body::-webkit-scrollbar-track {
   background-color: transparent;
-}
-
-/* Estilizando a barra de rolagem para navegadores (Firefox) */
-body::-moz-scrollbar {
-  width: 100%;
-}
-
-body::-moz-scrollbar-thumb {
-  background-color: #d6f1fb;
-}
-
-body::-moz-scrollbar-track {
-  background-color: transparent;
-  margin-right: 10rem;
 }
 
 body .header {
@@ -167,16 +150,6 @@ body input[type=radio]:checked + label {
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 
-.body-home {
-  /* ESTILIZAÇÃO PÁGINA INDEX/HOME/APRESENTAÇÃO */
-  /* --------------------------FIM PÁGINA HOME--------------------------------------- */
-}
-.body-home .container-home {
-  /* IMPLEMENTAÇÃO DA RESPONSIVIDADE */
-}
-.body-home .container-home .conteudo-home {
-  /* ignore */
-}
 .body-home .container-home .conteudo-home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,8 +199,6 @@ body input[type=radio]:checked + label {
   transition: 0.2s;
   transform: scale(1.05);
   box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
   transition: transform 0.2s ease-in-out;
 }
 .body-home .container-home .register-home:hover {
@@ -246,7 +217,6 @@ body input[type=radio]:checked + label {
   text-shadow: -1px -1px 2px #2c3440;
   letter-spacing: 1px;
   line-height: 1.5;
-  /* Adiciona espaçamento entre as linhas para melhor legibilidade */
 }
 .body-home .container-home .descricao-home h1 {
   font-weight: bold;
@@ -424,15 +394,12 @@ body input[type=radio]:checked + label {
   left: 32rem;
   z-index: 1;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
-  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
 }
 .body-login .container-login .form-login .svgContainer {
   width: 10rem;
   height: 10rem;
   margin: 2rem auto 1rem;
   border-radius: 50%;
-  /* border: 0.2rem solid #000000; */
   overflow: hidden;
 }
 .body-login .container-login .form-login .svgContainer div {
@@ -445,7 +412,6 @@ body input[type=radio]:checked + label {
   height: 100%;
 }
 .body-login .container-login .form-login #input-botao {
-  /* margin: 2em 2em;  */
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 0px;
@@ -454,7 +420,6 @@ body input[type=radio]:checked + label {
   justify-content: center;
 }
 .body-login .container-login .form-login .inputGroup {
-  /* margin: 2em 2em;  */
   margin-top: 7px;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -489,8 +454,8 @@ body input[type=radio]:checked + label {
   border: none;
   border-radius: 0.3rem;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   box-sizing: border-box;
   width: 100%;
   height: 4.3rem;
@@ -501,8 +466,6 @@ body input[type=radio]:checked + label {
   transition: 0.2s;
   transform: scale(1.03);
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
 }
 .body-login .container-login .form-login .inputGroup input:hover {
   transform: scale(1.06);
@@ -527,13 +490,11 @@ body input[type=radio]:checked + label {
   font-size: 16px;
   font-weight: 600;
   color: #2c3440;
-  /* Substitua pela cor desejada */
 }
 .body-login .container-login .form-login .inputGroup input:focus::placeholder {
   font-size: 16px;
   font-weight: 600;
   color: #2c3440;
-  /* Substitua pela cor desejada */
 }
 .body-login .container-login .form-login .inputGroup button {
   background-color: aliceblue;
@@ -554,8 +515,6 @@ body input[type=radio]:checked + label {
   transition: transform 0.2s ease-in-out;
   border: 1px solid;
   box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
 }
 .body-login .container-login .form-login .inputGroup button:hover,
 .body-login .container-login .form-login .inputGroup button:active {
@@ -569,10 +528,6 @@ body input[type=radio]:checked + label {
   opacity: 1;
 }
 
-.body-register {
-  /* AGORA VAMOS MEXER NA PÁGINA DE CADASTRO/REGISTER/SIGN UP */
-  /* --------------------------FIM PÁGINA CADRASTO--------------------------------------- */
-}
 .body-register .container-register {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -604,8 +559,6 @@ body input[type=radio]:checked + label {
   left: 36%;
   top: 15%;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
-  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
 }
 .body-register .input-user {
   padding: 2rem;
@@ -625,13 +578,10 @@ body input[type=radio]:checked + label {
   transform: scale(1.03);
   color: #d6f1fb;
   background-color: rgba(67, 76, 81, 0.4392156863);
-  /*  rgba(67, 76, 81, 0.44) RGBA(61,69,73,0.74) RGBA(65, 68, 73, 0.5)  #414449 */
   padding: 14px;
   text-align: start;
   font-size: 16px;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
 }
 .body-register .input-user input:hover {
   transform: scale(1.1);
@@ -642,16 +592,12 @@ body input[type=radio]:checked + label {
   font-size: 16px;
   font-weight: 600;
   color: aliceblue;
-  /* Substitua pela cor desejada */
-  /* Outros estilos que você queira aplicar */
 }
 .body-register .input-user input:focus::placeholder,
 .body-register .input-user input:valid::placeholder {
   font-size: 16px;
   font-weight: 600;
   color: aliceblue;
-  /* Substitua pela cor desejada */
-  /* Outros estilos que você queira aplicar */
 }
 .body-register .input-user input:focus {
   background-color: aliceblue;
@@ -689,8 +635,6 @@ body input[type=radio]:checked + label {
   height: 0.9rem;
   align-self: center;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -webkit-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
-  -moz-box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.7);
 }
 .body-register .caixa-termos input:hover {
   transform: scale(1.1);
@@ -700,12 +644,8 @@ body input[type=radio]:checked + label {
 }
 .body-register .caixa-termos input:checked {
   background-color: #80c4ff;
-  /* Cor de fundo do checkbox marcado */
   border-color: aliceblue;
-  /* Cor da borda do checkbox marcado */
   box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
 }
 .body-register .caixa-termos .termo1 {
   color: #d6f1fb;
@@ -734,8 +674,6 @@ body input[type=radio]:checked + label {
   transition: 0.2s;
   transform: scale(1.05);
   box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -webkit-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
-  -moz-box-shadow: 0px 1px 20px 0px rgba(84, 84, 84, 0.75);
   transition: transform 0.2s ease-in-out;
 }
 .body-register .botao-registro:hover {
@@ -744,29 +682,6 @@ body input[type=radio]:checked + label {
   color: aliceblue;
 }
 
-.body-visualizacao {
-
-  /* @media screen and (max-width: 1600px) {
-    .logo {
-      width: 10rem;
-      margin-left: -14rem;
-    }
-
-    .titulo {
-      grid-column: 1;
-      margin-top: 8rem;
-      margin-left: 2rem;
-      grid-row: 2;
-    }
-
-    .descricao {
-      grid-column: 1;
-      margin-top: 1rem;
-      margin-left: 2rem;
-      grid-row: 3;
-    }
-  } */
-}
 .body-visualizacao .titulo {
   grid-column: 1;
   margin-left: 4rem;
@@ -803,8 +718,6 @@ body input[type=radio]:checked + label {
   color: #d6f1fb;
   display: grid;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-visualizacao footer .tendencias {
   text-align: start;
@@ -975,16 +888,12 @@ body input[type=radio]:checked + label {
   border-radius: 6px;
   transition: 0.3s;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-visualizacao .filme .ver-mais-btn:hover {
   background-color: #d6f1fb;
   border: 1px solid #d6f1fb;
   color: #2c3440;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.1) unset;
 }
 .body-visualizacao .info-filme {
   grid-column: 4/2;
@@ -1070,8 +979,6 @@ body input[type=radio]:checked + label {
 .body-super-user .add .status-filme:hover {
   background-color: #d6f1fb;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-super-user .add .status-filme:hover h3 {
   color: #282e3a;
@@ -1198,8 +1105,6 @@ body input[type=radio]:checked + label {
   padding-bottom: 10px;
   padding-left: 10px;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-super-user .texto-grande:hover {
   background-color: #d6f1fb;
@@ -1214,12 +1119,10 @@ body input[type=radio]:checked + label {
 .body-super-user .texto-grande::-webkit-scrollbar {
   background-color: rgb(40, 46, 58);
   width: 10px;
-  /* Largura da barra de rolagem */
   border-radius: 10px;
 }
 .body-super-user .texto-grande::-webkit-scrollbar-thumb {
   background-color: #007af4;
-  /* Cor da parte "arrastável" da barra de rolagem */
   border-radius: 10px;
 }
 .body-super-user .texto-grande::-webkit-scrollbar-track {
@@ -1258,8 +1161,6 @@ body input[type=radio]:checked + label {
   padding-left: 10px;
   grid-column: 2;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-super-user .texto:hover {
   background-color: #d6f1fb;
@@ -1275,26 +1176,14 @@ body input[type=radio]:checked + label {
 .body-super-user .texto::-webkit-scrollbar {
   background-color: rgb(40, 46, 58);
   width: 10px;
-  /* Largura da barra de rolagem */
   border-radius: 10px;
 }
 .body-super-user .texto::-webkit-scrollbar-thumb {
   background-color: #007af4;
-  /* Cor da parte "arrastável" da barra de rolagem */
   border-radius: 10px;
 }
 .body-super-user .texto::-webkit-scrollbar-track {
   background-color: transparent;
-}
-.body-super-user .texto::-moz-scrollbar {
-  width: 100%;
-}
-.body-super-user .texto::-moz-scrollbar-thumb {
-  background-color: #d6f1fb;
-}
-.body-super-user .texto::-moz-scrollbar-track {
-  background-color: transparent;
-  margin-right: 10rem;
 }
 .body-super-user .submit-imagem-fundo {
   display: grid;
@@ -1418,8 +1307,6 @@ body input[type=radio]:checked + label {
   background: #282e3a repeating-linear-gradient(360deg, black, transparent 74%) fixed;
   z-index: 1;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-perfil .container-tudo {
   display: grid;
@@ -1779,8 +1666,6 @@ body input[type=radio]:checked + label {
 .body-assistido .container .filme-assistido .status-filme:hover {
   background-color: #d6f1fb;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-assistido .container .filme-assistido .status-filme:hover h3 {
   color: #282e3a;
@@ -1916,8 +1801,6 @@ body input[type=radio]:checked + label {
   height: 21rem;
   grid-template-columns: repeat(3, 1fr);
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-assistido .user-comentario .icone-user {
   grid-column: 1;
@@ -1998,8 +1881,6 @@ body input[type=radio]:checked + label {
   padding: 2rem;
   grid-template-rows: 0.1fr 0.7fr 0.2fr;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-assistido .criar-comentario h1 {
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
@@ -2013,12 +1894,9 @@ body input[type=radio]:checked + label {
   border: none;
   border-radius: 12px;
   resize: none;
-  /* A minha ideia era usar o javascript para deixar essa caixa dinâmica, mas acho que é muito empenho resize: vertical; */
   height: 14rem;
   transition: 0.3s;
   box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
 }
 .body-assistido .criar-comentario textarea:hover,
 .body-assistido textarea:focus {
@@ -2042,8 +1920,6 @@ body input[type=radio]:checked + label {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
-  -webkit-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
-  -moz-box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
 }
 .body-assistido .criar-comentario .submit-imagem i {
   background-color: transparent;

@@ -4,14 +4,45 @@ const path = require("node:path");
 const FilmeModel = require("../models/filme");
 const autentication = require("../middlewares/authentication");
 const multer = require("multer");
+const ComentarioModel = require("../models/comentario");
+
+//-----------------------------------------------------------------------
+//Models
+//-----------------------------------------------------------------------
 
 const upload = multer({ storage: multer.memoryStorage() });
 const filmeModel = new FilmeModel();
+const comentarioModel = new ComentarioModel();
+
+//-----------------------------------------------------------------------
+//Rotas GET
+//-----------------------------------------------------------------------
 
 router.get("/", (req, res) => {
   autentication(req, res, req.cookies.token);
-  res.render("popular");
+
+  filmeModel.getAllFilme().then((filmes) => {
+    res.render("popular", {
+      filmes: filmes,
+    });
+  });
 });
+
+router.get("/detalhes/:id", async (req, res) => {
+  autentication(req, res, req.cookies.token);
+  const comentarios = await comentarioModel.getAllComentsByFilmId(
+    req.params.id
+  );
+  const filme = await filmeModel.getFilmeById(req.params.id);
+  res.render("assistido", {
+    filme: filme[0],
+    comentarios: comentarios,
+  });
+});
+
+//-----------------------------------------------------------------------
+//Rotas POST
+//-----------------------------------------------------------------------
 
 router.post("/add", upload.single("imagem"), async (req, res) => {
   const titulo = req.body.titulo;
@@ -20,26 +51,31 @@ router.post("/add", upload.single("imagem"), async (req, res) => {
   const image = req.file.buffer.toString("base64");
   const ano = req.body.ano;
   const genero = req.body.genero;
+  const extensaoArquivo = path.extname(req.file.originalname).toLowerCase();
 
-  await filmeModel.cadastrarFilme(titulo, sinopse, duracao, image, ano, genero);
+  await filmeModel.cadastrarFilme(
+    titulo,
+    sinopse,
+    image,
+    duracao,
+    genero,
+    ano,
+    extensaoArquivo
+  );
+
+  res.redirect("/filmes");
 });
 
-router.get("/detalhes/:id", (req, res) => {
-  autentication(req, res, req.cookies.token);
-  //console.log(req.params.id);
-  //res.sendFile(path.resolve(__dirname, "..", "views", "assistido.html"));
-  res.render("assistido", { idfilme: req.params.id });
-});
-
-const ComentarioModel = require("../models/comentario");
 router.post("/addcomentario", upload.single("imagem"), async (req, res) => {
-  const comentario = new ComentarioModel();
-
   const idfilme = req.body.idfilme;
-  console.log(idfilme);
   const text = req.body.comentario;
   const image = req.file.buffer.toString("base64");
-  //await comentario.addComentario(text, image, idfilme, req.cookies.id);
+  const extensao = path.extname(req.file.originalname).toLowerCase();
+  const iduser = req.cookies.id;
+
+  await comentarioModel.addComentario(iduser, idfilme, text, image, extensao);
+
+  res.redirect(`/filmes/detalhes/${idfilme}`);
 });
 
 module.exports = router;

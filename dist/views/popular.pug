@@ -30,7 +30,7 @@ html
                 scroll-behavior: smooth;
             }
         header.header 
-            a.img(href="/home")
+            a.img(href="/user")
                 img.logo(src="/source/img/MovieManiax logo.png" alt="logo")
             .search-box 
                 input.search-txt(type="text")
@@ -91,43 +91,11 @@ html
                 button(onclick="handleRightClick()").seta-direita
                     i.bx.bx-chevron-right#seta
             h1.titulo Atividade da comunidade
-            .comunidade 
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
-                .filmes-conteudo 
-                    img(src="/source/img/aranha.jpg" alt="")
+            .comunidade
+                for filme in filmes
+                    .filmes-conteudo
+                        a(href=`/filmes/detalhes/${filme.id}`)
+                            img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
 
     script.
         const slider = document.querySelector(".filmes-popular");

@@ -49,16 +49,18 @@ html
             .container 
                 .filme-assistido 
                     .check-assistido
-                        img.filme-usuario-assistiu(src="/source/img/imagem-catalogo-besouro-azul.jpg" alt="")
+                        img.filme-usuario-assistiu(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
                         .titulo-filme 
-                            h1 Besouro Azul 
+                            h1 #{filme.titulo}
                         button.status-filme 
                             i.bx.bx-badge-check 
                             h3 Nâo Assistido
                         .dados-filme 
-                            p.ano 2023
-                            p.categoria Ação/Aventura
-                            p.tempo-tela 2h 7m
+                            p.ano #{filme.ano}
+                            p.categoria #{filme.categoria}
+                            - var horas = Math.floor(filme.duracao / 60)
+                            -var minutos = Math.floor(filme.duracao % 60)
+                            p.tempo-tela #{horas}h #{minutos}m
                         form.avaliacao
                             .div-avaliacao
                                 <input type="radio" name="avalia" id="">
@@ -72,27 +74,26 @@ html
                                 <input type="radio" name="avalia" id="">
                                 <label for="">5</label>
                         .sobre-filme 
-                            h4 O adolescente Jaime Reyes ganha superpoderes quando um misterioso escaravelho se prende à sua coluna e lhe fornece uma poderosa armadura alienígena azul
+                            h4 #{filme.sinopse}
                     h1.titulo-comentario Comentários
                 .comentarios 
                     ul.comentarios-lista
-                        li.user-comentario 
-                            .icone-user
-                                .nome-user
-                                    a.icon1.bx.bxs-user-circle#icon(href="/")
-                                    h1 iToshiba 
-                                    .data-comentario
-                                        p#data-comentario 26/08/2023
-                            .comentario-user
-                                h4 O Besouro Azul se estabeleceu como um novo favorito entre os heróis da DC em minha opinião. Este filme atendeu às minhas expectativas, embora elas não fossem excessivamente elevadas. Antecipei que poderia apresentar alguns dos tropos comuns associados aos filmes de super-heróis, mas surpreendentemente, esses elementos ainda mantêm seu apelo, especialmente neste contexto.
-                            .imagem-filme-comentario
-                                img(src="/source/img/fundo-besouro-azul.jpg" alt="")
+                        for comentario in comentarios
+                            li.user-comentario 
+                                .icone-user
+                                    .nome-user
+                                        a.icon1.bx.bxs-user-circle#icon(href="#")
+                                        h1 iToshiba 
+                                        .data-comentario
+                                            - var data = comentario.data.toLocaleString("pt-br", {timeZone: "UTC"})
+                                            p#data-comentario #{data}
+                                .comentario-user
+                                    h4 #{comentario.texto}
+                                .imagem-filme-comentario
+                                    img(src=`data:image/${comentario.extensao};base64,${comentario.imagem}`)
                     form.criar-comentario(action="/filmes/addcomentario" method="POST" enctype="multipart/form-data")
-                        input(type="hidden" name="idfilme" value="#{idfilme}")
+                        input(type="hidden" name="idfilme" value=`${filme.id}`)
                         h1 Comentário
                         textarea#comentario(name="comentario" rows="4" required)
-                        //.submit-imagem funcionaria nele pra se livrar do botão
                         input(type="file" name="imagem" accept="image/*")
-                        //button(type="submit").submit-imagem
-                            i.bx.bx-image-add Anexar foto
                         button(type="submit").send-comentario Postar 
