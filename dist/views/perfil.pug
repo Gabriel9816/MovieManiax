@@ -79,8 +79,8 @@ html
                     .filmes-assistidos
                         for filme in filmes
                             .filme 
-                                a(href="") 
-                                    img(src="/source/img/openheimer.webp" alt="")
+                                a(href=`/filmes/detalhes/${filme.id}`) 
+                                    img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
 
                     button(onclick="handleRightCLick()").seta-direita
                         i.bx.bx-chevron-right#seta

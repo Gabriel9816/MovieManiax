@@ -52,27 +52,34 @@ html
                         img.filme-usuario-assistiu(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
                         .titulo-filme 
                             h1 #{filme.titulo}
-                        button.status-filme 
-                            i.bx.bx-badge-check 
-                            h3 Nâo Assistido
-                        .dados-filme 
-                            p.ano #{filme.ano}
-                            p.categoria #{filme.categoria}
-                            - var horas = Math.floor(filme.duracao / 60)
-                            -var minutos = Math.floor(filme.duracao % 60)
-                            p.tempo-tela #{horas}h #{minutos}m
-                        form.avaliacao
+                        form.avaliacao(id="asssitido")
+                            label.status-filme
+                                if (assistido)
+                                    input(type="checkbox" id="assistidoCheck" checked)
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bxs-badge-check#status
+                                    h3#textAssisti Assistido
+                                else
+                                    input(type="checkbox" id="assistidoCheck")
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bx-badge-check#status
+                                    h3#textAssisti Nao Assistido
+                            .dados-filme 
+                                p.ano #{filme.ano}
+                                p.categoria #{filme.categoria}
+                                - var horas = Math.floor(filme.duracao / 60)
+                                -var minutos = Math.floor(filme.duracao % 60)
+                                p.tempo-tela #{horas}h #{minutos}m
                             .div-avaliacao
-                                <input type="radio" name="avalia" id="">
-                                <label for="">1</label>
-                                <input type="radio" name="avalia" id="">
-                                <label for="">2</label>
-                                <input type="radio" name="avalia" id="">
-                                <label for="">3</label>
-                                <input type="radio" name="avalia" id="">
-                                <label for="">4</label>
-                                <input type="radio" name="avalia" id="">
-                                <label for="">5</label>
+                                for i in [1, 2, 3, 4, 5]
+                                    if(i == avaliacao)
+                                        input(type="radio" name="avalia" id="avaliacao" value=`${i}` checked disabled)
+                                        <label for="">#{i}</label>
+                                    else
+                                        <input type="radio" name="avalia" id="avaliacao" value=#{i} disabled>
+                                        <label for="">#{i}</label>
+                                
+                            button.avaliar-filme(type="submit" id="btnavalia") Avaliar
                         .sobre-filme 
                             h4 #{filme.sinopse}
                     h1.titulo-comentario Comentários
@@ -96,4 +103,7 @@ html
                         h1 Comentário
                         textarea#comentario(name="comentario" rows="4" required)
                         input(type="file" name="imagem" accept="image/*")
-                        button(type="submit").send-comentario Postar 
+                        button(type="submit").send-comentario Postar
+
+        script(src="/source/js/disable.js")
+        script(src="/controllers/filmesusuario/add.js")

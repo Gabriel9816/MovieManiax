@@ -4,12 +4,13 @@ const path = require("node:path");
 const UsuarioModel = require("../models/usuario");
 const jwt = require("jsonwebtoken");
 
+const usuarioModel = new UsuarioModel();
+
 router.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "views", "login.html"));
 });
 
 router.post("/enter", async (req, res) => {
-  const usuarioModel = new UsuarioModel();
   const user = await usuarioModel.login(req.body.email, req.body.senha);
 
   if (!user) {
