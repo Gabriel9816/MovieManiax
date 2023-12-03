@@ -22,13 +22,15 @@ const filmesUsuarioModel = new FilmesUsuarioModel();
 //Rotas GET
 //-----------------------------------------------------------------------
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   autentication(req, res, req.cookies.token);
 
-  filmeModel.getAllFilme().then((filmes) => {
-    res.render("popular", {
-      filmes: filmes,
-    });
+  const filmes = await filmeModel.getAllFilme();
+  const filmesCarossel = await filmeModel.getTenFilms();
+
+  res.render("popular", {
+    filmes: filmes,
+    carrossel: filmesCarossel,
   });
 });
 
