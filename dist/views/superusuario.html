@@ -6,52 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/source/css/style.css">
-  <title>Popular</title>
+  <title>Super User</title>
 </head>
 
 <body class="body-super-user">
   <header class="header">
     <a href="/user" class="img">
-      <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo" />
+      <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
     </a>
     <div class="search-box">
-      <input class="search-txt" type="text" />
+      <input class="search-txt" type="text">
       <i class="bx bx-search"></i>
     </div>
 
     <div class="links">
-      <a class="l01" href="/superuser">Adicionar</a>
-      <a class="l02" href="/">Excluir</a>
+      <a class="l01" href="/filmes">Filmes</a>
+      <a class="l02" href="/superuser">Adicionar</a>
+      <a class="l03" href="/">Excluir</a>
     </div>
 
     <div class="icones">
-      <a class="icon2" href="/user/sair">
-        <i id="icon" class="bx bx-log-out"></i>
+      <a class="icon2" href="/sair">
+        <i id="icon" class='bx bx-log-out'></i>
       </a>
     </div>
   </header>
-  <div class="icones2">
-    <label class="submit-imagem-fundo" for="imagem">
-      <img class="imagem-fundo" src="/source/img/icone-add-image.png" />
-      <input type="file" name="imagem" id="imagem-fundo" accept="image/*" />
-    </label>
-  </div>
-  <form class="add" method="post" action="/filmes/add" enctype="multipart/form-data">
+
+  <form class="add" enctype="multipart/form-data" action="/filmes/add" method="POST">
     <label class="submit-imagem-filme" for="imagem">
-      <img class="imagem-filme" src="/source/img/icone-add.png" />
-      <input type="file" name="imagem" id="imagem-filme" accept="image/*" />
+      <img class="imagem-filme" src="/source/img/icone-add.png">
+      <input type="file" name="imagem" id="imagem-filme" accept="image/*">
     </label>
 
-    <textarea class="texto" name="titulo" rows="2" required></textarea>
-
-    <!-- pq avaliação aqui?
-        <img class="avaliacao" src="/source/img/stars.png" /> -->
+    <textarea class="texto" name="titulo" rows="4" required></textarea>
 
     <textarea class="texto-grande" name="sinopse" rows="4" required></textarea>
     <div class="add-data">
       <input class="ano" name="ano" type="text" />
       <input class="horas" name="duracao" type="text" />
-      <select class="genero1" id="genero-select" class="genero">
+      <select class="genero1" id="genero-select" name="genero">
         <option value="Ação">Ação</option>
         <option value="Fantasia">Fantasia</option>
         <option value="Comédia">Comédia</option>
@@ -63,14 +56,13 @@
         <option value="Ficção Científica">Ficção Científica</option>
         <option value="Aventura">Aventura</option>
       </select>
-
-      <div id="generos-selecionados" name="genero"></div>
     </div>
+    <div id="generos-selecionados"></div>
 
-    <div id="blur-background" class="blur-background"></div>
-
-    <button type="submit" class="cadastrar"></button>
+    <button type="submit">Adicionar</button>
   </form>
+
+  <div id="blur-background" class="blur-background"></div>
 </body>
 
 </html>

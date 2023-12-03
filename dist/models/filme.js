@@ -27,6 +27,18 @@ class FilmeModel {
       throw error;
     }
   }
+
+  async getTenFilms() {
+    try {
+      const results = await this.db.query(
+        `SELECT * FROM ${this.tabela} LIMIT 10`
+      );
+      return results;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async getFilmeById(id) {
     try {
       const results = await this.db.query(
@@ -38,10 +50,10 @@ class FilmeModel {
     }
   }
 
-  async cadastrarFilme(titulo, sinopse, duracao, capa, ano, genero) {
+  async cadastrarFilme(titulo, sinopse, capa, duracao, genero, ano, extensao) {
     try {
       await this.db.query(
-        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa,ano,genero) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}")`
+        `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa, ano, categoria, extensaoCapa) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}", "${extensao}")`
       );
     } catch (error) {
       throw error;

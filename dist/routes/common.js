@@ -7,9 +7,17 @@ const UsuarioModel = require("../models/usuario");
 const FilmesUsuarioModel = require("../models/filmesusuario");
 const getTempoAssistido = require("../middlewares/tempoAssitido");
 
+//-----------------------------------------------------------------------
+//Models
+//-----------------------------------------------------------------------
+
 const filmeModel = new FilmeModel();
 const usuarioModel = new UsuarioModel();
 const filmesUsuarioModel = new FilmesUsuarioModel();
+
+//-----------------------------------------------------------------------
+//Rotas GET
+//-----------------------------------------------------------------------
 
 router.get("/", async (req, res) => {
   autentication(req, res, req.cookies.token);
@@ -25,7 +33,7 @@ router.get("/perfil", async (req, res) => {
 
   const user = await usuarioModel.getUsuarioById(id);
   const count = await filmesUsuarioModel.getCountFilmesByUserId(id);
-  const tempo = getTempoAssistido(id);
+  const tempo = await getTempoAssistido(id);
   const filmes = await filmesUsuarioModel.getAllFilmsByUserId(id);
 
   res.render("perfil", {

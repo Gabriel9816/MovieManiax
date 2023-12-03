@@ -1,10 +1,34 @@
 html 
     head 
-        link(rel="stylesheet" href="/source/css/style.css")
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/source/css/style.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+        <title>Filme Assistido</title>
+        style.
+            body.body-assistido::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(40, 46, 58, 0.8) fixed;
+                z-index: 1;
+            }
 
     body.body-assistido 
+        style.
+            .body-assistido {
+                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%);
+                display: grid;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                grid-template-columns: repeat(1, 1fr);
+            }
         .pagina-inteira 
-            img(src="/source/img/Spoiler Alert.png" )
+            img(src="/source/img/Spoiler_Alert.png" )
         .container-tudo 
             header.header 
                 .img 
@@ -15,44 +39,71 @@ html
                     i.bx.bx-search 
                 .links 
                     a.l01(href="/filmes") Filmes
+                    a.l02(href="/superuser") Adicionar
+                    a.l03(href="/") Excluir
                 .icones
-                    a.icon1(href="/user/perfil")
+                    a.icon1(href="/perfil")
                         i.bx.bxs-ser-circle#icon1
-                    a.icon2(href="/user/sair") 
-                        i.bx.bx-log-out#icon 
+                    a.icon2(href="/sair") 
+                        i.bx.bx-log-out#icon
             .container 
                 .filme-assistido 
                     .check-assistido
-                        img.filme-usuario-assistiu(src="/source/img/imagem-catalogo-besouro-azul.jpg" alt="")
+                        img.filme-usuario-assistiu(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
                         .titulo-filme 
-                            h1 Besouro Azul 
-                        button.status-filme 
-                            i.bx.bxs-badge-check 
-                            h3 Já Assistido
-                        .dados-filme 
-                            p.ano 2023
-                            p.categoria Ação/Aventura
-                            p.tempo-tela 2h 7m
-                        img.avaliacao(src="/source/img/stars.png" alt="")
+                            h1 #{filme.titulo}
+                        form.avaliacao(id="asssitido")
+                            label.status-filme
+                                if (assistido)
+                                    input(type="checkbox" id="assistidoCheck" checked)
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bxs-badge-check#status
+                                    h3#textAssisti Assistido
+                                else
+                                    input(type="checkbox" id="assistidoCheck")
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bx-badge-check#status
+                                    h3#textAssisti Nao Assistido
+                            .dados-filme 
+                                p.ano #{filme.ano}
+                                p.categoria #{filme.categoria}
+                                - var horas = Math.floor(filme.duracao / 60)
+                                -var minutos = Math.floor(filme.duracao % 60)
+                                p.tempo-tela #{horas}h #{minutos}m
+                            .div-avaliacao
+                                for i in [1, 2, 3, 4, 5]
+                                    if(i == avaliacao)
+                                        input(type="radio" name="avalia" id="avaliacao" value=`${i}` checked disabled)
+                                        <label for="">#{i}</label>
+                                    else
+                                        <input type="radio" name="avalia" id="avaliacao" value=#{i} disabled>
+                                        <label for="">#{i}</label>
+                                
+                            button.avaliar-filme(type="submit" id="btnavalia") Avaliar
                         .sobre-filme 
-                            h4 O adolescente Jaime Reyes ganha superpoderes quando um misterioso escaravelho se prende à sua coluna e lhe fornece uma poderosa armadura alienígena azul
-                .comentarios 
+                            h4 #{filme.sinopse}
                     h1.titulo-comentario Comentários
+                .comentarios 
                     ul.comentarios-lista
-                        li.user-comentario 
-                            .icone-user
-                                .nome-user
-                                    a.icon1.bx.bxs-user-circle#icon(href="/")
-                                    h1 iToshiba 
-                                    .data-comentario
-                                        p#data-comentario 26/08/2023
-                            .comentario-user
-                                h4 O Besouro Azul se estabeleceu como um novo favorito entre os heróis da DC em minha opinião. Este filme atendeu às minhas expectativas, embora elas não fossem excessivamente elevadas. Antecipei que poderia apresentar alguns dos tropos comuns associados aos filmes de super-heróis, mas surpreendentemente, esses elementos ainda mantêm seu apelo, especialmente neste contexto.
-                            .imagem-filme-comentario
-                                img(src="/source/img/fundo-besouro-azul.jpg" alt="")
-                    form.criar-comentario
+                        for comentario in comentarios
+                            li.user-comentario 
+                                .icone-user
+                                    .nome-user
+                                        a.icon1.bx.bxs-user-circle#icon(href="#")
+                                        h1 iToshiba 
+                                        .data-comentario
+                                            - var data = comentario.data.toLocaleString("pt-br", {timeZone: "UTC"})
+                                            p#data-comentario #{data}
+                                .comentario-user
+                                    h4 #{comentario.texto}
+                                .imagem-filme-comentario
+                                    img(src=`data:image/${comentario.extensao};base64,${comentario.imagem}`)
+                    form.criar-comentario(action="/filmes/addcomentario" method="POST" enctype="multipart/form-data")
+                        input(type="hidden" name="idfilme" value=`${filme.id}`)
                         h1 Comentário
                         textarea#comentario(name="comentario" rows="4" required)
-                        button(type="submit").submit-imagem
-                            i.bx.bx-image-add Anexar foto
-                        button(type="submit").send-comentario Postar 
+                        input(type="file" name="imagem" accept="image/*")
+                        button(type="submit").send-comentario Postar
+
+        script(src="/source/js/disable.js")
+        script(src="/controllers/filmesusuario/add.js")
