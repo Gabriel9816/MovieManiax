@@ -388,8 +388,8 @@ body input[type=radio]:checked + label {
   padding: 1.2rem;
   display: grid;
   position: fixed;
-  top: 6rem;
-  left: 32rem;
+  top: 20%;
+  left: 39%;
   z-index: 1;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
 }
@@ -554,8 +554,8 @@ body input[type=radio]:checked + label {
   display: grid;
   position: fixed;
   z-index: 1;
-  left: 36%;
-  top: 15%;
+  left: 39%;
+  top: 21%;
   box-shadow: 1px 2px 20px 0px rgba(45, 45, 45, 0.75);
 }
 .body-register .input-user {
@@ -684,11 +684,11 @@ body input[type=radio]:checked + label {
   grid-column: 1;
   margin-left: 4rem;
   grid-row: 2;
-  margin-top: -7rem;
+  margin-top: 1rem;
 }
 .body-visualizacao .titulo h1 {
   color: #d6f1fb;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   text-align: justify;
   letter-spacing: 1.5px;
@@ -698,11 +698,11 @@ body input[type=radio]:checked + label {
   grid-column: 1;
   margin-left: 4rem;
   grid-row: 3;
-  margin-top: -12rem;
+  margin-top: -15rem;
 }
 .body-visualizacao .descricao h2 {
   color: #d6f1fb;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 100;
   text-align: justify;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
@@ -711,16 +711,15 @@ body input[type=radio]:checked + label {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 14rem;
+  height: 15rem;
   background: #282e3a repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
   color: #d6f1fb;
   display: grid;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
 .body-visualizacao footer .tendencias {
-  text-align: start;
-  margin-left: 2rem;
-  margin-top: 5px;
+  margin-left: 15px;
+  margin-top: 10px;
   margin-bottom: 3px;
   font-size: 1.5rem;
   font-weight: 400;
@@ -728,25 +727,23 @@ body input[type=radio]:checked + label {
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
 .body-visualizacao .carousel-container {
-  margin-left: 16px;
   display: grid;
   justify-content: center;
 }
 .body-visualizacao .carousel {
   position: relative;
   display: flex;
-  margin-right: 9rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  width: 93.5rem;
+  width: 100%;
 }
 .body-visualizacao .carousel::-webkit-scrollbar {
   display: none;
 }
 .body-visualizacao .carousel-container .passa-slide {
   position: absolute;
-  top: 14px;
-  left: 104rem;
+  top: 20px;
+  left: 109%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -824,20 +821,20 @@ body input[type=radio]:checked + label {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 25px;
-  width: 40.5rem;
+  width: 44.5rem;
   height: 11rem;
   align-items: center;
   text-align: center;
   margin-bottom: 5px;
-  margin-right: 23px;
+  margin-right: 15px;
   border: 1px solid;
   margin-left: 1rem;
 }
 .body-visualizacao .imagem-filme {
-  grid-column: 1;
-  grid-row: 3/1;
-  display: flex;
-  gap: 10px;
+  filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
+  width: 7rem;
+  height: 9rem;
+  border-radius: 8px;
 }
 .body-visualizacao .imagem-filme img {
   border-radius: 10px;
@@ -846,29 +843,39 @@ body input[type=radio]:checked + label {
   filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
 }
 .body-visualizacao .titulo-filme {
-  display: grid;
   margin-left: 15px;
+  grid-column: 1;
+  grid-row: 3/1;
+  margin-right: 12px;
 }
-.body-visualizacao .titulo-filme h3 {
+.body-visualizacao .dados-filme {
+  display: grid;
+  width: 27rem;
+}
+.body-visualizacao .dados-filme h3 {
+  grid-column: 2/1;
   font-weight: 200;
   font-size: 29px;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
-.body-visualizacao .titulo-filme .dados-filme {
+.body-visualizacao .dados-filme .informacoes-filme {
+  grid-row: 2;
   display: flex;
-  gap: 4px;
 }
-.body-visualizacao .titulo-filme .dados-filme p {
+.body-visualizacao .dados-filme p {
+  text-align: center;
   font-size: 12px;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
-.body-visualizacao .titulo-filme .dados-filme .tempo-tela {
+.body-visualizacao .dados-filme .tempo-tela {
   font-size: 12px;
   border: 1px solid;
   border-radius: 4px;
   padding-left: 3px;
   padding-right: 3px;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  grid-column: 3;
+  grid-row: 2;
 }
 .body-visualizacao .filme a {
   grid-column: 3;
@@ -900,13 +907,31 @@ body input[type=radio]:checked + label {
   margin-bottom: 1px;
 }
 .body-visualizacao .info-filme p {
+  width: 553px;
+  height: 80px;
+  border: 1px solid transparent;
+  overflow: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 7px;
+  border-radius: 14px;
   color: #fff;
-  margin-left: 1rem;
-  width: 32rem;
   text-align: justify;
   letter-spacing: 0;
-  font-size: 13px;
+  font-size: 15px;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.body-visualizacao .info-filme p::-webkit-scrollbar {
+  background-color: rgb(40, 46, 58);
+  width: 10px;
+  border-radius: 20px;
+}
+.body-visualizacao .info-filme p::-webkit-scrollbar-thumb {
+  background-color: #007af4;
+  border-radius: 3px;
+}
+.body-visualizacao .info-filme p::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .body-visualizacao .navigation {
   display: flex;
@@ -931,6 +956,7 @@ body input[type=radio]:checked + label {
   background-size: cover;
   overflow: hidden;
   display: grid;
+  grid-template-rows: 0.5fr 1fr;
 }
 .body-super-user .icones2 {
   display: grid;
@@ -951,6 +977,7 @@ body input[type=radio]:checked + label {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr;
   margin-top: 4rem;
+  grid-row: 2;
 }
 .body-super-user .add .status-filme {
   position: absolute;
@@ -1025,7 +1052,7 @@ body input[type=radio]:checked + label {
 }
 .body-super-user .add-data .ano {
   width: 8rem;
-  height: 1.9rem;
+  height: 2.2rem;
   background-color: transparent;
   border: solid 1px;
   border-color: #d6f1fb;
@@ -1038,7 +1065,7 @@ body input[type=radio]:checked + label {
 }
 .body-super-user .add-data .horas {
   width: 6rem;
-  height: 1.9rem;
+  height: 2.2rem;
   background-color: transparent;
   border: solid 1px;
   border-color: #d6f1fb;
@@ -1072,13 +1099,52 @@ body input[type=radio]:checked + label {
   align-items: center;
   justify-content: center;
   width: 19.8rem;
-  height: 1.9rem;
+  height: 2.2rem;
   background-color: transparent;
   border: solid 1px;
   border-color: #d6f1fb;
   color: #d6f1fb;
   border-radius: 5px;
   text-align: center;
+}
+.body-super-user .add-data .genero {
+  font-size: 15px;
+  display: block;
+  width: 9.8rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border: solid 1px;
+  border-color: #d6f1fb;
+  color: #d6f1fb;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+}
+.body-super-user .add-data .genero option {
+  transition: 0.3s;
+  background-color: rgb(40, 46, 58);
+  border-color: #d6f1fb;
+  color: #d6f1fb;
+  text-align: center;
+}
+.body-super-user .add-data .adicionar-botao {
+  font-size: 15px;
+  display: block;
+  width: 9.8rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border: solid 1px;
+  border-color: #d6f1fb;
+  color: #d6f1fb;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.body-super-user .add-data .adicionar-botao:hover {
+  border-color: #282e3a;
+  background-color: #d6f1fb;
+  color: #282e3a;
 }
 .body-super-user .texto-grande {
   grid-column: 3/2;
@@ -1297,12 +1363,12 @@ body input[type=radio]:checked + label {
 .body-perfil .pagina-inteira {
   content: "";
   position: absolute;
-  margin-top: 12.2rem;
+  margin-top: 14.2rem;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 345vh;
-  background: #282e3a repeating-linear-gradient(360deg, black, transparent 74%) fixed;
+  height: 80vh;
+  background: #282e3a repeating-linear-gradient(360deg, black, transparent 80%) fixed;
   z-index: 1;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
@@ -1327,7 +1393,7 @@ body input[type=radio]:checked + label {
 }
 .body-perfil .dados-perfil .user {
   position: fixed;
-  top: 7.3rem;
+  top: 9rem;
   left: 3rem;
 }
 .body-perfil .user .icon-user {
@@ -1354,9 +1420,9 @@ body input[type=radio]:checked + label {
   justify-content: flex-start;
   display: flex;
   gap: 1rem;
-  position: relative;
+  position: absolute;
   left: 12.5rem;
-  top: 1.5rem;
+  top: 15.5rem;
 }
 .body-perfil .dados-user li {
   display: grid;
@@ -1426,7 +1492,7 @@ body input[type=radio]:checked + label {
   grid-row: 2;
   display: grid;
   position: relative;
-  top: 3rem;
+  top: 22rem;
 }
 .body-perfil .series-recentes h1 {
   color: #d6f1fb;
@@ -1446,8 +1512,7 @@ body input[type=radio]:checked + label {
   background: transparent;
   cursor: pointer;
   border: 0;
-  top: 32rem;
-  left: -0.9rem;
+  top: 37rem;
 }
 .body-perfil .seta-esquerda i {
   font-size: 3rem;
@@ -1459,8 +1524,8 @@ body input[type=radio]:checked + label {
   background: transparent;
   cursor: pointer;
   border: 0;
-  top: 32rem;
-  left: 92.5rem;
+  top: 37rem;
+  left: 115.5rem;
 }
 .body-perfil .series-recentes button #seta {
   font-size: 4rem;
@@ -1479,8 +1544,8 @@ body input[type=radio]:checked + label {
   position: relative;
   display: flex;
   gap: 2.4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
 }
@@ -1496,7 +1561,7 @@ body input[type=radio]:checked + label {
   margin-right: 0rem;
 }
 .body-perfil .filmes-assistidos img {
-  width: 10rem;
+  width: 13rem;
   height: 100%;
   filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
   transition: 0.3s;
@@ -1515,9 +1580,9 @@ body input[type=radio]:checked + label {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -11rem;
   margin-top: -1rem;
   gap: 8rem;
+  margin-left: 6rem;
 }
 .body-popular .container .seta-esquerda {
   background: transparent;
@@ -1550,14 +1615,13 @@ body input[type=radio]:checked + label {
   overflow: hidden;
   text-align: center;
   color: #d6f1fb;
-  margin-left: -11rem;
+  margin-left: 6rem;
 }
 .body-popular .container .filmes-popular {
   position: relative;
   display: flex;
-  gap: 2.4rem;
-  margin-left: -4.2rem;
-  width: 100rem;
+  gap: 2.1rem;
+  width: 100%;
   margin-right: 9rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -1573,7 +1637,7 @@ body input[type=radio]:checked + label {
   margin-right: 17rem;
 }
 .body-popular .filmes-popular img {
-  width: 12.5rem;
+  width: 13.5rem;
   height: 100%;
   filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
   transition: 0.2s;
@@ -1585,12 +1649,13 @@ body input[type=radio]:checked + label {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
-  margin-left: 6rem;
+  margin-left: 8rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .body-popular .comunidade img {
-  width: 12rem;
+  width: 15rem;
+  height: 21rem;
   filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
   transition: 0.2s;
   transform: scale(1);
@@ -1600,10 +1665,10 @@ body input[type=radio]:checked + label {
 }
 
 .body-assistido .spoiler {
-  position: relative;
+  position: absolute;
   z-index: 1;
-  top: -107rem;
-  left: 21rem;
+  top: 37rem;
+  left: 36rem;
   width: 59rem;
   opacity: 0.4;
   rotate: 2deg;
@@ -1613,14 +1678,6 @@ body input[type=radio]:checked + label {
   z-index: 1;
   grid-row: 1;
 }
-.body-assistido .pagina-inteira::before {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100vh;
-  grid-column: 4/1;
-  position: relative;
-  z-index: 1;
-}
 .body-assistido .container {
   display: flex;
   margin-top: 17rem;
@@ -1628,16 +1685,16 @@ body input[type=radio]:checked + label {
   align-items: center;
   justify-content: center;
   align-self: center;
+  margin-left: 13%;
 }
 .body-assistido .container .filme-usuario-assistiu {
   grid-row: span 4;
-  width: 16rem;
-  margin-bottom: 5rem;
+  width: 15rem;
   filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
+  border-radius: 10px;
 }
 .body-assistido .container .filme-assistido {
-  display: flex;
-  margin-left: 12%;
+  margin-left: 11%;
   margin-right: 12%;
 }
 .body-assistido .container .filme-assistido .status-filme {
@@ -1648,18 +1705,24 @@ body input[type=radio]:checked + label {
   align-items: center;
   align-self: center;
   justify-content: center;
-  margin-left: -5rem;
   border-radius: 10px;
   border: none;
-  width: 10.5rem;
+  width: 11.5rem;
   text-align: center;
   background-color: transparent;
   cursor: pointer;
   margin-top: 3px;
   transition: 0.3s;
 }
+.body-assistido .status-filme #assistidoCheck {
+  position: absolute;
+  width: 11rem;
+  height: 2rem;
+  opacity: 0;
+}
 .body-assistido .container .filme-assistido .status-filme h3 {
   color: #d6f1fb;
+  font-size: 1rem;
 }
 .body-assistido .container .filme-assistido .status-filme:hover {
   background-color: #d6f1fb;
@@ -1688,16 +1751,17 @@ body input[type=radio]:checked + label {
   align-items: center;
   align-content: center;
   align-self: center;
+  margin-bottom: 38%;
 }
 .body-assistido .check-assistido .titulo-filme {
-  grid-column: 2;
+  grid-column: 5/2;
   grid-row: 1;
   display: grid;
   align-items: center;
   justify-content: center;
   align-self: center;
   margin-left: 1.5rem;
-  width: 19rem;
+  width: 42rem;
 }
 .body-assistido .check-assistido .sobre-filme {
   grid-column: 5/2;
@@ -1706,7 +1770,7 @@ body input[type=radio]:checked + label {
 }
 .body-assistido .container .titulo-filme h1 {
   position: relative;
-  width: 20rem;
+  width: 31rem;
   font-size: 2rem;
   text-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
@@ -1715,14 +1779,22 @@ body input[type=radio]:checked + label {
   text-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
 .body-assistido .container .sobre-filme h4 {
+  width: 859px;
+  height: 203px;
+  border: 1px solid transparent;
+  overflow: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 7px;
+  border-radius: 14px;
+  color: #fff;
+  text-align: justify;
+  letter-spacing: 0;
+  font-size: 15px;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
   position: relative;
-  width: 48rem;
-  height: 14rem;
-  font-size: 1.5rem;
   font-weight: 100;
   margin-left: 1.2rem;
-  letter-spacing: -1px;
-  text-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
 .body-assistido .container .titulo-filme p {
   grid-column: 2;
@@ -1739,13 +1811,29 @@ body input[type=radio]:checked + label {
   width: 17rem;
   grid-column: 2;
   grid-row: 3;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+  margin-left: 24px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0));
+  display: flex;
 }
 .body-assistido .avaliacao .div-avaliacao {
   display: flex;
   align-items: center;
+}
+.body-assistido .avaliacao button {
+  background: transparent;
+  outline: none;
+  border: 1px solid #d6f1fb;
+  border-radius: 5px;
+  width: 5rem;
+  text-align: center;
+  height: 1.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.body-assistido .avaliacao button:hover {
+  border: 1px solid #282e3a;
+  background-color: #d6f1fb;
+  color: #282e3a;
 }
 .body-assistido .dados-filme {
   grid-column: 2;
@@ -1754,9 +1842,8 @@ body input[type=radio]:checked + label {
   align-items: center;
   align-content: center;
   justify-content: center;
-  width: 18.5rem;
-  margin-top: -0.5rem;
-  margin-bottom: 0.5rem;
+  width: 18rem;
+  margin-left: 7px;
 }
 .body-assistido .dados-filme .ano {
   grid-column: 1;
@@ -1766,19 +1853,17 @@ body input[type=radio]:checked + label {
 }
 .body-assistido .dados-filme .categoria {
   grid-column: 2;
-  width: 9rem;
-  margin-left: 4px;
+  width: 5rem;
   margin-bottom: 0;
-  margin-right: -8px;
 }
 .body-assistido .dados-filme .tempo-tela {
   grid-column: 3;
   width: 4.4rem;
   margin-left: 0;
   border: 1px solid;
-  border-radius: 7px;
+  border-radius: 4px;
   text-align: center;
-  margin-bottom: 0;
+  margin-right: 3.5rem;
 }
 .body-assistido .container .comentarios {
   display: flex;
@@ -1796,7 +1881,7 @@ body input[type=radio]:checked + label {
   border-radius: 26px;
   background-color: #8ea1ac;
   width: 34rem;
-  height: 21rem;
+  height: 24rem;
   grid-template-columns: repeat(3, 1fr);
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
 }
@@ -1805,6 +1890,7 @@ body input[type=radio]:checked + label {
   grid-row: 1;
   display: grid;
   height: 1rem;
+  margin-top: 8px;
   margin-left: 0.2rem;
   margin-right: -7rem;
   margin-bottom: 2rem;
@@ -1846,15 +1932,37 @@ body input[type=radio]:checked + label {
   padding-right: 3rem;
 }
 .body-assistido .comentario-user h4 {
-  text-align: left;
-  font-size: 0.8rem;
-  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  width: 458px;
+  height: 157px;
+  border: 1px solid transparent;
+  overflow: auto;
+  padding-right: 7px;
+  padding-top: 14px;
+  border-radius: 14px;
+  color: #fff;
+  text-align: justify;
+  letter-spacing: 0;
+  font-size: 15px;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  position: relative;
   font-weight: 100;
+  margin-left: 1.2rem;
+}
+.body-assistido .comentario-user h4::-webkit-scrollbar {
+  background-color: rgb(40, 46, 58);
+  width: 10px;
+  border-radius: 10px;
+}
+.body-assistido .comentario-user h4::-webkit-scrollbar-thumb {
+  background-color: #007af4;
+  border-radius: 3px;
+}
+.body-assistido .comentario-user h4::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .body-assistido .titulo-comentario {
-  text-align: center;
-  margin-top: 27%;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-align: center;
 }
 .body-assistido .user-comentario .imagem-filme-comentario {
   grid-column: 2;
@@ -1871,14 +1979,23 @@ body input[type=radio]:checked + label {
   background-color: #8ea1ac;
   border-radius: 10px;
   position: absolute;
-  top: 69.3rem;
-  left: 59.7rem;
-  height: 26rem;
+  top: 72.5rem;
+  left: 71.7rem;
+  height: 25rem;
   width: 26rem;
   gap: 1rem;
   padding: 2rem;
   grid-template-rows: 0.1fr 0.7fr 0.2fr;
   box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
+}
+.body-assistido .criar-comentario input {
+  position: absolute;
+  top: 70%;
+  left: 6%;
+  height: 13%;
+  opacity: 0;
+  width: 26.5rem;
+  cursor: pointer;
 }
 .body-assistido .criar-comentario h1 {
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
@@ -1895,6 +2012,18 @@ body input[type=radio]:checked + label {
   height: 14rem;
   transition: 0.3s;
   box-shadow: 0px -1px 7px 2px rgba(214, 241, 251, 0.1);
+}
+.body-assistido .criar-comentario textarea::-webkit-scrollbar {
+  background-color: rgb(40, 46, 58);
+  width: 10px;
+  border-radius: 10px;
+}
+.body-assistido .criar-comentario textarea::-webkit-scrollbar-thumb {
+  background-color: #007af4;
+  border-radius: 3px;
+}
+.body-assistido .criar-comentario textarea::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .body-assistido .criar-comentario textarea:hover,
 .body-assistido textarea:focus {

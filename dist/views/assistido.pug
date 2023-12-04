@@ -6,29 +6,18 @@ html
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
         <title>Filme Assistido</title>
-        style.
-            body.body-assistido::before {
-                content: "";
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: rgba(40, 46, 58, 0.8) fixed;
-                z-index: 1;
-            }
 
     body.body-assistido 
         style.
             .body-assistido {
-                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%);
+                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
                 display: grid;
                 overflow-x: hidden;
                 scroll-behavior: smooth;
                 grid-template-columns: repeat(1, 1fr);
             }
         .pagina-inteira 
-            img(src="/source/img/Spoiler_Alert.png" )
+            img.spoiler(src="/source/img/Spoiler_Alert.png" )
         .container-tudo 
             header.header 
                 .img 
@@ -52,7 +41,6 @@ html
                         img.filme-usuario-assistiu(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
                         .titulo-filme 
                             h1 #{filme.titulo}
-                        form.avaliacao(id="asssitido")
                             label.status-filme
                                 if (assistido)
                                     input(type="checkbox" id="assistidoCheck" checked)
@@ -64,12 +52,13 @@ html
                                     input(type="hidden" id="idfilme" value=`${filme.id}`)
                                     i.bx.bx-badge-check#status
                                     h3#textAssisti Nao Assistido
-                            .dados-filme 
-                                p.ano #{filme.ano}
-                                p.categoria #{filme.categoria}
-                                - var horas = Math.floor(filme.duracao / 60)
-                                -var minutos = Math.floor(filme.duracao % 60)
-                                p.tempo-tela #{horas}h #{minutos}m
+                        .dados-filme 
+                            p.ano #{filme.ano}
+                            p.categoria #{filme.categoria}
+                            - var horas = Math.floor(filme.duracao / 60)
+                            -var minutos = Math.floor(filme.duracao % 60)
+                            p.tempo-tela #{horas}h #{minutos}m
+                        form.avaliacao(id="asssitido")
                             .div-avaliacao
                                 for i in [1, 2, 3, 4, 5]
                                     if(i == avaliacao)
@@ -78,7 +67,6 @@ html
                                     else
                                         <input type="radio" name="avalia" id="avaliacao" value=#{i} disabled>
                                         <label for="">#{i}</label>
-                                
                             button.avaliar-filme(type="submit" id="btnavalia") Avaliar
                         .sobre-filme 
                             h4 #{filme.sinopse}
@@ -102,6 +90,9 @@ html
                         input(type="hidden" name="idfilme" value=`${filme.id}`)
                         h1 Comentário
                         textarea#comentario(name="comentario" rows="4" required)
+                        <label class="submit-imagem" for="imagem">
+                        <i class="bx bx-image-add"></i> Anexar foto
+                        </label>
                         input(type="file" name="imagem" accept="image/*")
                         button(type="submit").send-comentario Postar
 

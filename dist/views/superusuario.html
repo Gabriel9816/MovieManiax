@@ -42,9 +42,9 @@
 
     <textarea class="texto-grande" name="sinopse" rows="4" required></textarea>
     <div class="add-data">
-      <input class="ano" name="ano" type="text" />
-      <input class="horas" name="duracao" type="text" />
-      <select class="genero1" id="genero-select" name="genero">
+      <input class="ano" name="ano" type="text" placeholder="ano" />
+      <input class="horas" name="duracao" type="text" placeholder="horas" />
+      <select class="genero" id="genero-select" name="genero">
         <option value="Ação">Ação</option>
         <option value="Fantasia">Fantasia</option>
         <option value="Comédia">Comédia</option>
@@ -56,10 +56,10 @@
         <option value="Ficção Científica">Ficção Científica</option>
         <option value="Aventura">Aventura</option>
       </select>
+
+      <button type="submit" class="adicionar-botao">Adicionar</button>
     </div>
     <div id="generos-selecionados"></div>
-
-    <button type="submit">Adicionar</button>
   </form>
 
   <div id="blur-background" class="blur-background"></div>

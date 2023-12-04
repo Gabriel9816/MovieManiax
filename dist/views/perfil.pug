@@ -79,8 +79,48 @@ html
                     .filmes-assistidos
                         for filme in filmes
                             .filme 
+                            <div class="filme">
+                                <a href="">
+                                    <img src="/dist/views/source/image/imagenspopular/openheimer.webp" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/jogos-mortais-x.webp" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/avatar-caminho-agua.webp" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/aranha.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/the-marvels.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+                                </a>
+                            </div>
+
+                            <div class="filme">
+                                <a href="">
+                                <img src="/dist/views/source/image/imagenspopular/FNAF-lancamento.webp" alt="">
+                                </a>
+                            </div>
                                 a(href=`/filmes/detalhes/${filme.id}`) 
                                     img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
-
                     button(onclick="handleRightCLick()").seta-direita
                         i.bx.bx-chevron-right#seta
