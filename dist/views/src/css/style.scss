@@ -2343,3 +2343,30 @@ body {
     color: #d6f1fb;
   }
 }
+
+@media (max-width: 1512px) {
+  .body-home {
+    .container-home .login-home {
+      font-size: 1.5rem;
+    }
+
+    .container-home .register-home {
+      font-size: 1.5rem;
+      padding: 4px;
+    }
+  }
+
+  .body-login .container-login .form-login {
+    left: 36%;
+  }
+
+  .body-register #form {
+    left: 35%;
+  }
+
+  .body-visualizacao {
+    .titulo {
+      margin-top: -4rem;
+    }
+  }
+}
