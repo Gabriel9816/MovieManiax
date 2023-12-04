@@ -933,13 +933,6 @@ body {
     border-radius: 8px;
   }
 
-  .imagem-filme img {
-    border-radius: 10px;
-    width: 6rem;
-    margin-left: 0.8rem;
-    filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
-  }
-
   .titulo-filme {
     margin-left: 15px;
     grid-column: 1;
@@ -1775,8 +1768,8 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: -1rem;
-    gap: 8rem;
-    margin-left: 6rem;
+    gap: 10rem;
+    margin-left: 5.5rem;
   }
 
   .container .seta-esquerda {
@@ -1814,7 +1807,7 @@ body {
     overflow: hidden;
     text-align: center;
     color: #d6f1fb;
-    margin-left: 6rem;
+    margin-left: 5rem;
   }
 
   .container .filmes-popular {

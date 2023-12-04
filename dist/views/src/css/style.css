@@ -842,12 +842,6 @@ body #avaliacao:checked + label {
   height: 9rem;
   border-radius: 8px;
 }
-.body-visualizacao .imagem-filme img {
-  border-radius: 10px;
-  width: 6rem;
-  margin-left: 0.8rem;
-  filter: drop-shadow(0 4px 8px rgb(0, 0, 0));
-}
 .body-visualizacao .titulo-filme {
   margin-left: 15px;
   grid-column: 1;
@@ -1587,8 +1581,8 @@ body #avaliacao:checked + label {
   align-items: center;
   justify-content: center;
   margin-top: -1rem;
-  gap: 8rem;
-  margin-left: 6rem;
+  gap: 10rem;
+  margin-left: 5.5rem;
 }
 .body-popular .container .seta-esquerda {
   background: transparent;
@@ -1621,7 +1615,7 @@ body #avaliacao:checked + label {
   overflow: hidden;
   text-align: center;
   color: #d6f1fb;
-  margin-left: 6rem;
+  margin-left: 5rem;
 }
 .body-popular .container .filmes-popular {
   position: relative;
