@@ -2344,7 +2344,7 @@ body {
   }
 }
 
-@media (max-width: 1528px) {
+@media (min-width: 1528px) {
   .body-home {
     .container-home .login-home {
       font-size: 1.5rem;
@@ -2367,6 +2367,66 @@ body {
   .body-visualizacao {
     .titulo {
       margin-top: -4rem;
+    }
+  }
+
+  .body-assistido {
+    .container {
+      margin-left: 3%;
+    }
+
+    .spoiler {
+      left: 20rem;
+    }
+
+    .criar-comentario {
+      left: 57.7rem;
+    }
+  }
+
+  .body-popular {
+    .comunidade {
+      margin-left: 5rem;
+    }
+
+    .container .filmes-popular {
+      width: 99%;
+      margin-left: 0.5rem;
+    }
+
+    .filmes-popular img {
+      width: 14rem;
+    }
+
+    .container .titulo {
+      margin-left: 2rem;
+    }
+
+    .container .passa-slide {
+      margin-left: 1.5rem;
+    }
+  }
+
+  .body-perfil {
+    .container-tudo .container {
+      margin-top: -6rem;
+    }
+
+    .series-recentes .seta-direita {
+      left: 91.5rem;
+    }
+
+    .series-recentes .filmes-assistidos {
+      margin-right: 4rem;
+    }
+  }
+
+  .body-super-user {
+    .add-data .horas {
+      height: 2.3rem;
+    }
+    .add-data .ano {
+      height: 2.3rem;
     }
   }
 }

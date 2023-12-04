@@ -2082,7 +2082,7 @@ body #avaliacao:checked + label {
   color: #d6f1fb;
 }
 
-@media (max-width: 1512px) {
+@media (min-width: 1528px) {
   .body-home .container-home .login-home {
     font-size: 1.5rem;
   }
@@ -2098,5 +2098,45 @@ body #avaliacao:checked + label {
   }
   .body-visualizacao .titulo {
     margin-top: -4rem;
+  }
+  .body-assistido .container {
+    margin-left: 3%;
+  }
+  .body-assistido .spoiler {
+    left: 20rem;
+  }
+  .body-assistido .criar-comentario {
+    left: 57.7rem;
+  }
+  .body-popular .comunidade {
+    margin-left: 5rem;
+  }
+  .body-popular .container .filmes-popular {
+    width: 99%;
+    margin-left: 0.5rem;
+  }
+  .body-popular .filmes-popular img {
+    width: 14rem;
+  }
+  .body-popular .container .titulo {
+    margin-left: 2rem;
+  }
+  .body-popular .container .passa-slide {
+    margin-left: 1.5rem;
+  }
+  .body-perfil .container-tudo .container {
+    margin-top: -6rem;
+  }
+  .body-perfil .series-recentes .seta-direita {
+    left: 91.5rem;
+  }
+  .body-perfil .series-recentes .filmes-assistidos {
+    margin-right: 4rem;
+  }
+  .body-super-user .add-data .horas {
+    height: 2.3rem;
+  }
+  .body-super-user .add-data .ano {
+    height: 2.3rem;
   }
 }/*# sourceMappingURL=style.css.map */
