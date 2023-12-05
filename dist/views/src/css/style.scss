@@ -2408,13 +2408,29 @@ body {
   }
 
   .body-perfil {
-    .container .series-recentes {
-      margin-top: -1rem;
+    .pagina-inteira {
+      margin-top: 12.2rem;
+    }
+
+    .container-tudo .container {
+      margin-top: -7rem;
+    }
+    .perfil-user .dados-perfil {
+      margin-top: 6rem;
     }
 
     .series-recentes .seta-direita {
       left: 91.5rem;
       top: 33rem;
+    }
+
+    .dados-perfil .user {
+      top: 7rem;
+    }
+
+    .dados-user {
+      left: 12.5rem;
+      top: 13.5rem;
     }
 
     .series-recentes .seta-esquerda {

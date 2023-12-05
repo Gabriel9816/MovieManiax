@@ -2124,12 +2124,25 @@ body #avaliacao:checked + label {
   .body-popular .container .passa-slide {
     margin-left: 1.5rem;
   }
-  .body-perfil .container .series-recentes {
-    margin-top: -1rem;
+  .body-perfil .pagina-inteira {
+    margin-top: 12.2rem;
+  }
+  .body-perfil .container-tudo .container {
+    margin-top: -7rem;
+  }
+  .body-perfil .perfil-user .dados-perfil {
+    margin-top: 6rem;
   }
   .body-perfil .series-recentes .seta-direita {
     left: 91.5rem;
     top: 33rem;
+  }
+  .body-perfil .dados-perfil .user {
+    top: 7rem;
+  }
+  .body-perfil .dados-user {
+    left: 12.5rem;
+    top: 13.5rem;
   }
   .body-perfil .series-recentes .seta-esquerda {
     top: 33rem;
