@@ -23,6 +23,34 @@ body::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
+h4::-webkit-scrollbar {
+  background-color: rgba(40, 46, 58, 1);
+  width: 10px;
+}
+
+h4::-webkit-scrollbar-thumb {
+  background-color: #007af4;
+  border-radius: 3px;
+}
+
+h4::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+textarea::-webkit-scrollbar {
+  background-color: rgba(40, 46, 58, 1);
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #007af4;
+  border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 body {
   .header {
     display: grid;
@@ -1518,8 +1546,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 80vh;
-
+    height: 100vh;
     background: #282e3a
       repeating-linear-gradient(360deg, black, transparent 100%) fixed;
     z-index: 1;
@@ -1736,7 +1763,6 @@ body {
   .filmes-assistidos .filme {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 1rem;
   }
 
   .filmes-assistidos #ultimo-filme {
@@ -2345,123 +2371,648 @@ body {
   }
 }
 
-@media (min-width: 1528px) {
-  .body-home {
-    .container-home .login-home {
-      font-size: 1.5rem;
+@media screen and (min-width: 1024px) {
+  body {
+    .search-box {
+      grid-area: 1/7;
     }
 
-    .container-home .register-home {
-      font-size: 1.5rem;
-      padding: 4px;
+    .img {
+      grid-column: 3/1;
+    }
+
+    .logo {
+      margin-left: 2rem;
     }
   }
 
-  .body-login .container-login .form-login {
-    left: 36%;
+  .body-login {
+    .container-login .form-login {
+      top: 20%;
+      left: 29%;
+    }
   }
 
-  .body-register #form {
-    left: 35%;
+  .body-register {
+    #form {
+      left: 29%;
+      top: 23%;
+    }
   }
 
+  .body-popular {
+    overflow-x: hidden;
+
+    .comunidade img {
+      width: 13rem;
+      height: 17rem;
+    }
+
+    .container .filmes-popular {
+      margin-left: 0px;
+      width: 63.4rem;
+    }
+
+    .filmes-popular img {
+      width: 11.5rem;
+    }
+
+    .container .titulo {
+      margin-left: -7rem;
+    }
+
+    .container .passa-slide {
+      margin-left: -7rem;
+    }
+
+    .comunidade {
+      margin-left: 10.9rem;
+      margin-right: 15rem;
+    }
+  }
+
+  .body-assistido {
+    .container .filme-assistido {
+      margin-left: -7%;
+      margin-right: 6%;
+    }
+
+    .spoiler {
+      top: 31rem;
+      left: 2rem;
+    }
+
+    .container .filme-usuario-assistiu {
+      width: 13rem;
+    }
+
+    .container .sobre-filme h4 {
+      width: 653px;
+      font-size: 19px;
+    }
+
+    .container .comentarios {
+      margin-left: -74%;
+    }
+
+    .comentarios .user-comentario {
+      width: 27.7rem;
+    }
+
+    .comentario-user h4 {
+      width: 348px;
+      margin-left: 0;
+    }
+
+    .user-comentario .imagem-filme-comentario {
+      grid-column: 3/1;
+    }
+
+    .imagem-filme-comentario img {
+      margin-left: 6.5rem;
+    }
+
+    .criar-comentario {
+      top: 64.5rem;
+      left: 33.7rem;
+      width: 24rem;
+    }
+
+    .criar-comentario textarea {
+      height: 13rem;
+      width: 24rem;
+    }
+
+    .criar-comentario .submit-imagem {
+      width: 24rem;
+    }
+
+    .criar-comentario input {
+      top: 67%;
+      width: 24.5rem;
+    }
+
+    .criar-comentario .send-comentario {
+      margin-left: 7.5rem;
+    }
+  }
+
+  .body-perfil {
+    .container-tudo .container {
+      margin-top: -5.9rem;
+    }
+
+    .series-recentes .filmes-assistidos {
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+
+    .series-recentes .seta-direita {
+      left: 60.5rem;
+    }
+  }
+
+  .body-super-user {
+    .texto {
+      width: 40rem;
+    }
+
+    .texto-grande {
+      width: 42.1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .body-visualizacao {
+    .titulo {
+      margin-top: -5rem;
+    }
+  }
+
+  .body-popular {
+    .container .filmes-popular {
+      margin-left: 0rem;
+      width: 79.4rem;
+    }
+
+    .comunidade {
+      margin-left: 10.8rem;
+    }
+  }
+
+  .body-perfil {
+    .user .nome-user {
+      left: 9.2rem;
+    }
+
+    .dados-user {
+      left: 12rem;
+    }
+
+    .series-recentes .filmes-assistidos {
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+
+    .series-recentes .seta-direita {
+      left: 76rem;
+    }
+  }
+
+  .body-super-user {
+    .texto {
+      width: 47rem;
+    }
+    .texto-grande {
+      width: 56rem;
+    }
+  }
+
+  .body-assistido {
+    .container .sobre-filme h4 {
+      width: 51rem;
+      font-size: 19px;
+    }
+
+    .container .check-assistido {
+      margin-bottom: 45%;
+    }
+
+    .spoiler {
+      top: 34rem;
+      left: 12rem;
+    }
+    .container .filme-assistido {
+      margin-left: -4%;
+      margin-right: 15%;
+    }
+
+    .comentarios .user-comentario {
+      width: 31.7rem;
+    }
+
+    .comentario-user h4 {
+      width: 429px;
+      margin-left: 0;
+    }
+
+    .imagem-filme-comentario img {
+      margin-left: 7.7rem;
+    }
+
+    .criar-comentario {
+      top: 68.5rem;
+      left: 45.7rem;
+      height: 25rem;
+      width: 26rem;
+    }
+
+    .criar-comentario textarea {
+      height: 14rem;
+      width: 26rem;
+    }
+
+    .criar-comentario .submit-imagem {
+      width: 26rem;
+    }
+
+    .criar-comentario input {
+      top: 70%;
+      width: 26.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .body-visualizacao {
     .titulo {
       margin-top: -7rem;
     }
   }
 
-  .body-assistido {
-    .container {
-      margin-left: 3%;
-    }
-
-    .spoiler {
-      left: 20rem;
-    }
-
-    .criar-comentario {
-      left: 57.7rem;
+  .body-login {
+    .container-login .form-login {
+      top: 20%;
+      left: 34%;
     }
   }
 
-  .body-popular {
-    .comunidade {
-      margin-left: 5rem;
-    }
-
-    .container .filmes-popular {
-      width: 99%;
-      margin-left: 0.5rem;
-    }
-
-    .filmes-popular img {
-      width: 14rem;
-    }
-
-    .container .titulo {
-      margin-left: 2rem;
-    }
-
-    .container .passa-slide {
-      margin-left: 1.5rem;
+  .body-register {
+    #form {
+      left: 33%;
+      top: 22%;
     }
   }
 
   .body-perfil {
     .pagina-inteira {
-      margin-top: 12.2rem;
-    }
-
-    .container-tudo .container {
-      margin-top: -7rem;
-    }
-
-    .user .nome-user {
-      left: 10.7rem;
+      margin-top: 13.2rem;
     }
 
     .perfil-user .dados-perfil {
-      margin-top: 6rem;
-    }
-
-    .series-recentes .seta-direita {
-      left: 91.5rem;
-      top: 33rem;
-    }
-
-    .container .series-recentes {
-      margin-top: 1rem;
+      margin-top: 7.1rem;
     }
 
     .dados-perfil .user {
-      top: 7rem;
+      top: 8rem;
     }
 
     .dados-user {
-      left: 13.5rem;
-      top: 13.5rem;
+      left: 12rem;
+      top: 14rem;
+    }
+
+    .filmes-assistidos img {
+      width: 12rem;
+    }
+
+    .series-recentes .filmes-assistidos {
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+
+    .container-tudo .container {
+      margin-top: -7.9rem;
+    }
+
+    .series-recentes .seta-esquerda {
+      top: 31rem;
+    }
+
+    .series-recentes .seta-direita {
+      left: 86rem;
+      top: 31rem;
+    }
+  }
+
+  .body-assistido {
+    .container {
+      margin-left: 17%;
+    }
+
+    .container .comentarios {
+      margin-left: -78%;
+    }
+
+    .comentarios .user-comentario {
+      width: 33.7rem;
+    }
+
+    .comentario-user h4 {
+      width: 481px;
+      margin-left: -17px;
+    }
+
+    .imagem-filme-comentario img {
+      margin-left: 8.7rem;
+    }
+
+    .criar-comentario {
+      top: 71.5rem;
+      left: 49.7rem;
+      height: 25rem;
+      width: 29rem;
+    }
+
+    .criar-comentario textarea {
+      height: 14rem;
+      width: 29rem;
+    }
+
+    .criar-comentario .submit-imagem {
+      width: 29rem;
+    }
+
+    .criar-comentario input {
+      top: 70%;
+      width: 29.5rem;
+    }
+
+    .criar-comentario .send-comentario {
+      margin-left: 10.5rem;
+    }
+  }
+
+  .body-popular {
+    .container .filmes-popular {
+      margin-left: 0px;
+      width: 89.5rem;
+    }
+
+    .container .titulo {
+      margin-left: -5rem;
+    }
+
+    .comunidade {
+      margin-left: 9.5rem;
+      margin-right: 10rem;
+    }
+  }
+
+  .body-super-user {
+    .add {
+      margin-left: 8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1528px) {
+  .body-register {
+    #form {
+      left: 35%;
+      top: 22%;
+    }
+  }
+
+  .body-visualizacao {
+    .titulo {
+      margin-top: -6rem;
+    }
+    .descricao {
+      margin-top: -12rem;
+    }
+  }
+
+  .body-perfil {
+    .pagina-inteira {
+      margin-top: 11.2rem;
+    }
+
+    .dados-perfil .user {
+      top: 6rem;
+    }
+
+    .dados-user {
+      left: 12rem;
+      top: 12rem;
+    }
+
+    .container-tudo .container {
+      margin-top: -6.9rem;
+    }
+
+    .series-recentes .filmes-assistidos {
+      margin-right: 5rem;
+      margin-left: 5rem;
+    }
+
+    .perfil-user .dados-perfil {
+      margin-top: 8.1rem;
     }
 
     .series-recentes .seta-esquerda {
       top: 33rem;
     }
 
+    .series-recentes .seta-direita {
+      left: 91rem;
+      top: 33rem;
+    }
+
+    .filmes-assistidos img {
+      width: 10rem;
+    }
+  }
+
+  .body-assistido {
+    .spoiler {
+      top: 34rem;
+      left: 22rem;
+    }
+
+    .criar-comentario {
+      top: 73.5rem;
+      left: 55.7rem;
+      height: 25rem;
+      width: 29rem;
+    }
+  }
+
+  .body-popular {
+    .container .filmes-popular {
+      margin-left: 1.5rem;
+      width: 91.5rem;
+    }
+
+    .filmes-popular img {
+      width: 11.2rem;
+    }
+
+    .comunidade img {
+      width: 12rem;
+      height: 17rem;
+    }
+
+    .container .titulo {
+      margin-left: -4rem;
+    }
+
+    .container .passa-slide {
+      margin-left: -5rem;
+    }
+
+    .comunidade {
+      margin-left: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .body-login {
+    .container-login .form-login {
+      top: 20%;
+      left: 37%;
+    }
+  }
+
+  .body-register {
+    #form {
+      left: 37%;
+      top: 22%;
+    }
+  }
+
+  .body-visualizacao {
+    .titulo {
+      margin-top: -5rem;
+    }
+    .descricao {
+      margin-top: -14rem;
+    }
+  }
+
+  .body-perfil {
+    .pagina-inteira {
+      margin-top: 10.2rem;
+    }
+    .container-tudo .container {
+      margin-top: -10.9rem;
+    }
+
+    .dados-perfil .user {
+      top: 5rem;
+    }
+
+    .dados-user {
+      left: 12rem;
+      top: 11rem;
+    }
+
     .series-recentes .filmes-assistidos {
-      margin-right: 4rem;
+      margin-right: 5rem;
+      margin-left: 5rem;
     }
 
     .series-recentes .filmes-assistidos img {
-      width: 12rem;
+      width: 11rem;
+    }
+
+    .container .series-recentes {
+      margin-top: 2.5rem;
+    }
+
+    .series-recentes .seta-esquerda {
+      top: 28rem;
+    }
+
+    .series-recentes .seta-direita {
+      left: 116rem;
+      top: 28rem;
+    }
+  }
+
+  .body-assistido {
+    .container {
+      margin-left: 21%;
+    }
+
+    .container .filme-assistido {
+      margin-left: 0%;
+      margin-right: 15%;
+    }
+
+    .spoiler {
+      top: 34rem;
+      left: 34rem;
+    }
+
+    .check-assistido .sobre-filme {
+      width: 53rem;
+    }
+
+    .container .sobre-filme h4 {
+      width: 58rem;
+    }
+
+    .container .comentarios {
+      margin-left: -90%;
+    }
+
+    .comentarios .user-comentario {
+      width: 40.7rem;
+    }
+
+    .comentario-user h4 {
+      width: 589px;
+      margin-left: -17px;
+    }
+
+    .imagem-filme-comentario img {
+      margin-left: 13.7rem;
+    }
+
+    .criar-comentario {
+      top: 79.5rem;
+      left: 71.7rem;
+      height: 25rem;
+      width: 35rem;
+    }
+
+    .criar-comentario textarea {
+      height: 14rem;
+      width: 35rem;
+    }
+
+    .criar-comentario .submit-imagem {
+      width: 35rem;
+    }
+
+    .criar-comentario input {
+      top: 70%;
+      left: 1.8rem;
+      width: 35.5rem;
+    }
+
+    .criar-comentario .send-comentario {
+      margin-left: 10.5rem;
+      width: 15rem;
     }
   }
 
   .body-super-user {
-    .add-data .horas {
-      height: 2.3rem;
+    .add {
+      margin-left: 24rem;
     }
-    .add-data .ano {
-      height: 2.3rem;
+  }
+
+  .body-popular {
+    .container .filmes-popular {
+      margin-left: 0px;
+      width: 99.9%;
+    }
+
+    .comunidade {
+      margin-left: 8rem;
+      margin-right: 1rem;
+    }
+
+    .container .titulo {
+      margin-left: -2rem;
+    }
+
+    .container .passa-slide {
+      margin-left: -2rem;
     }
   }
 }
