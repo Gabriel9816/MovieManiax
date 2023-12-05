@@ -2366,7 +2366,7 @@ body {
 
   .body-visualizacao {
     .titulo {
-      margin-top: -4rem;
+      margin-top: -7rem;
     }
   }
 
@@ -2408,16 +2408,25 @@ body {
   }
 
   .body-perfil {
-    .container-tudo .container {
-      margin-top: -6rem;
+    .container .series-recentes {
+      margin-top: -1rem;
     }
 
     .series-recentes .seta-direita {
       left: 91.5rem;
+      top: 33rem;
+    }
+
+    .series-recentes .seta-esquerda {
+      top: 33rem;
     }
 
     .series-recentes .filmes-assistidos {
       margin-right: 4rem;
+    }
+
+    .series-recentes .filmes-assistidos img {
+      width: 12rem;
     }
   }
 
