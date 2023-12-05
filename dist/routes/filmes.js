@@ -80,9 +80,14 @@ router.post("/add", upload.single("imagem"), async (req, res) => {
 router.post("/addcomentario", upload.single("imagem"), async (req, res) => {
   const idfilme = req.body.idfilme;
   const text = req.body.comentario;
-  const image = req.file.buffer.toString("base64");
-  const extensao = path.extname(req.file.originalname).toLowerCase();
   const iduser = req.cookies.id;
+  let image = null;
+  let extensao = null;
+
+  if (req.file) {
+    image = req.file.buffer.toString("base64");
+    extensao = path.extname(req.file.originalname).toLowerCase();
+  }
 
   await comentarioModel.addComentario(iduser, idfilme, text, image, extensao);
 
