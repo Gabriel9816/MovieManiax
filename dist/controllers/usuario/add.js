@@ -1,8 +1,8 @@
-const form = document.querySelector("#cadasUser");
+const form = document.querySelector("#form");
 
 const nome = document.querySelector("#user");
 const email = document.querySelector("#email");
-const senha = document.querySelector("#senha");
+const senha = document.querySelector("#password");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
