@@ -107,6 +107,21 @@ body {
     opacity: 1;
   }
 
+  .search-box i:hover {
+    color: #007bff;
+  }
+
+  .search-box i .submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 69.3rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
+
   .links {
     display: grid;
     grid-column: 9;
@@ -1894,6 +1909,16 @@ body {
 }
 
 .body-assistido {
+  .search-box i .submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 65.5rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .spoiler {
     position: absolute;
     z-index: 1;
@@ -2384,6 +2409,17 @@ body {
     .logo {
       margin-left: 2rem;
     }
+
+    .search-box i #submit-search {
+      width: 48px;
+      border-radius: 50%;
+      left: 41.1rem;
+      cursor: pointer;
+      top: 16px;
+      height: 25px;
+      position: absolute;
+      opacity: 0;
+    }
   }
 
   .body-login {
@@ -2406,6 +2442,11 @@ body {
     .comunidade img {
       width: 13rem;
       height: 17rem;
+    }
+
+    #comunidade {
+      margin-left: 10.1rem;
+      margin-right: 5rem;
     }
 
     .container .filmes-popular {
@@ -2524,6 +2565,18 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
+  body {
+    .search-box i #submit-search {
+      width: 48px;
+      border-radius: 50%;
+      left: 54.7rem;
+      cursor: pointer;
+      top: 16px;
+      height: 25px;
+      position: absolute;
+      opacity: 0;
+    }
+  }
   .body-visualizacao {
     .titulo {
       margin-top: -5rem;
@@ -2625,6 +2678,18 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    .search-box i #submit-search {
+      width: 48px;
+      border-radius: 50%;
+      left: 63.3rem;
+      cursor: pointer;
+      top: 16px;
+      height: 25px;
+      position: absolute;
+      opacity: 0;
+    }
+  }
   .body-visualizacao {
     .titulo {
       margin-top: -7rem;
@@ -2740,6 +2805,11 @@ body {
       width: 89.5rem;
     }
 
+    #comunidade {
+      margin-left: 7.5rem;
+      margin-right: 0rem;
+    }
+
     .container .titulo {
       margin-left: -5rem;
     }
@@ -2758,6 +2828,19 @@ body {
 }
 
 @media screen and (min-width: 1528px) {
+  body {
+    .search-box i #submit-search {
+      width: 48px;
+      border-radius: 50%;
+      left: 68rem;
+      cursor: pointer;
+      top: 16px;
+      height: 25px;
+      position: absolute;
+      opacity: 0;
+    }
+  }
+
   .body-register {
     #form {
       left: 35%;
@@ -2835,6 +2918,11 @@ body {
       width: 91.5rem;
     }
 
+    #comunidade {
+      margin-left: 5.7rem;
+      margin-right: 0rem;
+    }
+
     .filmes-popular img {
       width: 11.2rem;
     }
@@ -2859,6 +2947,19 @@ body {
 }
 
 @media screen and (min-width: 1920px) {
+  body {
+    .search-box i #submit-search {
+      width: 48px;
+      border-radius: 50%;
+      left: 89.5rem;
+      cursor: pointer;
+      top: 16px;
+      height: 25px;
+      position: absolute;
+      opacity: 0;
+    }
+  }
+
   .body-login {
     .container-login .form-login {
       top: 20%;
@@ -3000,6 +3101,11 @@ body {
     .container .filmes-popular {
       margin-left: 0px;
       width: 99.9%;
+    }
+
+    #comunidade {
+      margin-left: 3.2rem;
+      margin-right: 0rem;
     }
 
     .comunidade {

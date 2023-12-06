@@ -100,6 +100,19 @@ body .search-box i {
   color: #d6f1fb;
   opacity: 1;
 }
+body .search-box i:hover {
+  color: #007bff;
+}
+body .search-box i .submit-search {
+  width: 48px;
+  border-radius: 50%;
+  left: 69.3rem;
+  cursor: pointer;
+  top: 16px;
+  height: 25px;
+  position: absolute;
+  opacity: 0;
+}
 body .links {
   display: grid;
   grid-column: 9;
@@ -1691,6 +1704,16 @@ body #avaliacao:checked + label {
   transform: scale(1.03);
 }
 
+.body-assistido .search-box i .submit-search {
+  width: 48px;
+  border-radius: 50%;
+  left: 65.5rem;
+  cursor: pointer;
+  top: 16px;
+  height: 25px;
+  position: absolute;
+  opacity: 0;
+}
 .body-assistido .spoiler {
   position: absolute;
   z-index: 1;
@@ -2119,6 +2142,16 @@ body #avaliacao:checked + label {
   body .logo {
     margin-left: 2rem;
   }
+  body .search-box i #submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 41.1rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .body-login .container-login .form-login {
     top: 20%;
     left: 29%;
@@ -2133,6 +2166,10 @@ body #avaliacao:checked + label {
   .body-popular .comunidade img {
     width: 13rem;
     height: 17rem;
+  }
+  .body-popular #comunidade {
+    margin-left: 10.1rem;
+    margin-right: 5rem;
   }
   .body-popular .container .filmes-popular {
     margin-left: 0px;
@@ -2219,6 +2256,16 @@ body #avaliacao:checked + label {
   }
 }
 @media screen and (min-width: 1280px) {
+  body .search-box i #submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 54.7rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .body-visualizacao .titulo {
     margin-top: -5rem;
   }
@@ -2292,6 +2339,16 @@ body #avaliacao:checked + label {
   }
 }
 @media screen and (min-width: 1440px) {
+  body .search-box i #submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 63.3rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .body-visualizacao .titulo {
     margin-top: -7rem;
   }
@@ -2373,6 +2430,10 @@ body #avaliacao:checked + label {
     margin-left: 0px;
     width: 89.5rem;
   }
+  .body-popular #comunidade {
+    margin-left: 7.5rem;
+    margin-right: 0rem;
+  }
   .body-popular .container .titulo {
     margin-left: -5rem;
   }
@@ -2385,6 +2446,16 @@ body #avaliacao:checked + label {
   }
 }
 @media screen and (min-width: 1528px) {
+  body .search-box i #submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 68rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .body-register #form {
     left: 35%;
     top: 22%;
@@ -2439,6 +2510,10 @@ body #avaliacao:checked + label {
     margin-left: 1.5rem;
     width: 91.5rem;
   }
+  .body-popular #comunidade {
+    margin-left: 5.7rem;
+    margin-right: 0rem;
+  }
   .body-popular .filmes-popular img {
     width: 11.2rem;
   }
@@ -2457,6 +2532,16 @@ body #avaliacao:checked + label {
   }
 }
 @media screen and (min-width: 1920px) {
+  body .search-box i #submit-search {
+    width: 48px;
+    border-radius: 50%;
+    left: 89.5rem;
+    cursor: pointer;
+    top: 16px;
+    height: 25px;
+    position: absolute;
+    opacity: 0;
+  }
   .body-login .container-login .form-login {
     top: 20%;
     left: 37%;
@@ -2559,6 +2644,10 @@ body #avaliacao:checked + label {
   .body-popular .container .filmes-popular {
     margin-left: 0px;
     width: 99.9%;
+  }
+  .body-popular #comunidade {
+    margin-left: 3.2rem;
+    margin-right: 0rem;
   }
   .body-popular .comunidade {
     margin-left: 8rem;

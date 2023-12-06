@@ -6,7 +6,7 @@ html
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet")
 
-    body.body-popular 
+    body.body-popular
         style.
             body.body-popular{
                 background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
@@ -14,13 +14,13 @@ html
                 display: grid;
                 scroll-behavior: smooth;
             }
-        header.header 
+        header.header#header 
             a.img(href="/user")
                 img.logo(src="/source/img/MovieManiax logo.png" alt="logo")
             form.search-box(action="/filmes/busca", method="get")
                 input.search-txt(type="text" name="search")
-                button(type="submit")
-                    i.bx.bx-search 
+                i.bx.bx-search 
+                    button.submit-search#submit-search(type="submit")
             .links 
                 a.l01(href="/filmes") Filmes
                 a.l02(href="/superuser") Adicionar
@@ -31,7 +31,7 @@ html
                     i.bx.bx-log-out#icon 
         .container
             h1.titulo Resultado da Busca
-            .comunidade
+            .comunidade#comunidade
                 for filme in filmes
                     .filmes-conteudo
                         a(href=`/filmes/detalhes/${filme.id}`)
