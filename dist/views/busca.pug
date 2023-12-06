@@ -30,17 +30,7 @@ html
                 a.icon2(href="/user/sair")
                     i.bx.bx-log-out#icon 
         .container
-            h1.titulo Popular 
-            .filmes-popular#img
-                for films in carrossel
-                    a.filmes-conteudo(href=`/filmes/detalhes/${films.id}`)
-                        img(src=`data:image/${films.extensaoCapa};base64,${films.capa}`)
-            .passa-slide 
-                button(onclick="handleLeftClick()").seta-esquerda
-                    i.bx.bx-chevron-left#seta
-                button(onclick="handleRightClick()").seta-direita
-                    i.bx.bx-chevron-right#seta
-            h1.titulo Atividade da comunidade
+            h1.titulo Resultado da Busca
             .comunidade
                 for filme in filmes
                     .filmes-conteudo

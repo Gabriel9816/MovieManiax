@@ -17,6 +17,17 @@ class FilmeModel {
     }
   }
 
+  async buscaFilme(titulo) {
+    try {
+      const results = await this.db.query(
+        `SELECT * FROM ${this.tabela} WHERE titulo LIKE LOWER('%${titulo}%')`
+      );
+      return results;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async getThreeFilme() {
     try {
       const results = await this.db.query(
@@ -54,16 +65,6 @@ class FilmeModel {
     try {
       await this.db.query(
         `INSERT INTO ${this.tabela} (titulo, sinopse, duracao, capa, ano, categoria, extensaoCapa) VALUES ("${titulo}", "${sinopse}", ${duracao}, "${capa}", ${ano},"${genero}", "${extensao}")`
-      );
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  async editaFilme(id, titulo, sinopse, duracao, capa) {
-    try {
-      await this.db.query(
-        `UPDATE ${this.tabela} SET titulo = ${titulo}, sinopse = ${sinopse}, duracao = ${duracao}, capa = ${capa} WHERE id = ${id}`
       );
     } catch (error) {
       throw error;

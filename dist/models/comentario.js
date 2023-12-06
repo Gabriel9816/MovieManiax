@@ -29,14 +29,6 @@ class ComentarioModel {
       throw error;
     }
   }
-
-  async delComentario(id) {
-    try {
-      await this.db.query(`DELETE FROM ${this.tabela} WHERE id = ${id}`);
-    } catch (error) {
-      throw error;
-    }
-  }
 }
 
 module.exports = ComentarioModel;

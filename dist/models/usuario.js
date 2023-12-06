@@ -39,40 +39,12 @@ class UsuarioModel {
     }
   }
 
-  async getAllUsers() {
-    try {
-      const results = await this.db.query(`SELECT * FROM ${this.tabela}`);
-      return results;
-    } catch (error) {
-      throw error;
-    }
-  }
-
   async add(nome, email, senha) {
     const senhaenc = md5(senha);
     try {
       await this.db.query(
         `INSERT INTO ${this.tabela} (nome, email, senha) VALUES ('${nome}', '${email}', '${senhaenc}')`
       );
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  async edita(id, nome, email, senha) {
-    const senhaenc = md5(senha);
-    try {
-      await this.db.query(
-        `UPDATE ${this.tabela} SET nome = ${nome}, email = ${email}, senha = ${senhaenc} WHERE id = ${id}`
-      );
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  async del(id) {
-    try {
-      await this.db.query(`DELETE FROM ${this.tabela} WHERE id = ${id}`);
     } catch (error) {
       throw error;
     }

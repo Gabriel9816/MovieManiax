@@ -43,11 +43,22 @@ router.get("/detalhes/:id", async (req, res) => {
   const avaliacoes = await filmesUsuarioModel.getFilmsById(req.params.id);
   const media = await calculaMediaAvaliacao(avaliacoes);
 
+  console.log(comentarios);
+
   res.render("assistido", {
     filme: filme[0],
     comentarios: comentarios,
     assistido: await verificaAssitido(req.cookies.id, req.params.id),
     avaliacao: media,
+  });
+});
+
+router.get("/busca", async (req, res) => {
+  autentication(req, res, req.cookies.token);
+  const filmes = await filmeModel.buscaFilme(req.query.search);
+
+  res.render("busca", {
+    filmes: filmes,
   });
 });
 

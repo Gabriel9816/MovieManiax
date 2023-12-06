@@ -4,11 +4,23 @@ const path = require("node:path");
 const UsuarioModel = require("../models/usuario");
 const jwt = require("jsonwebtoken");
 
+//-----------------------------------------------------------------------
+//Models
+//-----------------------------------------------------------------------
+
 const usuarioModel = new UsuarioModel();
+
+//-----------------------------------------------------------------------
+//Rotas GET
+//-----------------------------------------------------------------------
 
 router.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "views", "login.html"));
 });
+
+//-----------------------------------------------------------------------
+//Rotas POST
+//-----------------------------------------------------------------------
 
 router.post("/enter", async (req, res) => {
   const user = await usuarioModel.login(req.body.email, req.body.senha);

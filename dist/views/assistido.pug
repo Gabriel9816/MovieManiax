@@ -29,7 +29,7 @@ html
                 .links 
                     a.l01(href="/filmes") Filmes
                     a.l02(href="/superuser") Adicionar
-                    a.l03(href="/") Excluir
+                    a.l03(href=`/superuser/excluir/${filme.id}`) Excluir
                 .icones
                     a.icon1(href="/perfil")
                         i.bx.bxs-ser-circle#icon1
@@ -77,8 +77,8 @@ html
                             li.user-comentario 
                                 .icone-user
                                     .nome-user
-                                        a.icon1.bx.bxs-user-circle#icon(href="#")
-                                        h1 iToshiba 
+                                        .icon1.bx.bxs-user-circle#icon(href="#")
+                                        h1 #{comentario.nome} 
                                         .data-comentario
                                             - var data = comentario.data.toLocaleString("pt-br", {timeZone: "UTC"})
                                             p#data-comentario #{data}

@@ -35,10 +35,6 @@ class Conexao {
       });
     });
   }
-
-  desconectar() {
-    this.conexao.end();
-  }
 }
 
 module.exports = Conexao;
