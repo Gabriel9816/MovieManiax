@@ -2449,6 +2449,10 @@ body {
       margin-right: 5rem;
     }
 
+    .container #titulo {
+      margin-left: 2rem;
+    }
+
     .container .filmes-popular {
       margin-left: 0px;
       width: 63.4rem;
@@ -2589,6 +2593,10 @@ body {
       width: 79.4rem;
     }
 
+    .container #titulo {
+      margin-left: 5rem;
+    }
+
     .comunidade {
       margin-left: 10.8rem;
     }
@@ -2690,6 +2698,13 @@ body {
       opacity: 0;
     }
   }
+
+  .body-popular {
+    .container #titulo {
+      margin-left: 1rem;
+    }
+  }
+
   .body-visualizacao {
     .titulo {
       margin-top: -7rem;
@@ -2918,6 +2933,10 @@ body {
       width: 91.5rem;
     }
 
+    .container #titulo {
+      margin-left: 3rem;
+    }
+
     #comunidade {
       margin-left: 5.7rem;
       margin-right: 0rem;
@@ -3101,6 +3120,10 @@ body {
     .container .filmes-popular {
       margin-left: 0px;
       width: 99.9%;
+    }
+
+    .container #titulo {
+      margin-left: 2rem;
     }
 
     #comunidade {
