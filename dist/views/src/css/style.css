@@ -1951,7 +1951,15 @@ body #avaliacao:checked + label {
   align-content: center;
   width: 16rem;
   height: 4rem;
+  margin-top: 4px;
   margin-left: 0.4rem;
+}
+.body-assistido .icone-user .nome-user .data-comentario {
+  margin-left: 3.5rem;
+  grid-column: 3/1;
+}
+.body-assistido .icone-user .nome-user .data-comentario #data-comentario {
+  width: 11rem;
 }
 .body-assistido .icone-user a {
   text-decoration: none;
@@ -1967,7 +1975,7 @@ body #avaliacao:checked + label {
   grid-column: 2;
   font-size: 1.5rem;
   width: 0;
-  margin-right: 9rem;
+  margin-right: 12rem;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 .body-assistido .icone-user p {

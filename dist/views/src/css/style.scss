@@ -2188,7 +2188,17 @@ body {
     align-content: center;
     width: 16rem;
     height: 4rem;
+    margin-top: 4px;
     margin-left: 0.4rem;
+  }
+
+  .icone-user .nome-user .data-comentario {
+    margin-left: 3.5rem;
+    grid-column: 3/1;
+  }
+
+  .icone-user .nome-user .data-comentario #data-comentario {
+    width: 11rem;
   }
 
   .icone-user a {
@@ -2207,7 +2217,7 @@ body {
     grid-column: 2;
     font-size: 1.5rem;
     width: 0;
-    margin-right: 9rem;
+    margin-right: 12rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
   }
 
