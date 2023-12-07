@@ -42,9 +42,6 @@ router.get("/detalhes/:id", async (req, res) => {
   const filme = await filmeModel.getFilmeById(req.params.id);
   const avaliacoes = await filmesUsuarioModel.getFilmsById(req.params.id);
   const media = await calculaMediaAvaliacao(avaliacoes);
-
-  console.log(comentarios);
-
   res.render("assistido", {
     filme: filme[0],
     comentarios: comentarios,

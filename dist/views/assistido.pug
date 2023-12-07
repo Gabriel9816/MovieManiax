@@ -23,10 +23,10 @@ html
                 .img 
                     a(href="/user")
                         img.logo(src="/source/img/MovieManiax logo.png") 
-                .search-box
-                    input(type="text").search-txt
+                form.search-box(action="/filmes/busca", method="get")
+                    input.search-txt(type="text" name="search")
                     i.bx.bx-search 
-                        button.submit-search(type="submit")
+                        button.submit-search#submit-search(type="submit")
                 .links 
                     a.l01(href="/filmes") Filmes
                     a.l02(href="/superuser") Adicionar
@@ -79,14 +79,15 @@ html
                                 .icone-user
                                     .nome-user
                                         .icon1.bx.bxs-user-circle#icon(href="#")
-                                        h1 #{comentario.nome} 
+                                        h1 #{comentario.nome}
                                         .data-comentario
                                             - var data = comentario.data.toLocaleString("pt-br", {timeZone: "UTC"})
                                             p#data-comentario #{data}
                                 .comentario-user
                                     h4 #{comentario.texto}
-                                .imagem-filme-comentario
-                                    img(src=`data:image/${comentario.extensao};base64,${comentario.imagem}`)
+                                if (comentario.imagem !== "null")
+                                    .imagem-filme-comentario
+                                        img(src=`data:image/${comentario.extensao};base64,${comentario.imagem}`)
                     form.criar-comentario(action="/filmes/addcomentario" method="POST" enctype="multipart/form-data")
                         input(type="hidden" name="idfilme" value=`${filme.id}`)
                         h1 Comentário

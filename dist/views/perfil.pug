@@ -33,12 +33,10 @@ html
                 <a href="/user" class="img">
                     <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
                 </a>
-                <div class="search-box">
-                    <input class="search-txt" type="text">
-                    <i class="bx bx-search">
-                        button.submit-search(type="submit")
-                    </i>
-                </div>
+                form.search-box(action="/filmes/busca", method="get")
+                    input.search-txt(type="text" name="search")
+                    i.bx.bx-search 
+                        button.submit-search#submit-search(type="submit")
                 <div class="links">
                     <a class="l01" href="/filmes">Filmes</a>
                     <a class="l02" href="/superuser">Adicionar</a>
