@@ -1990,6 +1990,7 @@ body #avaliacao:checked + label {
   padding-right: 3rem;
 }
 .body-assistido .comentario-user h4 {
+  margin-top: 17px;
   width: 458px;
   height: 157px;
   border: 1px solid transparent;
