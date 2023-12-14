@@ -1110,6 +1110,13 @@ body {
   display: grid;
   grid-template-rows: 0.5fr 1fr;
 
+  .links #adicionar {
+    color: #80c4ff;
+    cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
   .icones2 {
     display: grid;
     justify-content: center;
@@ -1131,7 +1138,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin-top: 4rem;
+    margin-top: 2rem;
     grid-row: 2;
   }
 
@@ -1706,6 +1713,7 @@ body {
     grid-row: 2;
     display: grid;
     position: relative;
+    opacity: 0;
   }
 
   .series-recentes h1 {
@@ -1798,6 +1806,12 @@ body {
 }
 
 .body-popular {
+  .links #filmes {
+    color: #80c4ff;
+    cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+  }
   .container {
     display: grid;
     grid-column: 1;
@@ -2554,6 +2568,14 @@ body {
   }
 
   .body-perfil {
+    .user .nome-user {
+      left: 11.7rem;
+    }
+
+    .dados-user {
+      left: 14.5rem;
+    }
+
     .container-tudo .container {
       margin-top: -5.9rem;
     }
@@ -2615,11 +2637,11 @@ body {
 
   .body-perfil {
     .user .nome-user {
-      left: 9.2rem;
+      left: 11.2rem;
     }
 
     .dados-user {
-      left: 12rem;
+      left: 14rem;
     }
 
     .series-recentes .filmes-assistidos {
@@ -2750,7 +2772,7 @@ body {
     }
 
     .dados-user {
-      left: 12rem;
+      left: 14rem;
       top: 14rem;
     }
 
@@ -2893,7 +2915,7 @@ body {
     }
 
     .dados-user {
-      left: 12rem;
+      left: 14rem;
       top: 12rem;
     }
 
@@ -3026,7 +3048,7 @@ body {
     }
 
     .dados-user {
-      left: 12rem;
+      left: 14rem;
       top: 11rem;
     }
 

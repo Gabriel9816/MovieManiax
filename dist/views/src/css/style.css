@@ -999,6 +999,12 @@ body #avaliacao:checked + label {
   display: grid;
   grid-template-rows: 0.5fr 1fr;
 }
+.body-super-user .links #adicionar {
+  color: #80c4ff;
+  cursor: default;
+  text-decoration: none;
+  pointer-events: none;
+}
 .body-super-user .icones2 {
   display: grid;
   justify-content: center;
@@ -1017,7 +1023,7 @@ body #avaliacao:checked + label {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  margin-top: 4rem;
+  margin-top: 2rem;
   grid-row: 2;
 }
 .body-super-user .add .status-filme {
@@ -1533,6 +1539,7 @@ body #avaliacao:checked + label {
   grid-row: 2;
   display: grid;
   position: relative;
+  opacity: 0;
 }
 .body-perfil .series-recentes h1 {
   color: #d6f1fb;
@@ -1610,6 +1617,12 @@ body #avaliacao:checked + label {
   transform: scale(1.06);
 }
 
+.body-popular .links #filmes {
+  color: #80c4ff;
+  cursor: default;
+  text-decoration: none;
+  pointer-events: none;
+}
 .body-popular .container {
   display: grid;
   grid-column: 1;
@@ -2250,6 +2263,12 @@ body #avaliacao:checked + label {
   .body-assistido .criar-comentario .send-comentario {
     margin-left: 7.5rem;
   }
+  .body-perfil .user .nome-user {
+    left: 11.7rem;
+  }
+  .body-perfil .dados-user {
+    left: 14.5rem;
+  }
   .body-perfil .container-tudo .container {
     margin-top: -5.9rem;
   }
@@ -2292,10 +2311,10 @@ body #avaliacao:checked + label {
     margin-left: 10.8rem;
   }
   .body-perfil .user .nome-user {
-    left: 9.2rem;
+    left: 11.2rem;
   }
   .body-perfil .dados-user {
-    left: 12rem;
+    left: 14rem;
   }
   .body-perfil .series-recentes .filmes-assistidos {
     margin-right: 4rem;
@@ -2388,7 +2407,7 @@ body #avaliacao:checked + label {
     top: 8rem;
   }
   .body-perfil .dados-user {
-    left: 12rem;
+    left: 14rem;
     top: 14rem;
   }
   .body-perfil .filmes-assistidos img {
@@ -2491,7 +2510,7 @@ body #avaliacao:checked + label {
     top: 6rem;
   }
   .body-perfil .dados-user {
-    left: 12rem;
+    left: 14rem;
     top: 12rem;
   }
   .body-perfil .container-tudo .container {
@@ -2587,7 +2606,7 @@ body #avaliacao:checked + label {
     top: 5rem;
   }
   .body-perfil .dados-user {
-    left: 12rem;
+    left: 14rem;
     top: 11rem;
   }
   .body-perfil .series-recentes .filmes-assistidos {
