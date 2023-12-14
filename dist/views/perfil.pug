@@ -71,17 +71,20 @@ html
                                 .tempo-filmes 
                                     p.titulo-dados-assistidos Filmes assistidos
                                     p#total-filmes #{count.total}
-                .series-recentes 
-                    h1 Filmes recentemente assistidos 
-                    button(onclick="handleLeftClick()").seta-esquerda
-                        i.bx.bx-chevron-left#seta
-                    .filmes-assistidos
-                        for filme in filmes
-                            .filme 
-                                a(href=`/filmes/detalhes/${filme.id}`) 
-                                    img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
-                    button(onclick="handleRightClick()").seta-direita
-                        i.bx.bx-chevron-right#seta
+
+                if (filmes.length > 0)
+                        .series-recentes 
+                            h1 Filmes recentemente assistidos 
+                            button(onclick="handleLeftClick()").seta-esquerda
+                                i.bx.bx-chevron-left#seta
+
+                            .filmes-assistidos
+                                for filme in filmes
+                                    .filme 
+                                        a(href=`/filmes/detalhes/${filme.id}`) 
+                                            img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
+                            button(onclick="handleRightClick()").seta-direita
+                                i.bx.bx-chevron-right#seta
         script.
             const slider = document.querySelector(".filmes-assistidos");
 

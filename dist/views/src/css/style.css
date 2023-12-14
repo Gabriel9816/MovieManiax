@@ -1539,7 +1539,6 @@ body #avaliacao:checked + label {
   grid-row: 2;
   display: grid;
   position: relative;
-  opacity: 0;
 }
 .body-perfil .series-recentes h1 {
   color: #d6f1fb;

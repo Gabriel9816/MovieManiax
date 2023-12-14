@@ -191,7 +191,7 @@ body {
     cursor: pointer;
   }
 
-  #avaliacao + label {
+  #avaliacao+label {
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
     margin-right: 9px;
     margin-top: 3px;
@@ -209,7 +209,7 @@ body {
     border: 2px solid transparent;
   }
 
-  #avaliacao:checked + label {
+  #avaliacao:checked+label {
     color: #007bff;
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
@@ -836,8 +836,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 15rem;
-    background: #282e3a
-      repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
+    background: #282e3a repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
     color: #d6f1fb;
     display: grid;
     box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -1102,8 +1101,7 @@ body {
 }
 
 .body-super-user {
-  background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%)
-    fixed;
+  background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -1569,8 +1567,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #282e3a
-      repeating-linear-gradient(360deg, black, transparent 100%) fixed;
+    background: #282e3a repeating-linear-gradient(360deg, black, transparent 100%) fixed;
     z-index: 1;
     box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   }
@@ -1713,7 +1710,6 @@ body {
     grid-row: 2;
     display: grid;
     position: relative;
-    opacity: 0;
   }
 
   .series-recentes h1 {
@@ -1812,6 +1808,7 @@ body {
     text-decoration: none;
     pointer-events: none;
   }
+
   .container {
     display: grid;
     grid-column: 1;
@@ -1933,6 +1930,7 @@ body {
     position: absolute;
     opacity: 0;
   }
+
   .spoiler {
     position: absolute;
     z-index: 1;
@@ -2614,6 +2612,7 @@ body {
       opacity: 0;
     }
   }
+
   .body-visualizacao {
     .titulo {
       margin-top: -5rem;
@@ -2658,6 +2657,7 @@ body {
     .texto {
       width: 47rem;
     }
+
     .texto-grande {
       width: 56rem;
     }
@@ -2677,6 +2677,7 @@ body {
       top: 34rem;
       left: 12rem;
     }
+
     .container .filme-assistido {
       margin-left: -4%;
       margin-right: 15%;
@@ -2900,6 +2901,7 @@ body {
     .titulo {
       margin-top: -6rem;
     }
+
     .descricao {
       margin-top: -12rem;
     }
@@ -3030,6 +3032,7 @@ body {
     .titulo {
       margin-top: -5rem;
     }
+
     .descricao {
       margin-top: -14rem;
     }
@@ -3039,6 +3042,7 @@ body {
     .pagina-inteira {
       margin-top: 10.2rem;
     }
+
     .container-tudo .container {
       margin-top: -10.9rem;
     }

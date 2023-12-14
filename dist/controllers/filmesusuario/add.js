@@ -25,5 +25,7 @@ form.addEventListener("submit", async (e) => {
       idFilme: idFilme.value,
       avaliacao: avalia,
     }),
+  }).then(() => {
+    window.location.reload();
   });
 });
