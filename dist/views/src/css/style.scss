@@ -191,7 +191,7 @@ body {
     cursor: pointer;
   }
 
-  #avaliacao+label {
+  #avaliacao + label {
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
     margin-right: 9px;
     margin-top: 3px;
@@ -209,7 +209,7 @@ body {
     border: 2px solid transparent;
   }
 
-  #avaliacao:checked+label {
+  #avaliacao:checked + label {
     color: #007bff;
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
@@ -836,7 +836,8 @@ body {
     bottom: 0;
     width: 100%;
     height: 15rem;
-    background: #282e3a repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
+    background: #282e3a
+      repeating-linear-gradient(-109deg, black, transparent 100%) fixed;
     color: #d6f1fb;
     display: grid;
     box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
@@ -1101,7 +1102,8 @@ body {
 }
 
 .body-super-user {
-  background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
+  background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%)
+    fixed;
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -1567,7 +1569,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #282e3a repeating-linear-gradient(360deg, black, transparent 100%) fixed;
+    background: #282e3a
+      repeating-linear-gradient(360deg, black, transparent 100%) fixed;
     z-index: 1;
     box-shadow: 0px -1px 7px 2px rgba(0, 0, 0, 0.3);
   }
@@ -2575,7 +2578,7 @@ body {
     }
 
     .container-tudo .container {
-      margin-top: -5.9rem;
+      margin-top: -4.5rem;
     }
 
     .series-recentes .filmes-assistidos {
@@ -2787,7 +2790,7 @@ body {
     }
 
     .container-tudo .container {
-      margin-top: -7.9rem;
+      margin-top: -6.9rem;
     }
 
     .series-recentes .seta-esquerda {
@@ -2922,7 +2925,7 @@ body {
     }
 
     .container-tudo .container {
-      margin-top: -6.9rem;
+      margin-top: -5.5rem;
     }
 
     .series-recentes .filmes-assistidos {
@@ -3044,7 +3047,7 @@ body {
     }
 
     .container-tudo .container {
-      margin-top: -10.9rem;
+      margin-top: -10.8rem;
     }
 
     .dados-perfil .user {
