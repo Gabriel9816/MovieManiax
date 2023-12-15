@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="/source/css/style.css" />
+
+  <style>
+    .body-register {
+      background: url(/source/img/fundo-filmes1.jpg) fixed;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .body-register::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #282e3ab3;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body class="body-register">
+  <div class="container-register">
+    <a href="/"><img class="imagem-logo" src="/source/img/MovieManiax logo.png" /></a>
+
+    <form id="form">
+      <div class="input-user">
+        <input id="user" name="Usuario" placeholder="Usuario" type="text" />
+        <input id="email" name="Email" placeholder="email@exemplo.com" type="text" />
+        <input id="password" name="Senha" placeholder="Senha" type="password" />
+      </div>
+
+      <label class="caixa-termos">
+        <input type="checkbox" class="caixa-input" />
+        <span class="caixa-input"></span>
+        <span class="termo1">Tenho pelo menos 16 anos e aceito os termos de Uso.</span>
+      </label>
+      <label class="caixa-termos" style="margin-top: 0.4rem">
+        <input type="checkbox" class="caixa-input" />
+        <span class="caixa-input"></span>
+        <span class="termo2">Aceito a Politica de Privacidade e concordo com o uso das minhas
+          informações pessoais de acordo com a mesma</span>
+      </label>
+
+      <button class="botao-registro" type="submit">Sing Up</button>
+    </form>
+  </div>
+
+  <script src="/controllers/usuario/add.js"></script>
+</body>
+
+</html>

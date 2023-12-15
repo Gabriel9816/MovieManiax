@@ -1,0 +1,101 @@
+html 
+    head
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/source/css/style.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+        title Perfil
+        style.
+            body.body-perfil::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: #282e3ab3;
+                z-index: -1; /* Garante que o desfoque fique atrás do conteúdo da página */
+            }
+
+    body.body-perfil 
+        style.
+            body.body-perfil{
+                background: url(/source/img/wakanda-cartoon.jpg) fixed;
+                background-position: center;
+                background-size: cover;
+                overflow: hidden;
+            }
+        .imagem-fundo 
+            .pagina-inteira 
+        .container-tudo 
+            <header class="header">
+                <a href="/user" class="img">
+                    <img class="logo" src="/source/img/MovieManiax logo.png" alt="logo">
+                </a>
+                form.search-box(action="/filmes/busca", method="get")
+                    input.search-txt(type="text" name="search")
+                    i.bx.bx-search 
+                        button.submit-search#submit-search(type="submit")
+                <div class="links">
+                    <a class="l01" href="/filmes">Filmes</a>
+                    <a class="l02" href="/superuser">Adicionar</a>
+                </div>
+                <div class="icones">
+                    <a class="icon2" href="/user/sair">
+                    <i id="icon" class='bx bx-log-out'></i>
+                    </a>
+                </div>
+            </header>
+            .container 
+                .perfil-user 
+                    .dados-perfil 
+                        .user 
+                            a.icon-user(href="#")
+                                i.bx.bxs-user-circle#icon 
+                            h1.nome-user #{user.nome} 
+                        ul.dados-user 
+                            li
+                                .tempo-filmes 
+                                    p.titulo-dados Tempo vendo filmes 
+                                    .meses-filmes#info-filme 
+                                        p.total-meses#texto1 #{tempo.meses} 
+                                        p.titulo-meses-filmes#texto2 MESES
+                                    .dias-filmes#info-filme 
+                                        p.total-meses#texto1 #{tempo.dias} 
+                                        p.titulo-meses-filmes#texto2 DIAS
+                                    .horas-filme#info-filme 
+                                        p.total-meses#texto1 #{tempo.horas} 
+                                        p.titulo-meses-filmes#texto2 HORAS
+                            li 
+                                .tempo-filmes 
+                                    p.titulo-dados-assistidos Filmes assistidos
+                                    p#total-filmes #{count.total}
+
+                if (filmes.length > 0)
+                        .series-recentes 
+                            h1 Filmes recentemente assistidos 
+                            button(onclick="handleLeftClick()").seta-esquerda
+                                i.bx.bx-chevron-left#seta
+
+                            .filmes-assistidos
+                                for filme in filmes
+                                    .filme 
+                                        a(href=`/filmes/detalhes/${filme.id}`) 
+                                            img(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
+                            button(onclick="handleRightClick()").seta-direita
+                                i.bx.bx-chevron-right#seta
+        script.
+            const slider = document.querySelector(".filmes-assistidos");
+
+            const handleLeftClick = (e) => {
+                console.log(slider);
+                console.log(slider.offsetWidth);
+                slider.scrollLeft -= slider.offsetWidth;
+            }
+
+            const handleRightClick = (e) => {
+                console.log(slider);
+                console.log(slider.offsetWidth);
+                slider.scrollLeft += slider.offsetWidth;
+            }

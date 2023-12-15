@@ -1,0 +1,102 @@
+html 
+    head 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/source/css/style.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://boxicons.com/css/boxicons.min.css">
+        <title>Filme Assistido</title>
+
+    body.body-assistido 
+        style.
+            .body-assistido {
+                background: #282e3a repeating-linear-gradient(0deg, black, transparent 100%) fixed;
+                display: grid;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        .pagina-inteira 
+            img.spoiler(src="/source/img/Spoiler_Alert.png" )
+        .container-tudo 
+            header.header 
+                .img 
+                    a(href="/user")
+                        img.logo(src="/source/img/MovieManiax logo.png") 
+                form.search-box(action="/filmes/busca", method="get")
+                    input.search-txt(type="text" name="search")
+                    i.bx.bx-search 
+                        button.submit-search#submit-search(type="submit")
+                .links 
+                    a.l01(href="/filmes") Filmes
+                    a.l02(href="/superuser") Adicionar
+                    a.l03(href=`/superuser/excluir/${filme.id}`) Excluir
+                .icones
+                    a.icon1(href="/perfil")
+                        i.bx.bxs-ser-circle#icon1
+                    a.icon2(href="/sair") 
+                        i.bx.bx-log-out#icon
+            .container 
+                .filme-assistido 
+                    .check-assistido
+                        img.filme-usuario-assistiu(src=`data:image/${filme.extensaoCapa};base64,${filme.capa}`)
+                        .titulo-filme 
+                            h1 #{filme.titulo}
+                            label.status-filme
+                                if (assistido)
+                                    input(type="checkbox" id="assistidoCheck" checked)
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bxs-badge-check#status
+                                    h3#textAssisti Assistido
+                                else
+                                    input(type="checkbox" id="assistidoCheck")
+                                    input(type="hidden" id="idfilme" value=`${filme.id}`)
+                                    i.bx.bx-badge-check#status
+                                    h3#textAssisti Nao Assistido
+                        .dados-filme 
+                            p.ano #{filme.ano}
+                            p.categoria #{filme.categoria}
+                            - var horas = Math.floor(filme.duracao / 60)
+                            -var minutos = Math.floor(filme.duracao % 60)
+                            p.tempo-tela #{horas}h #{minutos}m
+                        form.avaliacao(id="asssitido")
+                            .div-avaliacao
+                                for i in [1, 2, 3, 4, 5]
+                                    if(i == avaliacao)
+                                        input(type="radio" name="avalia" id="avaliacao" value=`${i}` checked disabled)
+                                        <label for="">#{i}</label>
+                                    else
+                                        <input type="radio" name="avalia" id="avaliacao" value=#{i} disabled>
+                                        <label for="">#{i}</label>
+                            button.avaliar-filme(type="submit" id="btnavalia") Avaliar
+                        .sobre-filme 
+                            h4 #{filme.sinopse}
+                    h1.titulo-comentario Comentários
+                .comentarios 
+                    ul.comentarios-lista
+                        for comentario in comentarios
+                            li.user-comentario 
+                                .icone-user
+                                    .nome-user
+                                        .icon1.bx.bxs-user-circle#icon(href="#")
+                                        h1 #{comentario.nome}
+                                        .data-comentario
+                                            - var data = comentario.data.toLocaleString("pt-br", {timeZone: "UTC"})
+                                            p#data-comentario #{data}
+                                .comentario-user
+                                    h4 #{comentario.texto}
+                                if (comentario.imagem !== "null")
+                                    .imagem-filme-comentario
+                                        img(src=`data:image/${comentario.extensao};base64,${comentario.imagem}`)
+                    form.criar-comentario(action="/filmes/addcomentario" method="POST" enctype="multipart/form-data")
+                        input(type="hidden" name="idfilme" value=`${filme.id}`)
+                        h1 Comentário
+                        textarea#comentario(name="comentario" rows="4" required)
+                        <label class="submit-imagem" for="imagem">
+                        <i class="bx bx-image-add"></i> Anexar foto
+                        </label>
+                        input(type="file" name="imagem" accept="image/*")
+                        button(type="submit").send-comentario Postar
+
+        script(src="/source/js/disable.js")
+        script(src="/controllers/filmesusuario/add.js")
